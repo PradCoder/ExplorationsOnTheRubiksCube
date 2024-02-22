@@ -56,14 +56,18 @@ https://www.puzzlemaster.ca/browse/cubepuzzle/?p=all
 # How we meet Criteria
 
 1. The relevant definitions and results needed to state the main results. 
-
 Groups, Subgroups, Cayley Graphs, Macros
+
 2. The statement of the main theorem(s) of your topic
+
+https://www.sfu.ca/~jtmulhol/math302/puzzles-rc.html
+Main Main Theorem: The Fundamental Theorem of Cubology (plain language form)
 
 We state the theorems on parity,
 Lagrange's Theorem, 
 
 Theorem: The cube always has even parity, or an even number of cubies exchanged, and 0 is even.
+
 
 State the algorithms we get:
 The bottom up solution, CFOP method, Petrus Method
