@@ -1,3 +1,3 @@
 # 4GR3 Repository
 
-This is a repository for the group project required by Math 4GR3 - Groups and Rings. 
+This repository contains the group project for Math 4GR3 - Groups and Rings. 
