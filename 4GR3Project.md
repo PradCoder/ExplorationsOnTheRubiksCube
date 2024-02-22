@@ -83,7 +83,8 @@ not solvabale)
 
 4. An example of the main theorem(s).
 
-A solution to an arangement (using one of the algortihms)
+A solution to an arangement (using one of the algortihms)u
+We give an example of a solvable cube(apply the algorithm), we also give an example of a non solvable cube. 
 
 Annother one is using God's number (22, the max number of minimal
 moves to solve a cube)
