@@ -63,6 +63,8 @@ Groups, Subgroups, Cayley Graphs, Macros
 We state the theorems on parity,
 Lagrange's Theorem, 
 
+Theorem: The cube always has even parity, or an even number of cubies exchanged, and 0 is even.
+
 State the algorithms we get:
 The bottom up solution, CFOP method, Petrus Method
 
