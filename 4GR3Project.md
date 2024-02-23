@@ -42,6 +42,9 @@ https://web.mit.edu/sp.268/www/rubik.pdf
 
 
 Algorithms on how to solve the cube (3x3x3),
+
+https://ruwix.com/the-rubiks-cube/how-to-solve-the-rubiks-cube-beginners-method/
+
 https://arxiv.org/pdf/1106.5736.pdf
 
 https://digitalcommons.ric.edu/cgi/viewcontent.cgi?article=1164&context=honors_projects
