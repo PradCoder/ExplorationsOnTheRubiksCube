@@ -1,6 +1,5 @@
 ---
 title: MATH 4GR3 Project - On Rubiks Cubes
-author: Pesara 
 date: \today
 linestretch: 1.25
 fontsize: 12pt
