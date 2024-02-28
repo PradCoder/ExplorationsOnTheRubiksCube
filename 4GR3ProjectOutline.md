@@ -1,5 +1,5 @@
 ---
-title: MATH 4GR3 Project On Rubiks Cubes
+title: MATH 4GR3 Project On Rubiks Cubes (Outline)
 ---
 
 # Abstract
@@ -43,9 +43,6 @@ Main Main Theorem: The Fundamental Theorem of Cubology (plain language form)
 We state the theorems on parity,
 Lagrange's Theorem, 
 
-Theorem: The cube always has even parity, or an even number of cubies exchanged, and 0 is even.
-
-
 State the algorithms we get:
 The bottom up solution, CFOP method, Petrus Method
 
@@ -74,7 +71,3 @@ stabilizers, support
 6. A bibliography with at least five papers related to the topic.
 
 State the papers and algorithms we worked on.
-
-
-# Section 1
-
