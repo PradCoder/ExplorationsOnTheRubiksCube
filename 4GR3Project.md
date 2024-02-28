@@ -135,3 +135,6 @@ In this section, we will state the main theorem of our topic and any lemmas requ
 
 
 ## Main Theorem: Fundamental Theorem of Cubology
+
+
+## A modified version of the Bottom Up Approach 
