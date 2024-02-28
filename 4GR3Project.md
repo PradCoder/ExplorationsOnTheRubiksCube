@@ -47,7 +47,7 @@ Theorem: The cube always has even parity, or an even number of cubies exchanged,
 
 
 State the algorithms we get:
-The bottom up solution, CFOP method, Petrus Method
+The bottom up solution 
 
 3. A summary of the proof of the main theorem(s).
 
@@ -62,9 +62,6 @@ not solvabale)
 
 A solution to an arangement (using one of the algortihms)u
 We give an example of a solvable cube(apply the algorithm), we also give an example of a non solvable cube. 
-
-Annother one is using God's number (22, the max number of minimal
-moves to solve a cube)
 
 5. A discussion of how this result relates to a topic discussed in the course. 
 
