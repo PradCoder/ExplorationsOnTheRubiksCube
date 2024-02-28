@@ -78,3 +78,60 @@ State the papers and algorithms we worked on.
 
 # Section 1
 
+In this section, we will state and define the relevant definitions and results required to state our main result(s).
+
+## Group
+
+A group $(G, \star)$ is a set $G$ with a binary operation $\star: G \times G \rightarrow G$ defined on it such that:
+
+### $\star$ is associative 
+Given $x,y,z \in G$
+$$(x \star y) \star z = x \star (y \star z)$$
+
+### Existence of an identity 
+In $G$ there exists an element $e$ such that 
+$$e \star x = x \star e = x$$
+
+### Existence of an inverse 
+For any $x \in G$ there exists an element $x^{-1}$ such that 
+$$x \star x^{-1} = x^{-1} \star x = e$$
+
+## Subgroup
+A subset $H$ of $G$ is a subgroup if and only if:
+
+### $H$ contains the identity of $G$ 
+Given $e_G \in G$ is the identity of $G$, then $e_G \in H$.
+
+### Closed under the operation of $G$ 
+Given $x,y \in H$, then 
+$x \star y \in H$
+
+### Existence of an inverse 
+For any $x \in H$ there exists it's inverse $x^{-1} \in H$.
+
+
+## Cayley Graph
+
+
+
+## Macros
+
+
+
+
+
+
+
+
+# Section 2
+
+In this section, we will state the main theorem of our topic and any lemmas required to understand the theorem.
+
+## Theorem on Parity
+
+
+
+## Lagrange's Theorem 
+
+
+## Main Theorem: Fundamental Theorem of Cubology
