@@ -24,7 +24,6 @@ https://arxiv.org/pdf/1106.5736.pdf
 https://digitalcommons.ric.edu/cgi/viewcontent.cgi?article=1164&context=honors_projects
 
 Implementations of the algorithms and discussion on how to do so effectively (optimization, computer algebra systems, computational geometry)
-
 https://doc.sagemath.org/html/en/reference/spkg/rubiks.html
 
 Different types of rubix cubes and extensions to the algorithms ()
@@ -46,6 +45,12 @@ Lagrange's Theorem,
 State the algorithms we get:
 The bottom up solution, CFOP method, Petrus Method
 
+Bottom up algorithm:
+Pick a face
+solve for the edges
+then solve corners
+Go down to the next layer solve for the edges (sisnce there are no corners)
+Go to the final layer, solve for the edge and solve corners
 3. A summary of the proof of the main theorem(s).
 
 We give a summary of the proofs we need,
