@@ -45,12 +45,6 @@ Lagrange's Theorem,
 State the algorithms we get:
 The bottom up solution, ~~CFOP method, Petrus Method~~
 
-Bottom up algorithm:
-Pick a face
-solve for the edges
-then solve corners
-Go down to the next layer solve for the edges (sisnce there are no corners)
-Go to the final layer, solve for the edge and solve corners
 3. A summary of the proof of the main theorem(s).
 
 We give a summary of the proofs we need,

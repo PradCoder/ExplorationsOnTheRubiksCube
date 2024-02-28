@@ -117,7 +117,13 @@ For any $x \in H$ there exists it's inverse $x^{-1} \in H$.
 
 
 
-
+## Bottom Up Algorithm
+Bottom up algorithm:
+Pick a face
+solve for the edges
+then solve corners
+Go down to the next layer solve for the edges (sisnce there are no corners)
+Go to the final layer, solve for the edge and solve corners
 
 
 # Section 2
