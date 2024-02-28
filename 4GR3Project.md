@@ -139,5 +139,12 @@ In this section, we will state the main theorem of our topic and any lemmas requ
 
 ## Main Theorem: Fundamental Theorem of Cubology
 
+ A move sequence is possible if and only if the following three conditions are satisfied:
+
+-  The permutation of the corner cubies has the same parity as the permutation of the edge cubies.
+-  The number of corners that are twisted clockwise is equal to the number that are twisted counterclockwise modulo $3$
+(meaning remaining corners twisted in the same direction occur in threes).
+- The number of flipped edges is even.
+
 
 ## A modified version of the Bottom Up Approach 
