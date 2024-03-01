@@ -109,6 +109,24 @@ For any $x \in H$ there exists it's inverse $x^{-1} \in H$.
 
 ## Cayley Graph
 
+Definition of a Cayley graph:
+
+Let G be a group with generating
+set $\Gamma$. Then the Cayley graph of G with respect to $Γ$, denoted by
+$Cay(G, Γ)$, is constructed as follows:
+
+1. The vertices Cay(G, $\Gamma$) are the elements of G.
+
+2. Two vertices $v,w \in G$ are adjacent $\iff$ there exists a $\gamma \in \Gamma$ such that $v = w \gamma$, so $vw^{-1} \in \Gamma$
+
+3. The multiplicity (# of edges between 2 distinct vertices) of the edge ${v, w}$ in edge multiset $E$ is the
+multiplicity of $vw^{−1}$ in $Γ$.
+
+A multiset is a collection of objects where items may appear in
+the collection more than once. The number of times that an object
+appears in the multiset is called the multiplicity of that element. If S
+is a multiset, then $|S|$ is the number of objects in S.
+
 
 
 ## Macros
