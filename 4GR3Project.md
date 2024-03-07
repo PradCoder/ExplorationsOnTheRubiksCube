@@ -154,6 +154,10 @@ In this section, we will state the main theorem of our topic and any lemmas requ
 
 ## Lagrange's Theorem 
 
+Let G be a finite group and let H be a subgroup of G. Then
+$|G|/|H| = [G : H]$ is the number of distinct left cosets of H in G. In particular, the number
+of elements in $H$ must divide the number of elements in $G$.
+
 
 ## Main Theorem: Fundamental Theorem of Cubology
 
