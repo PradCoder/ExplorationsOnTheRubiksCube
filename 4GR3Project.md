@@ -186,6 +186,10 @@ In this section we will present a summarized proof of our main theorem, namely, 
 
 In this section we demonstrate which cubes are solvable and which ones aren't by applying the Fundamental Theorem of Cubology
 
+<!-- -Take a solvable cube as an example
+
+-Take a non-solvable cube as an example
+ -->
 # Section 5 
 
 In this section we discuss how the Fundamental Theorem of Cubology relates to the content covered in MATH 4GR3.
@@ -193,3 +197,5 @@ In this section we discuss how the Fundamental Theorem of Cubology relates to th
 # Section 6
 
 In this section we list all of our references.
+
+Daniels, L. (2014). Group Theory and the Rubik’s Cube. http://math.fon.rs/files/DanielsProject58.pdf 
