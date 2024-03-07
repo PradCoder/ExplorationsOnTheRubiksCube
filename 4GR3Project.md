@@ -166,3 +166,8 @@ In this section, we will state the main theorem of our topic and any lemmas requ
 
 
 ## A modified version of the Bottom Up Approach 
+
+# Section 3 
+In this section we will present a summarized proof of our main theorem, namely, the Fundamental Theorem of Cubology.
+
+## Summarized Proof of the Fundamental Theorem of Cubology
