@@ -175,3 +175,16 @@ of elements in $H$ must divide the number of elements in $G$.
 In this section we will present a summarized proof of our main theorem, namely, the Fundamental Theorem of Cubology.
 
 ## Summarized Proof of the Fundamental Theorem of Cubology
+
+
+# Section 4
+
+In this section we demonstrate which cubes are solvable and which ones aren't by applying the Fundamental Theorem of Cubology
+
+# Section 5 
+
+In this section we discuss how the Fundamental Theorem of Cubology relates to the content covered in MATH 4GR3.
+
+# Section 6
+
+In this section we list all of our references.
