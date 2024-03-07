@@ -150,6 +150,11 @@ In this section, we will state the main theorem of our topic and any lemmas requ
 
 ## Theorem on Parity
 
+Permutations can also be described in terms of their parity. Any length n
+cycle of a permutation can be expressed as the product of 2-cycles.
+
+The cube always has even parity, or an even number of cubies
+exchanged from the starting position.
 
 
 ## Lagrange's Theorem 
