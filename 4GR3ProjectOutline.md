@@ -47,8 +47,8 @@ The bottom up solution, ~~CFOP method, Petrus Method~~
 
 3. A summary of the proof of the main theorem(s).
 
-We give a summary of the proofs we need,
-and the algorithms
+
+ 
 
 We give a summary on what is solvable
 what is not (some rubix cube puzzles are
