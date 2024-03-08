@@ -77,6 +77,7 @@ State the papers and algorithms we worked on.
 
 In this section, we will state and define the relevant definitions and results required to state our main result(s).
 
+# Group Theory Related Defintions
 ## Group
 
 A group $(G, \star)$ is a set $G$ with a binary operation $\star: G \times G \rightarrow G$ defined on it such that:
@@ -128,14 +129,13 @@ appears in the multiset is called the multiplicity of that element. If S
 is a multiset, then $|S|$ is the number of objects in S.
 
 
-
+# Rubiks Specicific Theorems
 ## Macros
 
-
-
-
+Macros are a set of instructions for solving a particular configurations of the cube, i.e. applying a macro permutes the from one state to another
 
 ## Bottom Up Algorithm
+
 Bottom up algorithm:
 Pick a face
 solve for the edges
@@ -174,7 +174,9 @@ of elements in $H$ must divide the number of elements in $G$.
 - The number of flipped edges is even.
 
 
-## A modified version of the Bottom Up Approach 
+# Algorithms
+
+## A Modified version of the Bottom Up Approach
 
 # Section 3 
 In this section we will present a summarized proof of our main theorem, namely, the Fundamental Theorem of Cubology.
