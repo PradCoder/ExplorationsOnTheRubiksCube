@@ -192,14 +192,16 @@ Begin with a cube in any configuration. We add a "+" mark to each cubicle, where
 
 For example:
 
-![An example of an orientation:](<Screenshot from 2024-03-08 11-03-50.png>)
+![An example of an orientation:](<Screenshot from 2024-03-08 11-03-50.png>){ height=200px }
+
 
 Then, we mark the remaining facets based on the primary facet. For an edge cubie, mark the sticker with a 0 
  if it is the primary facet, and mark the other sticker on the same cubie with a 1. For a corner cubie, mark the sticker in the primary facet with a 0 
 , and mark the other two stickers with 1
  and 2.
 
-![Updated marking with numbers of the previous orientation:](<Screenshot from 2024-03-08 11-07-22.png>)
+![Updated marking with numbers of the previous orientation:](<Screenshot from 2024-03-08 11-07-22.png>){ height=200px }
+
 
 We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_12$, $v \in \mathbb Z_8^{12}$ and $w \in \mathbb Z_2^{12}$
 
