@@ -126,6 +126,9 @@ is a multiset, then $|S|$ is the number of objects in S.
 
 
 # Rubiks Specicific Theorems
+## Cubies 
+
+
 ## Macros
 
 Macros are a set of instructions for solving a particular configurations of the cube, i.e. applying a macro permutes the from one state to another
