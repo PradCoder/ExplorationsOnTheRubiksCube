@@ -43,7 +43,6 @@ Main Main Theorem: The Fundamental Theorem of Cubology (plain language form)
 We state the theorems on parity,
 Lagrange's Theorem, 
 
-Theorem: The cube always has even parity, or an even number of cubies exchanged, and 0 is even.
 
 
 State the algorithms we get:
@@ -109,12 +108,9 @@ For any $x \in H$ there exists it's inverse $x^{-1} \in H$.
 
 
 ## Cayley Graph
-
-Definition of a Cayley graph:
-
 Let G be a group with generating
-set $\Gamma$. Then the Cayley graph of G with respect to $Γ$, denoted by
-$Cay(G, Γ)$, is constructed as follows:
+set $\Gamma$, then the Cayley graph of $G$ with respect to $\Gamma$, denoted by
+$Cay(G, \Gamma)$, is constructed as follows:
 
 1. The vertices Cay(G, $\Gamma$) are the elements of G.
 
