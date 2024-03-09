@@ -125,7 +125,7 @@ appears in the multiset is called the multiplicity of that element. If S
 is a multiset, then $|S|$ is the number of objects in S.
 
 
-# Rubiks Specicific Theorems
+# Rubiks Specific Theorems
 ## Cubies 
 
 
@@ -135,12 +135,11 @@ Macros are a set of instructions for solving a particular configurations of the 
 
 ## Bottom Up Algorithm
 
-Bottom up algorithm:
-Pick a face
-solve for the edges
-then solve corners
-Go down to the next layer solve for the edges (sisnce there are no corners)
-Go to the final layer, solve for the edge and solve corners
+- Pick a face
+- solve for the edges
+- then solve corners
+- Go down to the next layer solve for the edges (sisnce there are no corners)
+- Go to the final layer, solve for the edge and solve corners
 
 
 # Section 2
