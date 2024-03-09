@@ -144,7 +144,7 @@ Macros are a set of instructions for solving a particular configurations of the 
 
 # Section 2
 
-In this section, we will state the main theorem of our topic and any lemmas required to understand the theorem.
+In this section, we will state the main theorem of our topic and any lemmas required to understand the main theorem.
 
 ## Theorem on Parity
 
