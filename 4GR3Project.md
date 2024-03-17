@@ -3,16 +3,52 @@ title: MATH 4GR3 Project On Rubiks Cubes
 ---
 
 # Abstract
-In this project we discuss the motivation for the Rubiks cube
-Rubiks cube group (How we derive the group for modeling the cube), 
+
+The rubiks cube is perhap's the world's most famous puzzle, or certainly an iconic one at that. It is widely believed to have been first concieved by Hungarian Professor of Architecture Erno Rubik in an attempt to demonstrate 3-Dimensional Design, in Particular 3-Dimensional motion, to his students. He was also the first to come up with a solution to the puzzle (conceived after one month of inventing). Since it's rise to popularity, it has entertained the minds of many people, some of whom were mathematicians. It's first rigorous mathematical analysis was done by British-American Mathemetician David Singmaster, though solutions were known to a number of mathematicians by then (Such as J.H. Conway and Roger Penrose) [https://www.youtube.com/watch?v=DtYr_3h0Ubw]. 
+
+In this project we discuss the motivation to consider the Rubiks cube as a mathematical object, It's modelling, and as such the results that arise from it's modelling for instance the contruction of the Illegal Rubik's Cube Group, the subset of which is the Legal Rubik's Cube Group, which can be seen as a consequence of the fundamental theorems of Cubology (according to sources this varies). After the derivation and construction of the model with which we are working with we look into how to solve the rubik's cube. Note we are essentially considering only the 3x3x3 cube.
+
+# Attempting to Understand the Cube
+
+What is it that we are essentially trying to understand with the cube as it is presented? Well when we consider the appearance of the Rubik's cube
+Rubiks cube group (How we derive the group for modeling the cube), For starters take into account that the Rubik's cube is composed of 26 mechanical pieces (called cubies) held together, Furthermore we note we have 
+ - 8 corner cubies
+ - 12 edge cubies
+ - 6 Center cubies
+ - $9 \times 6 = 54$ Facets (small faces)
+ (Get a picture of the three type of faces)
+Note that regardless of motion the 6 center cubes stay fixed. We start counting the the possible configurations of the cubes.
+
+
+## Combinatorics
+
+We count the total number of configurations given the established types of cubies
+- There are 8 cubies, and hence 8! ways of arranging them
+- There are 12 edge cubies, and hence 12! ways of arranging those
+- There are 3 colors per each corner cubie, 3^{8} ways of arranging those
+- There are 2 colors per each edge cubie, 2^{12} ways of arranging those
+
+Multiplying these numbers together we get 
+$8!\cdot 12! \cdot 3^{8} \cdot 2^{12} = 519024039293878272000$
+This consists of the illegal arrangement of the elements in the Rubik's cube group.
+We will note how to construct the legal rubix cube group as a subset of this.
+
+## Notation
+
+The most popular set of notations are from Singmaster and we shall adopt them here
+
+- Let $U$ denote the upward (top) face.
+- Let $F$ denote the front face.
+- Let $L$ denote the left face.
+- Let $R$ denote the right face.
+- Let $B$ denote the back face.
+- Let $D$ denote the downward (bottom) face
+
+[Daniels project, Singmaster Notes]
+
+
+##
 https://faculty.etsu.edu/beelerr/rubik-talk2.pdf
-https://web.mit.edu/sp.268/www/rubik.pdf
-
-the general structure of the 3x3x3 rubiks cube (combinatorics of the group, legal moves in the group, solutions that are valid),
-
-http://math.fon.rs/files/DanielsProject58.pdf
-
-https://web.mit.edu/sp.268/www/rubik.pdf
 
 
 Algorithms on how to solve the cube (3x3x3),
@@ -23,9 +59,7 @@ https://arxiv.org/pdf/1106.5736.pdf
 
 https://digitalcommons.ric.edu/cgi/viewcontent.cgi?article=1164&context=honors_projects
 
-Implementations of the algorithms and discussion on how to do so effectively (optimization, computer algebra systems, computational geometry)
-
-https://doc.sagemath.org/html/en/reference/spkg/rubiks.html
+Implementations of the algorithms and discussion on how to do so effectively (optimization, computer algebra systems, computational geometry, maybe)
 
 Different types of rubix cubes and extensions to the algorithms ()
 https://www.puzzlemaster.ca/browse/cubepuzzle/?p=all
@@ -33,7 +67,10 @@ https://www.puzzlemaster.ca/browse/cubepuzzle/?p=all
 # How we meet Criteria
 
 1. The relevant definitions and results needed to state the main results. 
-Groups, Subgroups, Cayley Graphs, Macros
+Structures:
+    - Groups, Subgroups,Direct products, Semidirect Products, Wreath Products
+Representations:
+    - Cayley Graphs, Macros
 
 2. The statement of the main theorem(s) of your topic
 
@@ -42,9 +79,6 @@ Main Main Theorem: The Fundamental Theorem of Cubology (plain language form)
 
 We state the theorems on parity,
 Lagrange's Theorem, 
-
-Theorem: The cube always has even parity, or an even number of cubies exchanged, and 0 is even.
-
 
 State the algorithms we get:
 The bottom up solution 
@@ -77,6 +111,7 @@ State the papers and algorithms we worked on.
 
 In this section, we will state and define the relevant definitions and results required to state our main result(s).
 
+# Group Theory Related Defintions
 ## Group
 
 A group $(G, \star)$ is a set $G$ with a binary operation $\star: G \times G \rightarrow G$ defined on it such that:
@@ -108,12 +143,9 @@ For any $x \in H$ there exists it's inverse $x^{-1} \in H$.
 
 
 ## Cayley Graph
-
-Definition of a Cayley graph:
-
 Let G be a group with generating
-set $\Gamma$. Then the Cayley graph of G with respect to $Γ$, denoted by
-$Cay(G, Γ)$, is constructed as follows:
+set $\Gamma$, then the Cayley graph of $G$ with respect to $\Gamma$, denoted by
+$Cay(G, \Gamma)$, is constructed as follows:
 
 1. The vertices Cay(G, $\Gamma$) are the elements of G.
 
@@ -128,25 +160,28 @@ appears in the multiset is called the multiplicity of that element. If S
 is a multiset, then $|S|$ is the number of objects in S.
 
 
+# Rubiks Specific Theorems
+## Cubies 
+
 
 ## Macros
 
-
-
-
+Macros are a set of instructions for solving a particular configurations of the cube, i.e. applying a macro permutes the from one state to another
 
 ## Bottom Up Algorithm
-Bottom up algorithm:
-Pick a face
-solve for the edges
-then solve corners
-Go down to the next layer solve for the edges (sisnce there are no corners)
-Go to the final layer, solve for the edge and solve corners
+
+A general and quite commonly used Rubik's Cube Solution is solving a cube layer by layer:
+
+- Pick a face
+- solve for the edges
+- then solve corners
+- Go down to the next layer solve for the edges (sisnce there are no corners)
+- Go to the final layer, solve for the edge and solve corners
 
 
 # Section 2
 
-In this section, we will state the main theorem of our topic and any lemmas required to understand the theorem.
+In this section, we will state the main theorem of our topic and any lemmas required to understand the main theorem.
 
 ## Theorem on Parity
 
@@ -174,7 +209,9 @@ of elements in $H$ must divide the number of elements in $G$.
 - The number of flipped edges is even.
 
 
-## A modified version of the Bottom Up Approach 
+# Algorithms
+
+## A Modified version of the Bottom Up Approach
 
 # Section 3 
 In this section we will present a summarized proof of our main theorem, namely, the Fundamental Theorem of Cubology.
