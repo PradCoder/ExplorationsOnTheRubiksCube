@@ -22,6 +22,8 @@ Note that regardless of motion the 6 center cubes stay fixed. We start counting 
 
 ## Combinatorics
 
+[https://www.sfu.ca/~jtmulhol/math302/puzzles-rc-cubology.html, Daniels' project, Bandelow]
+
 We count the total number of configurations given the established types of cubies
 - There are 8 cubies, and hence 8! ways of arranging them
 - There are 12 edge cubies, and hence 12! ways of arranging those
@@ -33,6 +35,13 @@ $8!\cdot 12! \cdot 3^{8} \cdot 2^{12} = 519024039293878272000$
 This consists of the illegal arrangement of the elements in the Rubik's cube group.
 We will note how to construct the legal rubix cube group as a subset of this.
 
+## Construction of the illegal Rubix cube group
+[https://www.sfu.ca/~jtmulhol/math302/puzzles-rc-cubology.html]
+
+## Construction of the legal Rubik cube group
+[Daniel's project]
+
+We note that the rubik's cube group is a subset of $S_{54}$ as it provides $54$ facets with permutations.
 ## Notation
 
 The most popular set of notations are from Singmaster and we shall adopt them here
@@ -44,10 +53,10 @@ The most popular set of notations are from Singmaster and we shall adopt them he
 - Let $B$ denote the back face.
 - Let $D$ denote the downward (bottom) face
 
-[Daniels project, Singmaster Notes]
+[Daniels project, Singmaster Notes, Bandelow]
 
 
-##
+## Algorithms for solving the cube
 https://faculty.etsu.edu/beelerr/rubik-talk2.pdf
 
 
@@ -105,41 +114,6 @@ stabilizers, support
 6. A bibliography with at least five papers related to the topic.
 
 State the papers and algorithms we worked on.
-
-
-# Section 1
-
-In this section, we will state and define the relevant definitions and results required to state our main result(s).
-
-# Group Theory Related Defintions
-## Group
-
-A group $(G, \star)$ is a set $G$ with a binary operation $\star: G \times G \rightarrow G$ defined on it such that:
-
-### $\star$ is associative 
-Given $x,y,z \in G$
-$$(x \star y) \star z = x \star (y \star z)$$
-
-### Existence of an identity 
-In $G$ there exists an element $e$ such that 
-$$e \star x = x \star e = x$$
-
-### Existence of an inverse 
-For any $x \in G$ there exists an element $x^{-1}$ such that 
-$$x \star x^{-1} = x^{-1} \star x = e$$
-
-## Subgroup
-A subset $H$ of $G$ is a subgroup if and only if:
-
-### $H$ contains the identity of $G$ 
-Given $e_G \in G$ is the identity of $G$, then $e_G \in H$.
-
-### Closed under the operation of $G$ 
-Given $x,y \in H$, then 
-$x \star y \in H$
-
-### Existence of an inverse 
-For any $x \in H$ there exists it's inverse $x^{-1} \in H$.
 
 
 ## Cayley Graph
@@ -245,10 +219,15 @@ We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any config
 
 In this section we demonstrate which cubes are solvable and which ones aren't by applying the Fundamental Theorem of Cubology
 
-<!-- -Take a solvable cube as an example
+<!-- Take a solvable cube as an example -->
 
--Take a non-solvable cube as an example
- -->
+The types of solvable cubes
+
+<!--Take a non-solvable cube as an example -->
+
+Types of non-solvable cubes and explanation
+ https://speedcubeshop.ca/a/blog/unsolvable-rubiks-cubes
+
 # Section 5 
 
 In this section we discuss how the Fundamental Theorem of Cubology relates to the content covered in MATH 4GR3.
