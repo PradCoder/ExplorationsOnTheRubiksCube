@@ -43,7 +43,7 @@ We note that the rubik's cube group is a subset of $S_{54}$ as it provides $54$ 
 ## Construction of the legal Rubik cube group
 [Daniel's project]
 
-# Preliminaries
+### Preliminaries
 
 1. Direct products
 
@@ -62,7 +62,7 @@ The wreath products of two groups G and H is constructed by:
 The wreath product of G by H is a semi-direct product of a direct products of n copies
 of G by H.
 
-# Example of a wreath product: 
+### Example of a wreath product: 
 
 $G = \mathbb Z_2$, $H = S_3$, and $X = \{1,2,3\}$. The wreath product of G  by H is $\mathbb Z_2^3 \wr S_3$
 
@@ -72,6 +72,7 @@ $$\{(0,0,0)\sigma,(1,0,0)\sigma,(0,1,0)\sigma,(0,0,1)\sigma,(1,1,0)\sigma,(0,1,1
 
 Where $\sigma \in S_3$
 
+### Definition of an illegal rubik's group
 
 Unlike the legal Rubik's cube group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  However, we also notice that some orientations still will not be physically possible on the cube. We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
 
