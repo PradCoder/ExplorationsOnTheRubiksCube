@@ -107,10 +107,10 @@ of elements in $H$ must divide the number of elements in $G$.
 ## Second Fundamental Theorem of Cubology
 
 An operation of the cube is possible if and only if the following are satisfied:
-(1) The total number of edge and corner cycles of even length is even.
-(2) The number of corner cycles twisted right is equal to the number of corner cycles
+- The total number of edge and corner cycles of even length is even.
+- The number of corner cycles twisted right is equal to the number of corner cycles
 twisted left (up to modulo 3).
-(3) There is an even number of reorienting edge cycles.
+- There is an even number of reorienting edge cycles.
 
 ## Main Theorem: Fundamental Theorem of Cubology
 
