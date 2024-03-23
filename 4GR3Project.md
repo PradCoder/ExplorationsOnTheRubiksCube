@@ -35,17 +35,51 @@ $8!\cdot 12! \cdot 3^{8} \cdot 2^{12} = 519024039293878272000$
 This consists of the illegal arrangement of the elements in the Rubik's cube group.
 We will note how to construct the legal rubix cube group as a subset of this.
 
+We note that the rubik's cube group is a subset of $S_{54}$ as it provides $54$ facets with permutations.
+
 ## Construction of the illegal Rubix cube group
 [https://www.sfu.ca/~jtmulhol/math302/puzzles-rc-cubology.html]
 
 ## Construction of the legal Rubik cube group
 [Daniel's project]
 
-Unlike the legal Rubik's cube group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets. So we notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
+# Preliminaries
 
-<!-- To do this we need to define the wreath product?  -->
+1. Direct products
 
-We note that the rubik's cube group is a subset of $S_{54}$ as it provides $54$ facets with permutations.
+2. Semi-direct products
+
+3. Wreath products:
+
+The wreath products of two groups G and H is constructed by: 
+
+1. Write H as a permutation on n items
+
+2. Make n copies of the group G. $(G^n)$
+
+3. H acts on the copies of G by permuting the elements.
+
+The wreath product of G by H is a semi-direct product of a direct products of n copies
+of G by H.
+
+# Example of a wreath product: 
+
+$G = \mathbb Z_2$, $H = S_3$, and $X = \{1,2,3\}$. The wreath product of G  by H is $\mathbb Z_2^3 \wr S_3$
+
+So the elements of $\mathbb Z_2^3 \wr S_3$ are:
+
+$$\{(0,0,0)\sigma,(1,0,0)\sigma,(0,1,0)\sigma,(0,0,1)\sigma,(1,1,0)\sigma,(0,1,1)\sigma,(1,0,1)\sigma,(1,1,1)\sigma\}$$
+
+Where $\sigma \in S_3$
+
+
+Unlike the legal Rubik's cube group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  However, we also notice that some orientations still will not be physically possible on the cube. We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
+
+The illegal rubik's cube group is $I = (C^{12}_2 \wr 12) \times (C^8_3 \wr S_8)$
+
+
+
+
 ## Notation
 
 The most popular set of notations are from Singmaster and we shall adopt them here
@@ -147,13 +181,16 @@ A general and quite commonly used Rubik's Cube Solution is solving a cube layer 
 # Section 3 
 In this section we will present a summarized proof of our main theorem, namely, the Fundamental Theorem of Cubology.
 
-## Summarized Proof of the Fundamental Theorem of Cubology (group theory)
+## Summarized Proof of the Fundamental Theorem of Cubology
+
+We give a summary of the proofs we need,
+and the algorithms
 
 <!-- Begin with the cube in a solved state, and number the cube as such:
 
 ![The numbering in question:](<Screenshot from 2024-03-08 10-56-32.png>){ height=200px } -->
 
-<!-- Begin with a cube in any configuration. We add a "+" mark to each cubicle, where each cubicle can only have 1 of these "+" marks to 1 of their facets. There are a number of ways for doing this, so we will call the facet we mark for each cubicle the "primary facet".
+Begin with a cube in any configuration. We add a "+" mark to each cubicle, where each cubicle can only have 1 of these "+" marks to 1 of their facets. There are a number of ways for doing this, so we will call the facet we mark for each cubicle the "primary facet".
 
 For example:
 
@@ -168,10 +205,9 @@ Then, we mark the remaining facets based on the primary facet. For an edge cubie
 ![Updated marking with numbers of the previous orientation:](<Screenshot from 2024-03-08 11-07-22.png>)
 
 
-We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_12$, $v \in \mathbb Z_8^{12}$ and $w \in \mathbb Z_2^{12}$ -->
+We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_12$, $v \in \mathbb Z_8^{12}$ and $w \in \mathbb Z_2^{12}$
 
-## Summarized Proof of the Fundamental Theorem of Cubology
-
+## Summarized proof 
  The first thing to show is that the three conditions are necessary, that is, they hold for any legal configuration. To do this we just need to show that if the conditions are satisfied for a configuration, then they also hold for the configuration obtained from it by twising one of the six faces. This involves just looking at the six cases individually.
 
 Next we would need to show that if we had a configuration that satisfies the three conditions then the puzzle is solvable. Here is where our four basic moves come in handy. Let's recall them here for convenience. 
