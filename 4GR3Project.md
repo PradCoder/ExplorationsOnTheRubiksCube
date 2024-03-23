@@ -41,6 +41,10 @@ We will note how to construct the legal rubix cube group as a subset of this.
 ## Construction of the legal Rubik cube group
 [Daniel's project]
 
+Unlike the legal Rubik's cube group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets. So we notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
+
+<!-- To do this we need to define the wreath product?  -->
+
 We note that the rubik's cube group is a subset of $S_{54}$ as it provides $54$ facets with permutations.
 ## Notation
 
@@ -53,6 +57,8 @@ The most popular set of notations are from Singmaster and we shall adopt them he
 - Let $B$ denote the back face.
 - Let $D$ denote the downward (bottom) face
 
+$G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ is called rubik's cube group
+
 [Daniels project, Singmaster Notes, Bandelow]
 
 
@@ -61,7 +67,7 @@ The most popular set of notations are from Singmaster and we shall adopt them he
 ## Cayley Graph
 Let G be a group with generating
 set $\Gamma$, then the Cayley graph of $G$ with respect to $\Gamma$, denoted by
-$Cay(G, \Gamma)$, is constructed as follows:
+$Cay(G, \Gamma)$, is constructed as followsDaniels:
 
 1. The vertices Cay(G, $\Gamma$) are the elements of G.
 
