@@ -146,7 +146,7 @@ In this section we will present a summarized proof of our main theorem, namely, 
 
 ![The numbering in question:](<Screenshot from 2024-03-08 10-56-32.png>){ height=200px } -->
 
-Begin with a cube in any configuration. We add a "+" mark to each cubicle, where each cubicle can only have 1 of these "+" marks to 1 of their facets. There are a number of ways for doing this, so we will call the facet we mark for each cubicle the "primary facet".
+<!-- Begin with a cube in any configuration. We add a "+" mark to each cubicle, where each cubicle can only have 1 of these "+" marks to 1 of their facets. There are a number of ways for doing this, so we will call the facet we mark for each cubicle the "primary facet".
 
 For example:
 
@@ -161,7 +161,7 @@ Then, we mark the remaining facets based on the primary facet. For an edge cubie
 ![Updated marking with numbers of the previous orientation:](<Screenshot from 2024-03-08 11-07-22.png>)
 
 
-We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_12$, $v \in \mathbb Z_8^{12}$ and $w \in \mathbb Z_2^{12}$
+We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_12$, $v \in \mathbb Z_8^{12}$ and $w \in \mathbb Z_2^{12}$ -->
 
 ## Summarized Proof of the Fundamental Theorem of Cubology
 
