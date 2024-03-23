@@ -70,6 +70,7 @@ $Cay(G, \Gamma)$, is constructed as follows:
 3. The multiplicity (# of edges between 2 distinct vertices) of the edge ${v, w}$ in edge multiset $E$ is the
 multiplicity of $vw^{−1}$ in $Γ$.
 
+## Multiset
 A multiset is a collection of objects where items may appear in
 the collection more than once. The number of times that an object
 appears in the multiset is called the multiplicity of that element. If S
@@ -165,7 +166,15 @@ Then, we mark the remaining facets based on the primary facet. For an edge cubie
 
 We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_12$, $v \in \mathbb Z_8^{12}$ and $w \in \mathbb Z_2^{12}$
 
+## Summarized proof 
+ The first thing to show is that the three conditions are necessary, that is, they hold for any legal configuration. To do this we just need to show that if the conditions are satisfied for a configuration, then they also hold for the configuration obtained from it by twising one of the six faces. This involves just looking at the six cases individually.
 
+Next we would need to show that if we had a configuration that satisfies the three conditions then the puzzle is solvable. Here is where our four basic moves come in handy. Let's recall them here for convenience. 
+
+Since the corner and edge permutations have the same parity we can assume they are both even (otherwise twist any random face 90 degrees since this would multiply each by a 4-cycle which is odd). Since the corner permuation is even it is a product of 3-cycles, therefore the corners can be solved using 3-cycles. (We have a 3-cycle move that can be modified to cycle any 3 corner cubies on the puzzle.) Similarly, the edge permutation is even and can be solved using 3-cycles.
+
+Now all cubies are in their correct cubicles. We now have to orient them to solve the puzzle. Condition (b) says that the number of clockwise corner twists is equal to the number of counterclockwise corner twists modulo 3
+. So first twist any cw, ccw pairs into their solved positions. The result will be that all remaining corner twists will occur in triples: 3cw or 3ccw. These can be solved using our pairwise corner twisting moves. Finally, condition (c) says an even number of edges will be flipped. Luckily we have a move that will flip them in pairs. Therefore the puzzle can be solved. 
 # Section 4
 
 In this section we demonstrate which cubes are solvable and which ones aren't by applying the Fundamental Theorem of Cubology
