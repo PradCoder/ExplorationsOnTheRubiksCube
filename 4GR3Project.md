@@ -37,10 +37,9 @@ We will note how to construct the legal rubix cube group as a subset of this.
 
 We note that the rubik's cube group is a subset of $S_{54}$ as it provides $54$ facets with permutations.
 
-## Construction of the illegal Rubix cube group
-[https://www.sfu.ca/~jtmulhol/math302/puzzles-rc-cubology.html]
 
-## Construction of the legal Rubik cube group
+
+## Construction of the illegal Rubik cube group
 [Daniel's project]
 
 ### Preliminaries
@@ -78,9 +77,12 @@ Where $\sigma \in S_3$
 
 Unlike the legal Rubik's cube group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  However, we also notice that some orientations still will not be physically possible on the cube. We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
 
-The illegal rubik's cube group is $I = (C^{12}_2 \wr 12) \times (C^8_3 \wr S_8)$
+So from the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (C^{12}_2 \wr 12) \times (C^8_3 \wr S_8)$.
 
 
+
+## Construction of the legal Rubix cube group
+[https://www.sfu.ca/~jtmulhol/math302/puzzles-rc-cubology.html]
 
 
 
@@ -134,7 +136,15 @@ Now we notice that any of the eight corner cubes can occupy any of the corner cu
 
 So we can describe all the positions of the corner facets by $C^8_3 \wr S_8$
 
-### Edge cubes
+### Edge cubes 
+
+Every edge cube in the Rubik’s Cube consists of two facets,and there are 12 edge cube on the Rubik’s Cube. 
+
+So similar to the corner cubes, we can describe the orientations of the facets of edge cubes by: $C^{12}_2$.
+
+Since there are 12 edge cubes, and any edge cube could occupy any of the 12 positions. We can describe the permutation of the edge cubes by: $S_{12}$
+
+So we can describe all of the positions of the edge facets by: $C^{12}_2 \wr S_{12}$
 
 # Section 1
 
