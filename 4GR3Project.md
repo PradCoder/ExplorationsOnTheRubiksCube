@@ -183,6 +183,8 @@ Types of non-solvable cubes and explanation
 
 In this section we discuss how the Fundamental Theorem of Cubology relates to the content covered in MATH 4GR3.
 
+- Conjugation as a group action on the Rubik's Cube
+
 # Section 6
 
 In this section we list all of our references.
