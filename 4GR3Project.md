@@ -140,10 +140,7 @@ A general and quite commonly used Rubik's Cube Solution is solving a cube layer 
 # Section 3 
 In this section we will present a summarized proof of our main theorem, namely, the Fundamental Theorem of Cubology.
 
-## Summarized Proof of the Fundamental Theorem of Cubology
-
-We give a summary of the proofs we need,
-and the algorithms
+## Summarized Proof of the Fundamental Theorem of Cubology (group theory)
 
 <!-- Begin with the cube in a solved state, and number the cube as such:
 
@@ -166,7 +163,8 @@ Then, we mark the remaining facets based on the primary facet. For an edge cubie
 
 We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_12$, $v \in \mathbb Z_8^{12}$ and $w \in \mathbb Z_2^{12}$
 
-## Summarized proof 
+## Summarized Proof of the Fundamental Theorem of Cubology
+
  The first thing to show is that the three conditions are necessary, that is, they hold for any legal configuration. To do this we just need to show that if the conditions are satisfied for a configuration, then they also hold for the configuration obtained from it by twising one of the six faces. This involves just looking at the six cases individually.
 
 Next we would need to show that if we had a configuration that satisfies the three conditions then the puzzle is solvable. Here is where our four basic moves come in handy. Let's recall them here for convenience. 
