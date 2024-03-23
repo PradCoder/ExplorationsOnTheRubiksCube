@@ -98,11 +98,11 @@ The cube always has even parity, or an even number of cubies
 exchanged from the starting position.
 
 
-## Lagrange's Theorem 
+<!-- ## Lagrange's Theorem 
 
 Let G be a finite group and let H be a subgroup of G. Then
 $|G|/|H| = [G : H]$ is the number of distinct left cosets of H in G. In particular, the number
-of elements in $H$ must divide the number of elements in $G$.
+of elements in $H$ must divide the number of elements in $G$. -->
 
 ## Second Fundamental Theorem of Cubology
 
