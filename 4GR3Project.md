@@ -16,7 +16,7 @@ Rubiks cube group (How we derive the group for modeling the cube), For starters 
  - 12 edge cubies
  - 6 Center cubies
  - $9 \times 6 = 54$ Facets (small faces)
- (Get a picture of the three type of faces)
+ (Insert a picture of the three type of cubies -- ?)
 Note that regardless of motion the 6 center cubes stay fixed. We start counting the the possible configurations of the cubes.
 
 
@@ -78,8 +78,9 @@ is a multiset, then $|S|$ is the number of objects in S.
 
 
 # Rubiks Specific Theorems
-## Cubies 
+## Cubies
 
+# Section 1
 
 ## Macros
 
