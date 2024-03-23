@@ -56,23 +56,6 @@ The most popular set of notations are from Singmaster and we shall adopt them he
 [Daniels project, Singmaster Notes, Bandelow]
 
 
-## Algorithms for solving the cube
-https://faculty.etsu.edu/beelerr/rubik-talk2.pdf
-
-
-Algorithms on how to solve the cube (3x3x3),
-
-https://ruwix.com/the-rubiks-cube/how-to-solve-the-rubiks-cube-beginners-method/
-
-https://arxiv.org/pdf/1106.5736.pdf
-
-https://digitalcommons.ric.edu/cgi/viewcontent.cgi?article=1164&context=honors_projects
-
-Implementations of the algorithms and discussion on how to do so effectively (optimization, computer algebra systems, computational geometry, maybe)
-
-Different types of rubix cubes and extensions to the algorithms ()
-https://www.puzzlemaster.ca/browse/cubepuzzle/?p=all
-
 
 
 ## Cayley Graph
