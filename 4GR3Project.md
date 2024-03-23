@@ -97,7 +97,7 @@ The most popular set of notations are from Singmaster and we shall adopt them he
 - Let $B$ denote the back face.
 - Let $D$ denote the downward (bottom) face
 
-$G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ is called rubik's cube group
+$G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ is the called rubik's cube group, we see that $$
 
 [Daniels project, Singmaster Notes, Bandelow]
 
