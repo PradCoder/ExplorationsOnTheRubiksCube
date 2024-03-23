@@ -84,16 +84,6 @@ is a multiset, then $|S|$ is the number of objects in S.
 
 Macros are a set of instructions for solving a particular configurations of the cube, i.e. applying a macro permutes the from one state to another
 
-## Bottom Up Algorithm
-
-A general and quite commonly used Rubik's Cube Solution is solving a cube layer by layer:
-
-- Pick a face
-- solve for the edges
-- then solve corners
-- Go down to the next layer solve for the edges (sisnce there are no corners)
-- Go to the final layer, solve for the edge and solve corners
-
 
 # Section 2
 
@@ -128,6 +118,16 @@ of elements in $H$ must divide the number of elements in $G$.
 # Algorithms
 
 ## A Modified version of the Bottom Up Approach
+
+## Bottom Up Algorithm
+
+A general and quite commonly used Rubik's Cube Solution is solving a cube layer by layer:
+
+- Pick a face
+- solve for the edges
+- then solve corners
+- Go down to the next layer solve for the edges (sisnce there are no corners)
+- Go to the final layer, solve for the edge and solve corners
 
 # Section 3 
 In this section we will present a summarized proof of our main theorem, namely, the Fundamental Theorem of Cubology.
