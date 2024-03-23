@@ -45,9 +45,9 @@ We note that the rubik's cube group is a subset of $S_{54}$ as it provides $54$ 
 
 ### Preliminaries
 
-1. Direct products
+1. Direct products (External direct product)
 
-2. Semi-direct products
+2. Semi-direct products (Internal direct product)
 
 3. Wreath products:
 
@@ -61,6 +61,8 @@ The wreath products of two groups G and H is constructed by:
 
 The wreath product of G by H is a semi-direct product of a direct products of n copies
 of G by H.
+
+The wreath product permutes the factors of G according to the action h on X. So if $x \in G$, then the wreath product would take components of G and shuffle them around according to the action h on the set X.
 
 ### Example of a wreath product: 
 
@@ -77,6 +79,7 @@ Where $\sigma \in S_3$
 Unlike the legal Rubik's cube group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  However, we also notice that some orientations still will not be physically possible on the cube. We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
 
 The illegal rubik's cube group is $I = (C^{12}_2 \wr 12) \times (C^8_3 \wr S_8)$
+
 
 
 
@@ -120,6 +123,18 @@ is a multiset, then $|S|$ is the number of objects in S.
 
 # Rubiks Specific Theorems
 ## Cubies
+
+### Corner cubes
+
+Each corner cube consists of 3 facets. There are a total of 8 corner cubes on a Rubik's cube and each of the facets that comprise the corner cube lie on three different sides of the cube.
+
+So we can describe the orientation of the facets of corner cubes by: $C^8_3$
+
+Now we notice that any of the eight corner cubes can occupy any of the corner cube positions of the Rubik's cube. So we conclude that the possible arrangements of the corner cubes can be described by: $S_8$.
+
+So we can describe all the positions of the corner facets by $C^8_3 \wr S_8$
+
+### Edge cubes
 
 # Section 1
 
