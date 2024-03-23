@@ -73,47 +73,6 @@ Implementations of the algorithms and discussion on how to do so effectively (op
 Different types of rubix cubes and extensions to the algorithms ()
 https://www.puzzlemaster.ca/browse/cubepuzzle/?p=all
 
-# How we meet Criteria
-
-1. The relevant definitions and results needed to state the main results. 
-Structures:
-    - Groups, Subgroups,Direct products, Semidirect Products, Wreath Products
-Representations:
-    - Cayley Graphs, Macros
-
-2. The statement of the main theorem(s) of your topic
-
-https://www.sfu.ca/~jtmulhol/math302/puzzles-rc.html
-Main Main Theorem: The Fundamental Theorem of Cubology (plain language form)
-
-We state the theorems on parity,
-Lagrange's Theorem, 
-
-State the algorithms we get:
-The bottom up solution 
-
-3. A summary of the proof of the main theorem(s).
-
-We give a summary of the proofs we need,
-and the algorithms
-
-We give a summary on what is solvable
-what is not (some rubix cube puzzles are
-not solvabale)
-
-4. An example of the main theorem(s).
-
-A solution to an arangement (using one of the algortihms)u
-We give an example of a solvable cube(apply the algorithm), we also give an example of a non solvable cube. 
-
-5. A discussion of how this result relates to a topic discussed in the course. 
-
-Basic Group theory, orbits, commutators,
-stabilizers, support
-
-6. A bibliography with at least five papers related to the topic.
-
-State the papers and algorithms we worked on.
 
 
 ## Cayley Graph
