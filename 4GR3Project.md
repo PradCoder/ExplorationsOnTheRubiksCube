@@ -260,11 +260,15 @@ Types of non-solvable cubes and explanation
 
 A singular twisted corner is an impossible case to get on $3 \times 3$.
 
+As previously stated, the cube always has even parity. However, a corner twist is an odd permutation.
+
 ![Example of a corner twist](<Screenshot from 2024-03-24 08-41-47-1.png>)
 
  ## Swapped pieces
 
 Two edge pieces cannot be swapped, either adjacently or opposite on a $3 \times 3$ Rubik's cube. The same can be said for two corner pieces.
+
+Similar to the corner twist, swapped pieces produces odd permutations.
 
 ![Examples of swapped pieces](<Screenshot from 2024-03-24 08-42-10-1.png>)
 
