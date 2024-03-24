@@ -77,13 +77,22 @@ Where $\sigma \in S_3$
 
 Unlike the legal Rubik's cube group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  However, we also notice that some orientations still will not be physically possible on the cube. We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
 
-So from the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (C^{12}_2 \wr 12) \times (C^8_3 \wr S_8)$.
+So from the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (C^{12}_2 \wr S_{12}) \times (C^8_3 \wr S_8)$.
 
 
 
 ## Construction of the legal Rubix cube group
 [https://www.sfu.ca/~jtmulhol/math302/puzzles-rc-cubology.html]
-\
+^ Talk about this after the fundamental theorem of cubology?
+
+
+Again, the legal Rubik's cube group is a subset of the illegal Rubik's cube group.
+
+1. $1/2$ of the permutations of the edges and corners are possible since we require even permutations?
+
+2. $1/2$ of the orientations of the edges are possible since the number of flipped edges has to be even.
+
+3. $1/3$ of the corner orientations are possible. (Fundamental theorem of cubology b)
 
 
 ## Notation
@@ -231,7 +240,7 @@ Then, we mark the remaining facets based on the primary facet. For an edge cubie
 ![Updated marking with numbers of the previous orientation:](<Screenshot from 2024-03-08 11-07-22.png>)
 
 
-We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_12$, $v \in \mathbb Z_8^{12}$ and $w \in \mathbb Z_2^{12}$
+We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_{12}$, $v \in C_8^{12}$ and $w \in C_2^{12}$.
 
 ## Summarized proof 
  The first thing to show is that the three conditions are necessary, that is, they hold for any legal configuration. To do this we just need to show that if the conditions are satisfied for a configuration, then they also hold for the configuration obtained from it by twising one of the six faces. This involves just looking at the six cases individually.
