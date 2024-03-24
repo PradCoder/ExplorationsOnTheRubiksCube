@@ -83,7 +83,7 @@ So from the description of the corner and edge cubes, we can see that the illega
 
 ## Construction of the legal Rubix cube group
 [https://www.sfu.ca/~jtmulhol/math302/puzzles-rc-cubology.html]
-
+\
 
 
 ## Notation
@@ -254,6 +254,25 @@ The types of solvable cubes
 
 Types of non-solvable cubes and explanation
  https://speedcubeshop.ca/a/blog/unsolvable-rubiks-cubes
+
+
+ ## Corner twist
+
+A singular twisted corner is an impossible case to get on $3 \times 3$.
+
+![Example of a corner twist](<Screenshot from 2024-03-24 08-41-47-1.png>)
+
+ ## Swapped pieces
+
+Two edge pieces cannot be swapped, either adjacently or opposite on a $3 \times 3$ Rubik's cube. The same can be said for two corner pieces.
+
+![Examples of swapped pieces](<Screenshot from 2024-03-24 08-42-10-1.png>)
+
+ ## Multiples of the same color 
+
+ Multiples of the same color can appear incorrectly. These mistakes include two of the same color on a single edge or corner piece, or more than one center color on the cube, as each center has its own color.
+
+![Examples of multiple colors](<Screenshot from 2024-03-24 08-42-23-1.png>) 
 
 # Section 5 
 
