@@ -1,8 +1,8 @@
 # Fdb version 4
-["lualatex"] 1711367909 "/home/evo/4GR3Repository/cube_diagram.tex" "cube_diagram.pdf" "cube_diagram" 1711367910 0
+["lualatex"] 1711377550 "/home/evo/4GR3Repository/cube_diagram.tex" "cube_diagram.pdf" "cube_diagram" 1711377551 0
   "/home/evo/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1709816759 127314 bd974006b1a2c5a606f48a85e2df1fa0 ""
   "/home/evo/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1697722102 283030 041e34bd757e3acc22e85484a78fe3dc ""
-  "/home/evo/4GR3Repository/cube_diagram.tex" 1711367909 1683 c29bf11f2a6b888c8e3894f9d2bb18f2 ""
+  "/home/evo/4GR3Repository/cube_diagram.tex" 1711377550 4191 15a475d60b6bfe5274e1c7b48e3132b9 ""
   "/usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf" 1704400182 111536 ae9d1b331000d544f47e5223081b7b54 ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1704400182 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.lua" 1704400182 9447 5e9f52f1871707a5d27dea360afbe4cb ""
@@ -142,8 +142,8 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1704400182 13565 83bac25a8cf8630acccd6a7f8bb9f791 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1708604597 4483110 adb1e1d04498b9576f1f17c4219c5e03 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1708604584 11875075 d417dbb40f17d672275970003b270c17 ""
-  "cube_diagram.aux" 1711367910 32 3985256e7290058c681f74d7a3565a19 "lualatex"
-  "cube_diagram.tex" 1711367909 1683 c29bf11f2a6b888c8e3894f9d2bb18f2 ""
+  "cube_diagram.aux" 1711377551 32 3985256e7290058c681f74d7a3565a19 "lualatex"
+  "cube_diagram.tex" 1711377550 4191 15a475d60b6bfe5274e1c7b48e3132b9 ""
   (generated)
   "cube_diagram.aux"
   "cube_diagram.log"
