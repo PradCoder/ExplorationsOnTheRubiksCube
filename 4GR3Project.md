@@ -77,13 +77,22 @@ Where $\sigma \in S_3$
 
 Unlike the legal Rubik's cube group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  However, we also notice that some orientations still will not be physically possible on the cube. We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
 
-So from the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (C^{12}_2 \wr 12) \times (C^8_3 \wr S_8)$.
+So from the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (C^{12}_2 \wr S_{12}) \times (C^8_3 \wr S_8)$.
 
 
 
 ## Construction of the legal Rubix cube group
 [https://www.sfu.ca/~jtmulhol/math302/puzzles-rc-cubology.html]
+^ Talk about this after the fundamental theorem of cubology?
 
+
+Again, the legal Rubik's cube group is a subset of the illegal Rubik's cube group.
+
+1. $1/2$ of the permutations of the edges and corners are possible since we require even permutations?
+
+2. $1/2$ of the orientations of the edges are possible since the number of flipped edges has to be even.
+
+3. $1/3$ of the corner orientations are possible. (Fundamental theorem of cubology b)
 
 
 ## Notation
@@ -209,12 +218,9 @@ In this section we will present a summarized proof of our main theorem, namely, 
 
 ## Summarized Proof of the Fundamental Theorem of Cubology
 
-We give a summary of the proofs we need,
-and the algorithms
+<!-- Begin with the cube in a solved state, and number the cube as such:-->
 
-<!-- Begin with the cube in a solved state, and number the cube as such:
-
-![The numbering in question:](<Screenshot from 2024-03-08 10-56-32.png>){ height=200px } -->
+![The numbering in question:](<Screenshot from 2024-03-08 10-56-32.png>)
 
 Begin with a cube in any configuration. We add a "+" mark to each cubicle, where each cubicle can only have 1 of these "+" marks to 1 of their facets. There are a number of ways for doing this, so we will call the facet we mark for each cubicle the "primary facet".
 
@@ -231,7 +237,7 @@ Then, we mark the remaining facets based on the primary facet. For an edge cubie
 ![Updated marking with numbers of the previous orientation:](<Screenshot from 2024-03-08 11-07-22.png>)
 
 
-We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_12$, $v \in \mathbb Z_8^{12}$ and $w \in \mathbb Z_2^{12}$
+We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_{12}$, $v \in C_8^{12}$ and $w \in C_2^{12}$.
 
 ## Summarized proof 
  The first thing to show is that the three conditions are necessary, that is, they hold for any legal configuration. To do this we just need to show that if the conditions are satisfied for a configuration, then they also hold for the configuration obtained from it by twising one of the six faces. This involves just looking at the six cases individually.
@@ -254,6 +260,29 @@ The types of solvable cubes
 
 Types of non-solvable cubes and explanation
  https://speedcubeshop.ca/a/blog/unsolvable-rubiks-cubes
+
+
+ ## Corner twist
+
+A singular twisted corner is an impossible case to get on $3 \times 3$.
+
+As previously stated, the cube always has even parity. However, a corner twist is an odd permutation.
+
+![Example of a corner twist](<Screenshot from 2024-03-24 08-41-47-1.png>)
+
+ ## Swapped pieces
+
+Two edge pieces cannot be swapped, either adjacently or opposite on a $3 \times 3$ Rubik's cube. The same can be said for two corner pieces.
+
+Similar to the corner twist, swapped pieces produces odd permutations.
+
+![Examples of swapped pieces](<Screenshot from 2024-03-24 08-42-10-1.png>)
+
+ ## Multiples of the same color 
+
+ Multiples of the same color can appear incorrectly. These mistakes include two of the same color on a single edge or corner piece, or more than one center color on the cube, as each center has its own color.
+
+![Examples of multiple colors](<Screenshot from 2024-03-24 08-42-23-1.png>) 
 
 # Section 5 
 
