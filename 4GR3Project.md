@@ -218,9 +218,9 @@ In this section we will present a summarized proof of our main theorem, namely, 
 
 ## Summarized Proof of the Fundamental Theorem of Cubology
 
-<!-- Begin with the cube in a solved state, and number the cube as such:
+<!-- Begin with the cube in a solved state, and number the cube as such:-->
 
-![The numbering in question:](<Screenshot from 2024-03-08 10-56-32.png>){ height=200px } -->
+![The numbering in question:](<Screenshot from 2024-03-08 10-56-32.png>)
 
 Begin with a cube in any configuration. We add a "+" mark to each cubicle, where each cubicle can only have 1 of these "+" marks to 1 of their facets. There are a number of ways for doing this, so we will call the facet we mark for each cubicle the "primary facet".
 
