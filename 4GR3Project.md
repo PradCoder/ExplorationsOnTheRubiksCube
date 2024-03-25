@@ -262,11 +262,15 @@ Similar to the corner twist, swapped pieces produces odd permutations.
 
 ![Examples of swapped pieces](<Screenshot from 2024-03-24 08-42-10-1.png>)
 
- ## Multiples of the same color 
+<!--  ## Multiples of the same color 
 
  Multiples of the same color can appear incorrectly. These mistakes include two of the same color on a single edge or corner piece, or more than one center color on the cube, as each center has its own color.
 
-![Examples of multiple colors](<Screenshot from 2024-03-24 08-42-23-1.png>) 
+![Examples of multiple colors](<Screenshot from 2024-03-24 08-42-23-1.png>)  -->
+
+## Exactly one edge cubie is flipped
+
+## Exactly two corner cubies are twisted in the same direction.
 
 # Section 5 
 

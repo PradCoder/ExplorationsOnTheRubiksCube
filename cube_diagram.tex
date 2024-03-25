@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{3d}
+\begin{document}
+\pgfmathsetmacro\radius{0.1}
+\newcommand{\frontcolor}{red}
+\newcommand{\sidecolor}{blue}
+            \tdplotsetmaincoords{55}{135}
+            \begin{tikzpicture}
+                \clip (-3,-2.5) rectangle (3,2.5);
+                \begin{scope}[tdplot_main_coords]
+                    \filldraw [canvas is yz plane at x=1.5] (-1.5,-1.5) rectangle (1.5,1.5);
+                    \filldraw [canvas is xz plane at y=1.5] (-1.5,-1.5) rectangle (1.5,1.5);
+                    \filldraw [canvas is yx plane at z=1.5] (-1.5,-1.5) rectangle (1.5,1.5);
+                    \foreach \X in {-1.5,-0.5,0.5}{
+                        \foreach \Y in {-1.5,-0.5,0.5}{
+                            \draw [thick,canvas is yz plane at x=1.5,shift={(\X,\Y)},fill=\sidecolor] (0.5,0) -- ({1-\radius},0) arc (-90:0:\radius) -- (1,{1-\radius}) arc (0:90:\radius) -- (\radius,1) arc (90:180:\radius) -- (0,\radius) arc (180:270:\radius) -- cycle;
+                            \draw [thick,canvas is xz plane at y=1.5,shift={(\X,\Y)},fill=\frontcolor] (0.5,0) -- ({1-\radius},0) arc (-90:0:\radius) -- (1,{1-\radius}) arc (0:90:\radius) -- (\radius,1) arc (90:180:\radius) -- (0,\radius) arc (180:270:\radius) -- cycle;
+                            \draw [thick,canvas is yx plane at z=1.5,shift={(\X,\Y)},fill=yellow] (0.5,0) -- ({1-\radius},0) arc (-90:0:\radius) -- (1,{1-\radius}) arc (0:90:\radius) -- (\radius,1) arc (90:180:\radius) -- (0,\radius) arc (180:270:\radius) -- cycle;
+                        }
+                    }
+                \end{scope}
+            \end{tikzpicture}
+\end{document} 
