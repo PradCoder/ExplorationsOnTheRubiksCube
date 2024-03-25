@@ -218,9 +218,6 @@ In this section we will present a summarized proof of our main theorem, namely, 
 
 ## Summarized Proof of the Fundamental Theorem of Cubology
 
-We give a summary of the proofs we need,
-and the algorithms
-
 <!-- Begin with the cube in a solved state, and number the cube as such:
 
 ![The numbering in question:](<Screenshot from 2024-03-08 10-56-32.png>){ height=200px } -->
