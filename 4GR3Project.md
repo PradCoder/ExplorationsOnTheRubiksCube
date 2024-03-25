@@ -46,7 +46,16 @@ We note that the rubik's cube group is a subset of $S_{54}$ as it provides $54$ 
 
 1. Direct products (External direct product)
 
-2. Semi-direct products (Internal direct product)
+2. Semi-direct products:
+A Weaker version of an inner product where only one of the subgroups has to be normal
+**Theorem** Let $G$ be a group with subgroups $H$ and $K$ such that
+
+(1) $G = NH$
+
+(2) $N \cap H = e$
+
+(3) $N \triangleleft K$
+[keith conrad, semidirect products]
 
 3. Wreath products:
 
@@ -98,13 +107,17 @@ The capital letter represent a $90\degree$ turn clockwise facing that face. The 
 *Example*: The combunation of moves $UFR$ denotes a move consisting of $90\degree$ clowise turns done to the top, then front, and then the right face. The inverse of this is $R^{-1}F^{-1}U^{-1})$.
 
 ## The Rubiks cube Group
+[Daniels project, Singmaster Notes, Bandelow]
 
 Recall, that the rubiks cube consists of $54$ facets, and the entire set of arrangements of the rubiks cube can be thought of as permutations of these 54 facets. Hence we can denote $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ as the called rubik's cube group.
 
 Now note that not all arrangments of the permutations would lead to the valid arrangements of a rubik's cube, this group includes all cubes that can be taken apart and put together (the illegal rubiks' cube group), e.g. not pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube (the legal rubik's cube group).
 
 Note that it is the case that the corner facets can be modelled as the cyclic group of 3 elements $C_{3}$ and since there are 8 of theese we note it is the corss product of $C_{3}$ eight times. 
-[Daniels project, Singmaster Notes, Bandelow]
+
+Now, the possible arrangements of the corner cubes can be described using $S_{8}$ (since we are permuting those), which allows the postions of all the corner facets on the Rubik's Cube to be described as the group $C_{3}^{8} \wr S_{8}$.
+
+By a similar argument we see that the  position of all the edge facets on the Rubik's Cube can be described by the group $C_{2}^{2} \wr s_{12}$.
 
 ### Definition of an illegal rubik's group
 
@@ -117,9 +130,7 @@ So from the description of the corner and edge cubes, we can see that the illega
 ## Construction of the legal Rubix cube group
 [https://www.sfu.ca/~jtmulhol/math302/puzzles-rc-cubology.html]
 ^ Talk about this after the fundamental theorem of cubology?
-
-
-Again, the legal Rubik's cube group is a subset of the illegal Rubik's cube group.
+Attempting to derive the legal rubik's cube group requires the construction of the Fundamential Theorem of Cubology, and the second fundamental theorem of cubology
 
 <!-- ## Cayley Graph
 Let G be a group with generating
@@ -140,13 +151,7 @@ appears in the multiset is called the multiplicity of that element. If S
 is a multiset, then $|S|$ is the number of objects in S. -->
 
 
-# Rubiks Specific Theorems
-
-
-# Section 1
-
-
-# Section 2
+### Rubiks Specific Theorems
 
 In this section, we will state the main theorem of our topic and any lemmas required to understand the main theorem.
 
@@ -165,6 +170,33 @@ Let G be a finite group and let H be a subgroup of G. Then
 $|G|/|H| = [G : H]$ is the number of distinct left cosets of H in G. In particular, the number
 of elements in $H$ must divide the number of elements in $G$. -->
 
+## Main Theorem: Fundamental Theorem of Cubology
+A move sequence is possible if and only if the following three conditions are satisfied, we also state the group theoretic formulation:
+
+Note we are considering the following defintion of a postion of a facet of a cube:
+ A position vector $(\rho,\sigma,v,w) \in S_{8} \times S_{12} \times C_{3}^{8} \times C_{2}^{12}$
+-  The permutation of the corner cubies has the same parity as the permutation of the edge cubies 
+$\Leftrightarrow$ 
+$$\text{sign}(\rho) = \text{sign}(\sigma)$$
+
+-  The number of corners that are twisted clockwise is equal to the number that are twisted counterclockwise modulo $3$
+(meaning remaining corners twisted in the same direction occur in threes).
+$\Leftrightarrow$
+$$v_{1} + v_{2} +\dots +v_{8} = 0 (\text{mod } 3)$$
+- The number of flipped edges is even.
+$\Leftrightarrow$
+$$w_{1} + w_{2} +\dots +w_{12} = 0 (\text{mod } 2)$$
+
+## Summarized proof 
+ The first thing to show is that the three conditions are necessary, that is, they hold for any legal configuration. To do this we just need to show that if the conditions are satisfied for a configuration, then they also hold for the configuration obtained from it by twising one of the six faces. This involves just looking at the six cases individually.
+
+Next we would need to show that if we had a configuration that satisfies the three conditions then the puzzle is solvable. Here is where our four basic moves come in handy. Let's recall them here for convenience. 
+
+Since the corner and edge permutations have the same parity we can assume they are both even (otherwise twist any random face 90 degrees since this would multiply each by a 4-cycle which is odd). Since the corner permuation is even it is a product of 3-cycles, therefore the corners can be solved using 3-cycles. (We have a 3-cycle move that can be modified to cycle any 3 corner cubies on the puzzle.) Similarly, the edge permutation is even and can be solved using 3-cycles.
+
+Now all cubies are in their correct cubicles. We now have to orient them to solve the puzzle. Condition (b) says that the number of clockwise corner twists is equal to the number of counterclockwise corner twists modulo 3
+. So first twist any cw, ccw pairs into their solved positions. The result will be that all remaining corner twists will occur in triples: 3cw or 3ccw. These can be solved using our pairwise corner twisting moves. Finally, condition (c) says an even number of edges will be flipped. Luckily we have a move that will flip them in pairs. Therefore the puzzle can be solved. 
+
 ## Second Fundamental Theorem of Cubology
 
 An operation of the cube is possible if and only if the following are satisfied:
@@ -173,16 +205,10 @@ An operation of the cube is possible if and only if the following are satisfied:
 twisted left (up to modulo 3).
 - There is an even number of reorienting edge cycles.
 
-## Main Theorem: Fundamental Theorem of Cubology
+## Ultimate Result
+We can now effectively conclude that 
 
- A move sequence is possible if and only if the following three conditions are satisfied:
-
--  The permutation of the corner cubies has the same parity as the permutation of the edge cubies.
--  The number of corners that are twisted clockwise is equal to the number that are twisted counterclockwise modulo $3$
-(meaning remaining corners twisted in the same direction occur in threes).
-- The number of flipped edges is even.
-
-
+$RC$
 # Algorithms
 
 ## A Modified version of the Bottom Up Approach
@@ -223,15 +249,6 @@ Then, we mark the remaining facets based on the primary facet. For an edge cubie
 
 We notice that we can use a 4-tuple, $(\rho, \sigma,v,w)$ to describe any configuration of the cube. Where $\rho \in S_8$, $\sigma \in S_{12}$, $v \in C_8^{12}$ and $w \in C_2^{12}$.
 
-## Summarized proof 
- The first thing to show is that the three conditions are necessary, that is, they hold for any legal configuration. To do this we just need to show that if the conditions are satisfied for a configuration, then they also hold for the configuration obtained from it by twising one of the six faces. This involves just looking at the six cases individually.
-
-Next we would need to show that if we had a configuration that satisfies the three conditions then the puzzle is solvable. Here is where our four basic moves come in handy. Let's recall them here for convenience. 
-
-Since the corner and edge permutations have the same parity we can assume they are both even (otherwise twist any random face 90 degrees since this would multiply each by a 4-cycle which is odd). Since the corner permuation is even it is a product of 3-cycles, therefore the corners can be solved using 3-cycles. (We have a 3-cycle move that can be modified to cycle any 3 corner cubies on the puzzle.) Similarly, the edge permutation is even and can be solved using 3-cycles.
-
-Now all cubies are in their correct cubicles. We now have to orient them to solve the puzzle. Condition (b) says that the number of clockwise corner twists is equal to the number of counterclockwise corner twists modulo 3
-. So first twist any cw, ccw pairs into their solved positions. The result will be that all remaining corner twists will occur in triples: 3cw or 3ccw. These can be solved using our pairwise corner twisting moves. Finally, condition (c) says an even number of edges will be flipped. Luckily we have a move that will flip them in pairs. Therefore the puzzle can be solved. 
 # Section 4
 
 In this section we demonstrate which cubes are solvable and which ones aren't by applying the Fundamental Theorem of Cubology
