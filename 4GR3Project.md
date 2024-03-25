@@ -73,6 +73,39 @@ $$\{(0,0,0)\sigma,(1,0,0)\sigma,(0,1,0)\sigma,(0,0,1)\sigma,(1,1,0)\sigma,(0,1,1
 
 Where $\sigma \in S_3$
 
+1. $1/2$ of the permutations of the edges and corners are possible since we require even permutations?
+
+2. $1/2$ of the orientations of the edges are possible since the number of flipped edges has to be even.
+
+3. $1/3$ of the corner orientations are possible. (Fundamental theorem of cubology b)
+
+
+## Notation
+
+The most popular set of notations are from Singmaster and we shall adopt them here, note that we label the face with respect to it lying
+flat on a plane and one is facing front face)
+
+- Let $U$ denote the upward (top) face.
+- Let $F$ denote the front face.
+- Let $L$ denote the left face.
+- Let $R$ denote the right face.
+- Let $B$ denote the back face.
+- Let $D$ denote the downward (bottom) face
+(insert picture here)
+
+The capital letter represent a $90\degree$ turn clockwise facing that face. The inverse of each move would be the $90\degree$ rotation of the face counter-clockwise (denoted by a $M^{-1}$ in our adaptation where $M$ \in \{F,L,U,D,R,B \}$).
+
+*Example*: The combunation of moves $UFR$ denotes a move consisting of $90\degree$ clowise turns done to the top, then front, and then the right face. The inverse of this is $R^{-1}F^{-1}U^{-1})$.
+
+## The Rubiks cube Group
+
+Recall, that the rubiks cube consists of $54$ facets, and the entire set of arrangements of the rubiks cube can be thought of as permutations of these 54 facets. Hence we can denote $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ as the called rubik's cube group.
+
+Now note that not all arrangments of the permutations would lead to the valid arrangements of a rubik's cube, this group includes all cubes that can be taken apart and put together (the illegal rubiks' cube group), e.g. not pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube (the legal rubik's cube group).
+
+Note that it is the case that the corner facets can be modelled as the cyclic group of 3 elements $C_{3}$ and since there are 8 of theese we note it is the corss product of $C_{3}$ eight times. 
+[Daniels project, Singmaster Notes, Bandelow]
+
 ### Definition of an illegal rubik's group
 
 Unlike the legal Rubik's cube group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  However, we also notice that some orientations still will not be physically possible on the cube. We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
@@ -88,32 +121,7 @@ So from the description of the corner and edge cubes, we can see that the illega
 
 Again, the legal Rubik's cube group is a subset of the illegal Rubik's cube group.
 
-1. $1/2$ of the permutations of the edges and corners are possible since we require even permutations?
-
-2. $1/2$ of the orientations of the edges are possible since the number of flipped edges has to be even.
-
-3. $1/3$ of the corner orientations are possible. (Fundamental theorem of cubology b)
-
-
-## Notation
-
-The most popular set of notations are from Singmaster and we shall adopt them here
-
-- Let $U$ denote the upward (top) face.
-- Let $F$ denote the front face.
-- Let $L$ denote the left face.
-- Let $R$ denote the right face.
-- Let $B$ denote the back face.
-- Let $D$ denote the downward (bottom) face
-
-$G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ is the called rubik's cube group, we see that $$
-
-[Daniels project, Singmaster Notes, Bandelow]
-
-
-
-
-## Cayley Graph
+<!-- ## Cayley Graph
 Let G be a group with generating
 set $\Gamma$, then the Cayley graph of $G$ with respect to $\Gamma$, denoted by
 $Cay(G, \Gamma)$, is constructed as followsDaniels:
@@ -123,43 +131,19 @@ $Cay(G, \Gamma)$, is constructed as followsDaniels:
 2. Two vertices $v,w \in G$ are adjacent $\iff$ there exists a $\gamma \in \Gamma$ such that $v = w \gamma$, so $vw^{-1} \in \Gamma$
 
 3. The multiplicity (# of edges between 2 distinct vertices) of the edge ${v, w}$ in edge multiset $E$ is the
-multiplicity of $vw^{−1}$ in $Γ$.
+multiplicity of $vw^{−1}$ in $Γ$. -->
 
-## Multiset
+<!-- ## Multiset
 A multiset is a collection of objects where items may appear in
 the collection more than once. The number of times that an object
 appears in the multiset is called the multiplicity of that element. If S
-is a multiset, then $|S|$ is the number of objects in S.
+is a multiset, then $|S|$ is the number of objects in S. -->
 
 
 # Rubiks Specific Theorems
-## Cubies
 
-### Corner cubes
-
-Each corner cube consists of 3 facets. There are a total of 8 corner cubes on a Rubik's cube and each of the facets that comprise the corner cube lie on three different sides of the cube.
-
-So we can describe the orientation of the facets of corner cubes by: $C^8_3$
-
-Now we notice that any of the eight corner cubes can occupy any of the corner cube positions of the Rubik's cube. So we conclude that the possible arrangements of the corner cubes can be described by: $S_8$.
-
-So we can describe all the positions of the corner facets by $C^8_3 \wr S_8$
-
-### Edge cubes 
-
-Every edge cube in the Rubik’s Cube consists of two facets,and there are 12 edge cube on the Rubik’s Cube. 
-
-So similar to the corner cubes, we can describe the orientations of the facets of edge cubes by: $C^{12}_2$.
-
-Since there are 12 edge cubes, and any edge cube could occupy any of the 12 positions. We can describe the permutation of the edge cubes by: $S_{12}$
-
-So we can describe all of the positions of the edge facets by: $C^{12}_2 \wr S_{12}$
 
 # Section 1
-
-## Macros
-
-Macros are a set of instructions for solving a particular configurations of the cube, i.e. applying a macro permutes the from one state to another
 
 
 # Section 2
