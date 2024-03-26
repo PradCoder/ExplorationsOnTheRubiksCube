@@ -74,38 +74,30 @@
 
   \begin{block}{Abstract}
 
-    Some block contents, followed by a diagram, followed by a dummy paragraph.
+   % Some block contents, followed by a diagram, followed by a dummy paragraph.
 
-    \begin{figure}
-      \centering
-      \begin{tikzpicture}[scale=6]
-        \draw[step=0.25cm,color=gray] (-1,-1) grid (1,1);
-        \draw (1,0) -- (0.2,0.2) -- (0,1) -- (-0.2,0.2) -- (-1,0)
-          -- (-0.2,-0.2) -- (0,-1) -- (0.2,-0.2) -- cycle;
-      \end{tikzpicture}
-      \caption{A figure caption.}
-    \end{figure}
+%%    \begin{figure}
+%%      \centering
+%%      \begin{tikzpicture}[scale=6]
+%%        \draw[step=0.25cm,color=gray] (-1,-1) grid (1,1);
+%%        \draw (1,0) -- (0.2,0.2) -- (0,1) -- (-0.2,0.2) -- (-1,0)
+%%          -- (-0.2,-0.2) -- (0,-1) -- (0.2,-0.2) -- cycle;
+%%      \end{tikzpicture}
+%%      \caption{A figure caption.}
+  %%  \end{figure}
 
-    The rubiks cube is perhap's the world's most famous puzzle, 
-    or certainly an iconic one at that. It is widely believed 
-    to have been first concieved by Hungarian Professor of 
-    Architecture Erno Rubik in an attempt to demonstrate 
-    3-Dimensional Design, in Particular 3-Dimensional motion, 
-    to his students. He was also the first to come up with a 
-    solution to the puzzle (conceived after one month of inventing). 
-    Since it's rise to popularity, it has entertained the minds of 
-    many people, some of whom were mathematicians. It's first rigorous 
-    mathematical analysis was done by British-American Mathemetician 
+    The rubiks cube is perhaps the world's most famous puzzle. 
+    The first rigorous 
+    mathematical analysis of a Rubik's Cube was done by British-American Mathemetician 
     David Singmaster, though solutions were known to a number of 
-    mathematicians by then (Such as J.H. Conway and Roger Penrose) 
-    (1). In this project 
+    mathematicians at the time (Such as J.H. Conway and Roger Penrose). 
+    In this project 
     we discuss the motivation to consider the Rubiks cube 
-    as a mathematical object, It's modelling, and as such the 
-    results that arise from it's modelling for instance the 
-    contruction of the Illegal Rubik's Cube Group, the 
-    subset of which is the Legal Rubik's Cube Group, which 
-    can be seen as a consequence of the fundamental theorems 
-    of Cubology (according to sources this varies). After the 
+    as a mathematical object, its modelling and the associated 
+    results that arise from its modelling; for example, the 
+    contruction of the legal Rubik's Cube Group, a
+    subset of the Illegal Rubik's Cube Group. 
+    After the 
     derivation and construction of the model with which we are 
     working with we look into how to solve the rubik's cube. 
     Note we are essentially considering only the 3x3x3 cube.
@@ -128,6 +120,36 @@
   \end{block}
 
   \begin{alertblock}{Useful Definitions}
+
+
+    \begin{itemize}
+      
+  \item  \textbf{Semi-direct products:}
+     Let $G$ be a group with subgroups $H$ and $K$ such that
+
+      (1) $G = NH$
+
+      (2) $N \cap H = e$
+
+      (3) $N \triangleleft K$
+        [keith conrad, semidirect products]
+
+\item  \textbf{Wreath products:}
+
+The wreath products of two groups $G$ and $H$ is constructed by: 
+
+1. Write $H$ as a permutation on $n$ items
+
+2. Make $n$ copies of the group $G$. $(G^n)$
+
+3. $H$ acts on the copies of $G$ by permuting the elements.
+
+The wreath product of $G$ by $H$ is a semi-direct product of a direct products of $n$ copies
+of $G$ by $H$.
+
+The wreath product permutes the factors of G according to the action h on X. So if $x \in G$, then the wreath product would take components of G and shuffle them around according to the action h on the set X.
+
+    \end{itemize}
 
     This block catches your eye, so \textbf{important stuff} should probably go
     here.
@@ -183,29 +205,27 @@
 
   \begin{block}{Unsolvable Cubes}
 
-    Et rutrum ex euismod vel. Pellentesque ultricies, velit in fermentum
-    vestibulum, lectus nisi pretium nibh, sit amet aliquam lectus augue vel
-    velit. Suspendisse rhoncus massa porttitor augue feugiat molestie. Sed
-    molestie ut orci nec malesuada. Sed ultricies feugiat est fringilla
-    posuere.
+    These cubes are unsolvable since they involve odd permutations.
 
-    \begin{figure}
-      \centering
-      \begin{tikzpicture}
-        \begin{axis}[
-            scale only axis,
-            no markers,
-            domain=0:2*pi,
-            samples=100,
-            axis lines=center,
-            axis line style={-},
-            ticks=none]
-          \addplot[red] {sin(deg(x))};
-          \addplot[blue] {cos(deg(x))};
-        \end{axis}
-      \end{tikzpicture}
-      \caption{Another figure caption.}
-    \end{figure}
+    \begin{enumerate}
+      
+      \item \textbf{Exactly one edge cubie is flipped}, egestas at vehicula et, convallis
+        accumsan orci. Orci varius natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus.
+      \item \textbf{Corner twist}. Aliquam blandit nec
+        massa ac sollicitudin. Curabitur cursus, metus nec imperdiet bibendum,
+        velit lectus faucibus dolor, quis gravida metus mauris gravida turpis.
+      \item \textbf{Swapped pieces}. Phasellus fermentum augue non
+        nulla accumsan, non rhoncus lectus condimentum.
+
+      \item \textbf{One edge piece is flipped}
+    \end{enumerate}
+
+    % \begin{figure}
+    %   \centering
+    %   \includegraphics{Screenshot from 2024-03-24 08-41-47-1.png}
+    %   \caption{Corner twist}
+    % \end{figure}
 
   \end{block}
 

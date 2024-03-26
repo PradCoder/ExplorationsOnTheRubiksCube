@@ -294,7 +294,9 @@ Similar to the corner twist, swapped pieces produces odd permutations.
 
 ## Exactly one edge cubie is flipped *
 
-## Exactly two corner cubies are twisted in the same direction *
+![Example of cube with one edge flipped](<Screenshot from 2024-03-26 11-14-42-1.png>)
+
+
 
 # Section 5 
 
