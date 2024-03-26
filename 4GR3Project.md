@@ -211,9 +211,10 @@ twisted left (up to modulo 3).
 - There is an even number of reorienting edge cycles.
 
 ## Ultimate Result *
-We can now effectively conclude that 
+We can now effectively conclude that, 
+$RC_{3} \cong (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12})\subset (C_{3}^{7} \wr S_{8}) \times (C_{2}^{11} \wr S_{12}) \subset RC_{3}^{*} \cong C_{2}^{12} \times S_{8} \times C_{3}^{8} \times S_{8} \times S_{8}\subset S_{54}$ 
 
-$RC \approx (C_{3}^{7} \wr S_{8}) \times (C_{2}^{11} \wr S_{12})$
+$RC_{3} \cong (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12})$
 
 # Algorithms
 
