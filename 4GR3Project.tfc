@@ -1,0 +1,396 @@
+<h1 id="abstract">Abstract *</h1>
+<p>The rubiks cube is perhap’s the world’s most famous puzzle, or
+certainly an iconic one at that. It is widely believed to have been
+first concieved by Hungarian Professor of Architecture Erno Rubik in an
+attempt to demonstrate 3-Dimensional Design, in Particular 3-Dimensional
+motion, to his students. He was also the first to come up with a
+solution to the puzzle (conceived after one month of inventing). Since
+it’s rise to popularity, it has entertained the minds of many people,
+some of whom were mathematicians. It’s first rigorous mathematical
+analysis was done by British-American Mathemetician David Singmaster,
+though solutions were known to a number of mathematicians by then (Such
+as J.H. Conway and Roger Penrose)
+[https://www.youtube.com/watch?v=DtYr_3h0Ubw].</p>
+<p>In this project we discuss the motivation to consider the Rubiks cube
+as a mathematical object, It’s modelling, and as such the results that
+arise from it’s modelling for instance the contruction of the Illegal
+Rubik’s Cube Group, the subset of which is the Legal Rubik’s Cube Group,
+which can be seen as a consequence of the fundamental theorems of
+Cubology (according to sources this varies). After the derivation and
+construction of the model with which we are working with we look into
+how to solve the rubik’s cube. Note we are essentially considering only
+the 3x3x3 cube.</p>
+<h1 id="attempting-to-understand-the-cube">Attempting to Understand the
+Cube *</h1>
+<p>What is it that we are essentially trying to understand with the cube
+as it is presented? Well when we consider the appearance of the Rubik’s
+cube Rubiks cube group (How we derive the group for modeling the cube),
+For starters take into account that the Rubik’s cube is composed of 26
+mechanical pieces (called cubies) held together, Furthermore we note we
+have - 8 corner cubies - 12 edge cubies - 6 Center cubies - <span
+class="math inline">9 × 6 = 54</span> Facets (small faces) (Insert a
+picture of the three type of cubies – ?) Note that regardless of motion
+the 6 center cubes stay fixed. We start counting the the possible
+configurations of the cubes.</p>
+<h2 id="combinatorics">Combinatorics *</h2>
+<p>[https://www.sfu.ca/~jtmulhol/math302/puzzles-rc-cubology.html,
+Daniels’ project, Bandelow]</p>
+<p>We count the total number of configurations given the established
+types of cubies - There are 8 cubies, and hence 8! ways of arranging
+them - There are 12 edge cubies, and hence 12! ways of arranging those -
+There are 3 colors per each corner cubie, 3^{8} ways of arranging those
+- There are 2 colors per each edge cubie, 2^{12} ways of arranging
+those</p>
+<p>Multiplying these numbers together we get <span
+class="math inline">8! ⋅ 12! ⋅ 3<sup>8</sup> ⋅ 2<sup>12</sup> = 519024039293878272000</span>
+This consists of the illegal arrangement of the elements in the Rubik’s
+cube group. We will note how to construct the legal rubix cube group as
+a subset of this.</p>
+<p>We note that the rubik’s cube group is a subset of <span
+class="math inline"><em>S</em><sub>54</sub></span> as it provides <span
+class="math inline">54</span> facets with permutations.</p>
+<h2 id="construction-of-the-illegal-rubik-cube-group">Construction of
+the illegal Rubik cube group</h2>
+<p>[Daniel’s project]</p>
+<h3 id="preliminaries">Preliminaries</h3>
+<ol type="1">
+<li><p>Direct products (External direct product)</p></li>
+<li><p>Semi-direct products:</p></li>
+</ol>
+<p>A Weaker version of an inner product where only one of the subgroups
+has to be normal</p>
+<p><strong>Theorem</strong> Let <span
+class="math inline"><em>G</em></span> be a group with subgroups <span
+class="math inline"><em>H</em></span> and <span
+class="math inline"><em>K</em></span> such that</p>
+<ol type="1">
+<li><p><span
+class="math inline"><em>G</em> = <em>N</em><em>H</em></span></p></li>
+<li><p><span
+class="math inline"><em>N</em> ∩ <em>H</em> = <em>e</em></span></p></li>
+<li><p><span class="math inline"><em>N</em> ⊲ <em>K</em></span> [keith
+conrad, semidirect products]</p></li>
+</ol>
+<ol start="3" type="1">
+<li>Wreath products:</li>
+</ol>
+<p>The wreath products of two groups G and H is constructed by:</p>
+<ol type="1">
+<li><p>Write H as a permutation on n items</p></li>
+<li><p>Make n copies of the group G. <span
+class="math inline">(<em>G</em><sup><em>n</em></sup>)</span></p></li>
+<li><p>H acts on the copies of G by permuting the elements.</p></li>
+</ol>
+<p>The wreath product of G by H is a semi-direct product of a direct
+products of n copies of G by H.</p>
+<p>The wreath product permutes the factors of G according to the action
+h on X. So if <span class="math inline"><em>x</em> ∈ <em>G</em></span>,
+then the wreath product would take components of G and shuffle them
+around according to the action h on the set X.</p>
+<h3 id="example-of-a-wreath-product">Example of a wreath product: *</h3>
+<p><span class="math inline"><em>G</em> = ℤ<sub>2</sub></span>, <span
+class="math inline"><em>H</em> = <em>S</em><sub>3</sub></span>, and
+<span class="math inline"><em>X</em> = {1, 2, 3}</span>. The wreath
+product of G by H is <span
+class="math inline">ℤ<sub>2</sub><sup>3</sup>≀<em>S</em><sub>3</sub></span></p>
+<p>So the elements of <span
+class="math inline">ℤ<sub>2</sub><sup>3</sup>≀<em>S</em><sub>3</sub></span>
+are:</p>
+<p><span
+class="math display">{(0,0,0)<em>σ</em>, (1,0,0)<em>σ</em>, (0,1,0)<em>σ</em>, (0,0,1)<em>σ</em>, (1,1,0)<em>σ</em>, (0,1,1)<em>σ</em>, (1,0,1)<em>σ</em>, (1,1,1)<em>σ</em>}</span></p>
+<p>Where <span
+class="math inline"><em>σ</em> ∈ <em>S</em><sub>3</sub></span></p>
+<ol type="1">
+<li><p><span class="math inline">1/2</span> of the permutations of the
+edges and corners are possible since we require even
+permutations?</p></li>
+<li><p><span class="math inline">1/2</span> of the orientations of the
+edges are possible since the number of flipped edges has to be
+even.</p></li>
+<li><p><span class="math inline">1/3</span> of the corner orientations
+are possible. (Fundamental theorem of cubology b)</p></li>
+</ol>
+<h2 id="position-vectors">Position Vectors</h2>
+<p>For a given configuration of a Rubik’s Cube there exists a <span
+class="math inline">4</span> tuple <span
+class="math inline">(<em>ρ</em>,<em>σ</em>,<em>v</em>,<em>w</em>))</span>
+where <span
+class="math inline"><em>ρ</em> ∈ <em>S</em><sub>8</sub>, <em>σ</em> ∈ <em>S</em><sub>12</sub></span>
+describe the permutations of the cubies and <span
+class="math inline"><em>v</em> ∈ ℤ<sub>3</sub><sup>8</sup>, <em>w</em> ∈ ℤ<sub>2</sub><sup>12</sup></span>
+describe the orientations of the cubies.</p>
+<h2 id="notation">Notation *</h2>
+<p>The most popular set of notations are from Singmaster and we shall
+adopt them here, note that we label the face with respect to it lying
+flat on a plane and one is facing front face)</p>
+<ul>
+<li>Let <span class="math inline"><em>U</em></span> denote the upward
+(top) face.</li>
+<li>Let <span class="math inline"><em>F</em></span> denote the front
+face.</li>
+<li>Let <span class="math inline"><em>L</em></span> denote the left
+face.</li>
+<li>Let <span class="math inline"><em>R</em></span> denote the right
+face.</li>
+<li>Let <span class="math inline"><em>B</em></span> denote the back
+face.</li>
+<li>Let <span class="math inline"><em>D</em></span> denote the downward
+(bottom) face (insert picture here)</li>
+</ul>
+<p>The capital letter represent a <span
+class="math inline">$90\degree$</span> turn clockwise facing that face.
+The inverse of each move would be the <span
+class="math inline">$90\degree$</span> rotation of the face
+counter-clockwise (denoted by a <span
+class="math inline"><em>M</em><sup>−1</sup></span> in our adaptation
+where <span class="math inline"><em>M</em></span> {F,L,U,D,R,B }$).</p>
+<p><em>Example</em>: The combunation of moves <span
+class="math inline"><em>U</em><em>F</em><em>R</em></span> denotes a move
+consisting of <span class="math inline">$90\degree$</span> clowise turns
+done to the top, then front, and then the right face. The inverse of
+this is <span
+class="math inline"><em>R</em><sup>−1</sup><em>F</em><sup>−1</sup><em>U</em><sup>−1</sup>)</span>.</p>
+<h2 id="the-rubiks-cube-group">The Rubiks cube Group *</h2>
+<p>[Daniels project, Singmaster Notes, Bandelow]</p>
+<p>Recall, that the rubiks cube consists of <span
+class="math inline">54</span> facets, and the entire set of arrangements
+of the rubiks cube can be thought of as permutations of these 54 facets.
+Hence we can denote <span
+class="math inline"><em>G</em> = ⟨<em>F</em>, <em>L</em>, <em>U</em>, <em>D</em>, <em>R</em>, <em>B</em>⟩ ⊂ <em>S</em><sub>54</sub></span>
+as the called rubik’s cube group.</p>
+<p>Now note that not all arrangments of the permutations would lead to
+the valid arrangements of a rubik’s cube, this group includes all cubes
+that can be taken apart and put together (the illegal rubiks’ cube
+group), e.g. not pieces can alternate between being either corner and
+edge cubies, and those that can be reached by applying moves on the cube
+(the legal rubik’s cube group).</p>
+<p>Note that it is the case that the corner facets can be modelled as
+the cyclic group of 3 elements <span
+class="math inline"><em>C</em><sub>3</sub></span> and since there are 8
+of theese we note it is the corss product of <span
+class="math inline"><em>C</em><sub>3</sub></span> eight times.</p>
+<p>Now, the possible arrangements of the corner cubes can be described
+using <span class="math inline"><em>S</em><sub>8</sub></span> (since we
+are permuting those), which allows the postions of all the corner facets
+on the Rubik’s Cube to be described as the group <span
+class="math inline"><em>C</em><sub>3</sub><sup>8</sup>≀<em>S</em><sub>8</sub></span>.</p>
+<p>By a similar argument we see that the position of all the edge facets
+on the Rubik’s Cube can be described by the group <span
+class="math inline"><em>C</em><sub>2</sub><sup>2</sup>≀<em>s</em><sub>12</sub></span>.</p>
+<h3 id="definition-of-an-illegal-rubiks-group">Definition of an illegal
+rubik’s group *</h3>
+<p>Unlike the legal Rubik’s cube group, the Illegal Rubik’s Cube Group
+allows the solver to take the cube apart and rearrange the facets.
+However, we also notice that some orientations still will not be
+physically possible on the cube. We also notice that the Rubik’s cube
+group is a subgroup of the illegal rubik’s cube group.</p>
+<p>So from the description of the corner and edge cubes, we can see that
+the illegal rubik’s cube group is <span
+class="math inline"><em>I</em> = (<em>C</em><sub>2</sub><sup>12</sup>≀<em>S</em><sub>12</sub>) × (<em>C</em><sub>3</sub><sup>8</sup>≀<em>S</em><sub>8</sub>)</span>.</p>
+<h2 id="construction-of-the-legal-rubix-cube-group">Construction of the
+legal Rubix cube group *</h2>
+<p>[https://www.sfu.ca/~jtmulhol/math302/puzzles-rc-cubology.html] ^
+Talk about this after the fundamental theorem of cubology? Attempting to
+derive the legal rubik’s cube group requires the construction of the
+Fundamential Theorem of Cubology, and the second fundamental theorem of
+cubology</p>
+<!-- ## Cayley Graph
+Let G be a group with generating
+set $\Gamma$, then the Cayley graph of $G$ with respect to $\Gamma$, denoted by
+$Cay(G, \Gamma)$, is constructed as followsDaniels:
+
+1. The vertices Cay(G, $\Gamma$) are the elements of G.
+
+2. Two vertices $v,w \in G$ are adjacent $\iff$ there exists a $\gamma \in \Gamma$ such that $v = w \gamma$, so $vw^{-1} \in \Gamma$
+
+3. The multiplicity (# of edges between 2 distinct vertices) of the edge ${v, w}$ in edge multiset $E$ is the
+multiplicity of $vw^{−1}$ in $Γ$. -->
+<!-- ## Multiset
+A multiset is a collection of objects where items may appear in
+the collection more than once. The number of times that an object
+appears in the multiset is called the multiplicity of that element. If S
+is a multiset, then $|S|$ is the number of objects in S. -->
+<h3 id="rubiks-specific-theorems">Rubiks Specific Theorems *</h3>
+<p>In this section, we will state the main theorem of our topic and any
+lemmas required to understand the main theorem.</p>
+<h2 id="theorem-on-parity">Theorem on Parity</h2>
+<p>Permutations can also be described in terms of their parity. Any
+length n cycle of a permutation can be expressed as the product of
+2-cycles.</p>
+<p>The cube always has even parity, or an even number of cubies
+exchanged from the starting position.</p>
+<!-- ## Lagrange's Theorem 
+
+Let G be a finite group and let H be a subgroup of G. Then
+$|G|/|H| = [G : H]$ is the number of distinct left cosets of H in G. In particular, the number
+of elements in $H$ must divide the number of elements in $G$. -->
+<h2 id="main-theorem-fundamental-theorem-of-cubology">Main Theorem:
+Fundamental Theorem of Cubology *</h2>
+<p>A move sequence is possible if and only if the following three
+conditions are satisfied, we also state the group theoretic
+formulation:</p>
+<p>Note we are considering the following defintion of a postion of a
+facet of a cube: A position vector <span
+class="math inline">(<em>ρ</em>,<em>σ</em>,<em>v</em>,<em>w</em>) ∈ <em>S</em><sub>8</sub> × <em>S</em><sub>12</sub> × <em>C</em><sub>3</sub><sup>8</sup> × <em>C</em><sub>2</sub><sup>12</sup></span>
+- The permutation of the corner cubies has the same parity as the
+permutation of the edge cubies <span class="math inline">⇔</span> <span
+class="math display">sign(<em>ρ</em>) = sign(<em>σ</em>)</span></p>
+<ul>
+<li>The number of corners that are twisted clockwise is equal to the
+number that are twisted counterclockwise modulo <span
+class="math inline">3</span> (meaning remaining corners twisted in the
+same direction occur in threes). <span class="math inline">⇔</span>
+<span
+class="math display"><em>v</em><sub>1</sub> + <em>v</em><sub>2</sub> + … + <em>v</em><sub>8</sub> = 0(mod
+3)</span></li>
+<li>The number of flipped edges is even. <span
+class="math inline">⇔</span> <span
+class="math display"><em>w</em><sub>1</sub> + <em>w</em><sub>2</sub> + … + <em>w</em><sub>12</sub> = 0(mod
+2)</span></li>
+</ul>
+<h2 id="summarized-proof">Summarized proof ?</h2>
+<p>The first thing to show is that the three conditions are necessary,
+that is, they hold for any legal configuration. To do this we just need
+to show that if the conditions are satisfied for a configuration, then
+they also hold for the configuration obtained from it by twising one of
+the six faces. This involves just looking at the six cases
+individually.</p>
+<p>Next we would need to show that if we had a configuration that
+satisfies the three conditions then the puzzle is solvable. Here is
+where our four basic moves come in handy. Let’s recall them here for
+convenience.</p>
+<p>Since the corner and edge permutations have the same parity we can
+assume they are both even (otherwise twist any random face 90 degrees
+since this would multiply each by a 4-cycle which is odd). Since the
+corner permuation is even it is a product of 3-cycles, therefore the
+corners can be solved using 3-cycles. (We have a 3-cycle move that can
+be modified to cycle any 3 corner cubies on the puzzle.) Similarly, the
+edge permutation is even and can be solved using 3-cycles.</p>
+<p>Now all cubies are in their correct cubicles. We now have to orient
+them to solve the puzzle. Condition (b) says that the number of
+clockwise corner twists is equal to the number of counterclockwise
+corner twists modulo 3 . So first twist any cw, ccw pairs into their
+solved positions. The result will be that all remaining corner twists
+will occur in triples: 3cw or 3ccw. These can be solved using our
+pairwise corner twisting moves. Finally, condition (c) says an even
+number of edges will be flipped. Luckily we have a move that will flip
+them in pairs. Therefore the puzzle can be solved.</p>
+<h2 id="second-fundamental-theorem-of-cubology">Second Fundamental
+Theorem of Cubology *</h2>
+<p>An operation of the cube is possible if and only if the following are
+satisfied: - The total number of edge and corner cycles of even length
+is even. - The number of corner cycles twisted right is equal to the
+number of corner cycles twisted left (up to modulo 3). - There is an
+even number of reorienting edge cycles.</p>
+<h2 id="ultimate-result">Ultimate Result *</h2>
+<p>We can now effectively conclude that</p>
+<p><span
+class="math inline"><em>R</em><em>C</em> ≈ (<em>C</em><sub>3</sub><sup>7</sup>≀<em>S</em><sub>8</sub>) × (<em>C</em><sub>2</sub><sup>11</sup>≀<em>S</em><sub>12</sub>)</span></p>
+<h1 id="algorithms">Algorithms</h1>
+<h2 id="a-modified-version-of-the-bottom-up-approach">A Modified version
+of the Bottom Up Approach</h2>
+<h2 id="bottom-up-algorithm">Bottom Up Algorithm</h2>
+<p>A general and quite commonly used Rubik’s Cube Solution is solving a
+cube layer by layer:</p>
+<ul>
+<li>Pick a face</li>
+<li>solve for the edges</li>
+<li>then solve corners</li>
+<li>Go down to the next layer solve for the edges (sisnce there are no
+corners)</li>
+<li>Go to the final layer, solve for the edge and solve corners</li>
+</ul>
+<h1 id="section-3">Section 3</h1>
+<p>In this section we will present a summarized proof of our main
+theorem, namely, the Fundamental Theorem of Cubology.</p>
+<h2
+id="summarized-proof-of-the-fundamental-theorem-of-cubology-redundant">Summarized
+Proof of the Fundamental Theorem of Cubology * (redundant)</h2>
+<!-- Begin with the cube in a solved state, and number the cube as such:-->
+<figure>
+<img src="Screenshot%20from%202024-03-08%2010-56-32.png"
+alt="The numbering in question:" />
+<figcaption aria-hidden="true">The numbering in question:</figcaption>
+</figure>
+<p>Begin with a cube in any configuration. We add a “+” mark to each
+cubicle, where each cubicle can only have 1 of these “+” marks to 1 of
+their facets. There are a number of ways for doing this, so we will call
+the facet we mark for each cubicle the “primary facet”.</p>
+<p>For example:</p>
+<figure>
+<img src="Screenshot%20from%202024-03-08%2011-03-50.png"
+alt="An example of an orientation:" />
+<figcaption aria-hidden="true">An example of an
+orientation:</figcaption>
+</figure>
+<p>Then, we mark the remaining facets based on the primary facet. For an
+edge cubie, mark the sticker with a 0 if it is the primary facet, and
+mark the other sticker on the same cubie with a 1. For a corner cubie,
+mark the sticker in the primary facet with a 0 , and mark the other two
+stickers with 1 and 2.</p>
+<figure>
+<img src="Screenshot%20from%202024-03-08%2011-07-22.png"
+alt="Updated marking with numbers of the previous orientation:" />
+<figcaption aria-hidden="true">Updated marking with numbers of the
+previous orientation:</figcaption>
+</figure>
+<p>We notice that we can use a 4-tuple, <span
+class="math inline">(<em>ρ</em>,<em>σ</em>,<em>v</em>,<em>w</em>)</span>
+to describe any configuration of the cube. Where <span
+class="math inline"><em>ρ</em> ∈ <em>S</em><sub>8</sub></span>, <span
+class="math inline"><em>σ</em> ∈ <em>S</em><sub>12</sub></span>, <span
+class="math inline"><em>v</em> ∈ <em>C</em><sub>8</sub><sup>12</sup></span>
+and <span
+class="math inline"><em>w</em> ∈ <em>C</em><sub>2</sub><sup>12</sup></span>.</p>
+<h1 id="section-4">Section 4 *</h1>
+<p>In this section we demonstrate which cubes are solvable and which
+ones aren’t by applying the Fundamental Theorem of Cubology</p>
+<!-- Take a solvable cube as an example -->
+<p>The types of solvable cubes</p>
+<!--Take a non-solvable cube as an example -->
+<p>Types of non-solvable cubes and explanation
+https://speedcubeshop.ca/a/blog/unsolvable-rubiks-cubes</p>
+<p>## Corner twist</p>
+<p>A singular twisted corner is an impossible case to get on <span
+class="math inline">3 × 3</span>.</p>
+<p>As previously stated, the cube always has even parity. However, a
+corner twist is an odd permutation.</p>
+<figure>
+<img src="Screenshot%20from%202024-03-24%2008-41-47-1.png"
+alt="Example of a corner twist" />
+<figcaption aria-hidden="true">Example of a corner twist</figcaption>
+</figure>
+<p>## Swapped pieces</p>
+<p>Two edge pieces cannot be swapped, either adjacently or opposite on a
+<span class="math inline">3 × 3</span> Rubik’s cube. The same can be
+said for two corner pieces.</p>
+<p>Similar to the corner twist, swapped pieces produces odd
+permutations.</p>
+<figure>
+<img src="Screenshot%20from%202024-03-24%2008-42-10-1.png"
+alt="Examples of swapped pieces" />
+<figcaption aria-hidden="true">Examples of swapped pieces</figcaption>
+</figure>
+<!--  ## Multiples of the same color 
+
+ Multiples of the same color can appear incorrectly. These mistakes include two of the same color on a single edge or corner piece, or more than one center color on the cube, as each center has its own color.
+
+![Examples of multiple colors](<Screenshot from 2024-03-24 08-42-23-1.png>)  -->
+<h2 id="exactly-one-edge-cubie-is-flipped">Exactly one edge cubie is
+flipped *</h2>
+<figure>
+<img src="Screenshot%20from%202024-03-26%2011-14-42-1.png"
+alt="Example of cube with one edge flipped" />
+<figcaption aria-hidden="true">Example of cube with one edge
+flipped</figcaption>
+</figure>
+<h1 id="section-5">Section 5</h1>
+<p>In this section we discuss how the Fundamental Theorem of Cubology
+relates to the content covered in MATH 4GR3.</p>
+<ul>
+<li>Conjugation as a group action on the Rubik’s Cube</li>
+</ul>
+<h1 id="section-6">Section 6 *</h1>
+<p>In this section we list all of our references.</p>
+<p>Daniels, L. (2014). Group Theory and the Rubik’s Cube.
+http://math.fon.rs/files/DanielsProject58.pdf</p>
