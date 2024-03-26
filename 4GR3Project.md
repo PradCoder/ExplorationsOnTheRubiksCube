@@ -46,7 +46,9 @@ We note that the rubik's cube group is a subset of $S_{54}$ as it provides $54$ 
 1. Direct products (External direct product)
 
 2. Semi-direct products:
+
 A Weaker version of an inner product where only one of the subgroups has to be normal
+
 **Theorem** Let $G$ be a group with subgroups $H$ and $K$ such that
 
 (1) $G = NH$
@@ -87,6 +89,10 @@ Where $\sigma \in S_3$
 
 3. $1/3$ of the corner orientations are possible. (Fundamental theorem of cubology b)
 
+
+## Position Vectors
+
+For a given configuration of a Rubik's Cube there exists a $4$ tuple $(\rho, \sigma, v, w))$ where $\rho \in S_8, \sigma \in S_{12}$ describe the permutations of the cubies and $v \in \mathbb Z_3^8, w \in \mathbb Z_2^{12}$ describe the orientations of the cubies.
 
 ## Notation *
 
@@ -207,7 +213,7 @@ twisted left (up to modulo 3).
 ## Ultimate Result *
 We can now effectively conclude that 
 
-$RC \cong (C_{3}^{7} \wr S_{8}) \times (C_{2}^{11} \wr S_{12})$
+$RC \approx (C_{3}^{7} \wr S_{8}) \times (C_{2}^{11} \wr S_{12})$
 
 # Algorithms
 
