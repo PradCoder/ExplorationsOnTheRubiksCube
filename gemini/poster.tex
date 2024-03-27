@@ -96,32 +96,13 @@
     The first rigorous 
     mathematical analysis of a Rubik's Cube was done by British-American Mathemetician 
     David Singmaster, though solutions were known to a number of 
-    mathematicians at the time (Such as J.H. Conway and Roger Penrose). 
-    In this project 
-    we discuss the motivation to consider the Rubiks cube 
-    as a mathematical object, its modelling and the associated 
-    results that arise from its modelling; for example, the 
-    contruction of the legal Rubik's Cube Group, a
-    subset of the Illegal Rubik's Cube Group. 
-    After the 
-    derivation and construction of the model with which we are 
-    working with we look into how to solve the rubik's cube. 
-    Note we are essentially considering only the 3x3x3 cube.
+    mathematicians at the time (Such as J.H. Conway and Roger Penrose).  
+    In this project, we are only considering the 3x3x3 cube.
 
   \end{block}
 
   \begin{block}{Modelling the Cube}
 
-    Nam vulputate nunc felis, non condimentum lacus porta ultrices. Nullam sed
-    sagittis metus. Etiam consectetur gravida urna quis suscipit.
-
-    \begin{itemize}
-      \item \textbf{Mauris tempor} risus nulla, sed ornare
-      \item \textbf{Libero tincidunt} a duis congue vitae
-      \item \textbf{Dui ac pretium} morbi justo neque, ullamcorper
-    \end{itemize}
-
-    Eget augue porta, bibendum venenatis tortor.
 
   \end{block}
 
@@ -168,6 +149,7 @@ For a given configuration of a Rubik's Cube there exists a $4$ tuple $(\rho, \si
 We will adopt Singmaster notation. 
 We label the face with respect to it lying
 flat on a plane and one is facing front face)
+
 \begin{itemize}
 \item Let $U$ denote the upward (top) face.
 \item Let $F$ denote the front face.
@@ -176,7 +158,10 @@ flat on a plane and one is facing front face)
 \item Let $B$ denote the back face.
 \item Let $D$ denote the downward (bottom) face
 \end{itemize}
+
+% The capital letter represent a $90\degree$ turn clockwise facing that face. The inverse of each move would be the $90\degree$ rotation of the face counter-clockwise (denoted by a $M^{-1}$ in our adaptation where $M$ \in \{F,L,U,D,R,B \}$).
 \end{itemize}
+
 
     % This block catches your eye, so \textbf{important stuff} should probably go
     % here.
@@ -201,31 +186,33 @@ flat on a plane and one is facing front face)
 
   \end{alertblock}
  
-  \begin{exampleblock}{A highlighted block containing some math}
+  \begin{exampleblock}{Theorem on parity:}
 
-    A different kind of highlighted block.
+    \textbf{Permutations} can also be described in terms of their parity. Any length n
+cycle of a permutation can be expressed as the product of 2-cycles.
 
-    $$
-    \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
-    $$
+The cube always has even parity, or an even number of cubies
+exchanged from the starting position.
 
-    Interdum et malesuada fames $\{1, 4, 9, \ldots\}$ ac ante ipsum primis in
-    faucibus. Cras eleifend dolor eu nulla suscipit suscipit. Sed lobortis non
-    felis id vulputate.
 
-    \heading{A heading inside a block}
+    % $$
+    % \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
+    % $$
 
-    Praesent consectetur mi $x^2 + y^2$ metus, nec vestibulum justo viverra
-    nec. Proin eget nulla pretium, egestas magna aliquam, mollis neque. Vivamus
-    dictum $\mathbf{u}^\intercal\mathbf{v}$ sagittis odio, vel porta erat
-    congue sed. Maecenas ut dolor quis arcu auctor porttitor.
+    % Interdum et malesuada fames $\{1, 4, 9, \ldots\}$ ac ante ipsum primis in
+    % faucibus. Cras eleifend dolor eu nulla suscipit suscipit. Sed lobortis non
+    % felis id vulputate.
 
-    \heading{Another heading inside a block}
+    % \heading{Example of a semi direct product:}
 
-    Sed augue erat, scelerisque a purus ultricies, placerat porttitor neque.
-    Donec $P(y \mid x)$ fermentum consectetur $\nabla_x P(y \mid x)$ sapien
-    sagittis egestas. Duis eget leo euismod nunc viverra imperdiet nec id
-    justo.
+    % The group $S_n$ can be written as a semi-direct product: $S_n =A_n \times \langle$
+
+    % \heading{Another heading inside a block}
+
+    % Sed augue erat, scelerisque a purus ultricies, placerat porttitor neque.
+    % Donec $P(y \mid x)$ fermentum consectetur $\nabla_x P(y \mid x)$ sapien
+    % sagittis egestas. Duis eget leo euismod nunc viverra imperdiet nec id
+    % justo.
 
   \end{exampleblock}
 \end{column}
