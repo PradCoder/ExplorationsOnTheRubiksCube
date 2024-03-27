@@ -9,7 +9,8 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[size=custom,width=120,height=72,scale=1.0]{beamerposter}
+% \usepackage[size=custom,width=120,height=72,scale=1.0]{beamerposter}
+\usepackage[size=B0]{beamerposter}
 \usetheme{gemini}
 \usecolortheme{gemini}
 \usepackage{graphicx}
@@ -195,7 +196,8 @@ cycle of a permutation can be expressed as the product of 2-cycles.
 The cube always has even parity, or an even number of cubies
 exchanged from the starting position.
 
-      \item \textbf{Second Fundamental Theorem of Cubology}An operation of the cube is possible if and only if the following are satisfied:
+      \item \textbf{Second Fundamental Theorem of Cubology: }
+      An operation of the cube is possible if and only if the following are satisfied:
             \begin{itemize}
               \item The total number of edge and corner cycles of even length is even.
               \item The number of corner cycles twisted right is equal to the number of corner cycles twisted left (up to modulo 3).
@@ -405,8 +407,29 @@ Similar to the corner twist, swapped pieces produces odd permutations.
 \begin{column}{\colwidth}
 
   \begin{exampleblock}{Construction of legal Rubik's cube}
+    Recall, that the rubiks cube consists of $54$ facets, and the entire set of arrangements of the rubiks cube can be thought of as permutations of these 54 facets. Hence we can denote $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ as the called rubik's cube group.
 
-    In this section, we will construct the legal Rubik's cube.
+    \heading{Construction of the illegal Rubik's cube:}
+
+    First we construct the illegal Rubik's cube group since the legal Rubik's cube group is a subgroup of the illegal Rubik's cube group.
+    
+    Unlike the legal Rubik's cube group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  However, we also notice that some orientations still will not be physically possible on the cube. We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
+
+    So from the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (C^{12}_2 \wr S_{12}) \times (C^8_3 \wr S_8)$.
+
+    \heading{Construction of the legal Rubik's cube}
+
+    Next, we will construct the legal Rubik's cube.
+
+    
+
+Now note that not all arrangments of the permutations would lead to the valid arrangements of a rubik's cube, this group includes all cubes that can be taken apart and put together (the illegal rubiks' cube group), e.g. pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube (the legal rubik's cube group).
+
+Note that it is the case that the corner facets can be modelled as the cyclic group of 3 elements $C_{3}$ and since there are 8 of these we note it is the cross product of $C_{3}$ eight times. 
+
+Now, the possible arrangements of the corner cubes can be described using $S_{8}$ (since we are permuting those), which allows the postions of all the corner facets on the Rubik's Cube to be described as the group $C_{3}^{8} \wr S_{8}$.
+
+By a similar argument we see that the  position of all the edge facets on the Rubik's Cube can be described by the group $C_{2}^{2} \wr S_{12}$.
 
     % $$
     % \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
@@ -416,23 +439,13 @@ Similar to the corner twist, swapped pieces produces odd permutations.
     % faucibus. Cras eleifend dolor eu nulla suscipit suscipit. Sed lobortis non
     % felis id vulputate.
 
-    \heading{A heading inside a block}
+    
 
-    Praesent consectetur mi $x^2 + y^2$ metus, nec vestibulum justo viverra
-    nec. Proin eget nulla pretium, egestas magna aliquam, mollis neque. Vivamus
-    dictum $\mathbf{u}^\intercal\mathbf{v}$ sagittis odio, vel porta erat
-    congue sed. Maecenas ut dolor quis arcu auctor porttitor.
-
-    \heading{Another heading inside a block}
-
-    Sed augue erat, scelerisque a purus ultricies, placerat porttitor neque.
-    Donec $P(y \mid x)$ fermentum consectetur $\nabla_x P(y \mid x)$ sapien
-    sagittis egestas. Duis eget leo euismod nunc viverra imperdiet nec id
-    justo.
+    
 
   \end{exampleblock}
 
-  \begin{block}{Nullam vel erat at velit convallis laoreet}
+  \begin{block}{How is all this related to 4GR3}
 
     Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
     inceptos himenaeos. Phasellus libero enim, gravida sed erat sit amet,
