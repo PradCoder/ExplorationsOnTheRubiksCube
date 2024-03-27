@@ -49,13 +49,13 @@ We note that the rubik's cube group is a subset of $S_{54}$ as it provides $54$ 
 
 A Weaker version of an inner product where only one of the subgroups has to be normal
 
-**Theorem** Let $G$ be a group with subgroups $H$ and $K$ such that
+**Theorem** Let $G$ be a group with subgroups $H$ and $N$ such that
 
 (1) $G = NH$
 
 (2) $N \cap H = e$
 
-(3) $N \triangleleft K$
+(3) $N \triangleleft G$
 [keith conrad, semidirect products]
 
 3. Wreath products:
