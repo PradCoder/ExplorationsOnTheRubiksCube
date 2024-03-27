@@ -181,25 +181,24 @@ The wreath product permutes the factors of G according to the action h on X. So 
 \begin{column}{\colwidth}
 
   \begin{block}{The fundamental theorems of cubology}
-
-    Vivamus congue volutpat elit non semper. Praesent molestie nec erat ac
-    interdum. In quis suscipit erat. \textbf{Phasellus mauris felis, molestie
-    ac pharetra quis}, tempus nec ante. Donec finibus ante vel purus mollis
-    fermentum. Sed felis mi, pharetra eget nibh a, feugiat eleifend dolor. Nam
-    mollis condimentum purus quis sodales. Nullam eu felis eu nulla eleifend
-    bibendum nec eu lorem. Vivamus felis velit, volutpat ut facilisis ac,
-    commodo in metus.
+    
+    A move sequence is possible if and only if the following three conditions are satisfied, we also state the group theoretic formulation:
 
     \begin{enumerate}
-      \item \textbf{Morbi mauris purus}, egestas at vehicula et, convallis
-        accumsan orci. Orci varius natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus.
-      \item \textbf{Cras vehicula blandit urna ut maximus}. Aliquam blandit nec
-        massa ac sollicitudin. Curabitur cursus, metus nec imperdiet bibendum,
-        velit lectus faucibus dolor, quis gravida metus mauris gravida turpis.
-      \item \textbf{Vestibulum et massa diam}. Phasellus fermentum augue non
-        nulla accumsan, non rhoncus lectus condimentum.
+      \item \textbf{The permutation of the corner cubies has the same parity as the permutation of the edge cubies} 
+      if and only if 
+      $$\text{sign}(\rho) = \text{sign}(\sigma)$$
+      \item \textbf{The number of corners that are twisted clockwise is equal to the number that are twisted counterclockwise modulo $3$}
+      (meaning remaining corners twisted in the same direction occur in threes).
+      if and only if 
+      $$v_{1} + v_{2} +\dots +v_{8} = 0 \mod 3$$
+      \item \textbf{The number of flipped edges is even}
+      if and only if 
+      $$w_{1} + w_{2} +\dots +w_{12} = 0 \mod 2$$
     \end{enumerate}
+
+   \textbf{Remark:}  We are considering the following defintion of a postion of a facet of a cube:
+    A position vector $(\rho,\sigma,v,w) \in S_{8} \times S_{12} \times C_{3}^{8} \times C_{2}^{12}$
 
   \end{block}
 
@@ -209,23 +208,17 @@ The wreath product permutes the factors of G according to the action h on X. So 
 
     \begin{enumerate}
       
-      \item \textbf{Exactly one edge cubie is flipped}, egestas at vehicula et, convallis
-        accumsan orci. Orci varius natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus.
-      \item \textbf{Corner twist}. Aliquam blandit nec
-        massa ac sollicitudin. Curabitur cursus, metus nec imperdiet bibendum,
-        velit lectus faucibus dolor, quis gravida metus mauris gravida turpis.
-      \item \textbf{Swapped pieces}. Phasellus fermentum augue non
-        nulla accumsan, non rhoncus lectus condimentum.
-
+      \item \textbf{Exactly one edge cubie is flipped}
+      \item \textbf{Corner twist}
+      \item \textbf{Swapped pieces}
       \item \textbf{One edge piece is flipped}
     \end{enumerate}
 
-    % \begin{figure}
-    %   \centering
-    %   \includegraphics{Screenshot from 2024-03-24 08-41-47-1.png}
-    %   \caption{Corner twist}
-    % \end{figure}
+    \begin{figure}
+      \centering
+      \includegraphics{Screenshot from 2024-03-24 08-41-47.png}
+      \caption{Corner twist}
+    \end{figure}
 
   \end{block}
 
