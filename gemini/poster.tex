@@ -965,10 +965,24 @@ $$RC_{3} \approx (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12}) \subset  (
 
   \begin{alertblock}{How does this relate to MATH 4GR3?}
 
-    \heading{Commutator}
+    \heading{Commutators and Conjugates}
 
+    Note that when anlalyzing permutations, certain moves sequences are more effective than others. For instance the moves done by commutators.
+    Consider for instance $y$ and $h$ are moves that fail to commute with each other by "just a little bit",
+    then $[y,h]$ will be close to the identity (i.e. the solved state). For example a permutation $\alpha \in S_{n}$ we define the fixed set of $\alpha$ to be the set of all numbers in
+    $$[n] = \{1,2,3,4,\dots,n\}$$
+    that are not moved as
+    $$fix(\alpha) = \{m \in [n] | \alpha(m) = m\}$$ 
+    the ones that are moved, is the compliment of this set, which we denote by $mov(\alpha)$
+    $$mov(\alpha) = \overline{fix(\alpha)} = \{m \in [n] | \alpha(m) \neq m\}$$
+    (Note: the moved set is sometimes known as the support of $\alpha$ denoted $supp(\alpha)$).
+    In terms of permutation puzzles $mov(\alpha)$ is the list of all the positions of the pieces that are moved when $\alpha$ is applied.
+    We note that in the rubik's cube group we have the following commutator for instance, followed by a commutator that
+    can be used to adjust the move done by the commutator by changing the elements permuted, the type (structure on the move) is essentially
+    the same but different pieces are moved
+    
 \textbf{Remark:} 
-\textbf{Commutators} provided us with a method for creating puzzles moves that affect only a small number of pieces and \textbf{Conjugation} is a process for modifying moves to produce new moves that have similar structure.
+\textbf{Commutators} provide us with a method for creating puzzles moves that affect only a small number of pieces and \textbf{Conjugation} is a process for modifying the moves of the Commutators to produce new moves that have similar structure.
 
     % \begin{table}
     %   \centering
