@@ -41,7 +41,7 @@
 % Title
 % ====================
 
-\title{Modelling The Rubik's Cube}
+\title{Understanding The Rubik's Cube: A Group Theoretic Approach}
 
 \author{Tony X \inst{1} \and Pesara A \inst{1} \and Zeyn J \inst{1}}
 
@@ -97,15 +97,89 @@
     The first rigorous 
     mathematical analysis of a Rubik's Cube was done by British-American Mathemetician 
     David Singmaster, though solutions were known to a number of 
-    mathematicians at the time (Such as J.H. Conway and Roger Penrose).  
-    In this project, we are only considering the 3x3x3 cube.
+    mathematicians at the time (such as J.H. Conway and Roger Penrose).  
+    In this project, we attempt to understand the inner workings of the Rubik's cube via group theory and abstract algebra. 
+
+              \begin{figure}
+                \centering
+                      \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+                          \coordinate (O) at (0,0,0);
+                          \coordinate (A) at (1,0,0);
+                          \coordinate (B) at (2,0,0);
+                          \coordinate (C) at (3,0,0);
+                          \coordinate (D) at (0,1,0);
+                          \coordinate (G) at (1,1,0);
+                          \coordinate (L) at (2,1,0);
+                          \coordinate (N) at (3,1,0);
+                          \coordinate (E) at (0,2,0);
+                          \coordinate (J) at (1,2,0);
+                          \coordinate (H) at (2,2,0);
+                          \coordinate (P) at (3,2,0);
+                          \coordinate (F) at (0,3,0);
+                          \coordinate (K) at (1,3,0);
+                          \coordinate (M) at (2,3,0);
+                          \coordinate (I) at (3,3,0);
+                          \coordinate (Q) at (3,0,1);
+                          \coordinate (R) at (3,0,2);
+                          \coordinate (S) at (3,0,3);
+                          \coordinate (T) at (3,1,1);
+                          \coordinate (U) at (3,1,2);
+                          \coordinate (V) at (3,1,3);
+                          \coordinate (W) at (3,2,1);
+                          \coordinate (X) at (3,2,2);
+                          \coordinate (Y) at (3,2,3);
+                          \coordinate (Z) at (3,3,1);
+                          \coordinate (AA) at (3,3,2);
+                          \coordinate (BB) at (3,3,3);
+                          \coordinate (CC) at (0,3,1);
+                          \coordinate (DD) at (1,3,1);
+                          \coordinate (EE) at (2,3,1);
+                          \coordinate (FF) at (0,3,2);
+                          \coordinate (GG) at (1,3,2);
+                          \coordinate (HH) at (2,3,2);
+                          \coordinate (II) at (0,3,3);
+                          \coordinate (JJ) at (1,3,3);
+                          \coordinate (KK) at (2,3,3);
+                          
+                          \draw[black,fill=blue!80] (O) -- (A) -- (G) -- (D) -- cycle;
+                          \draw[black,fill=blue!80] (A) -- (B) -- (L) -- (G) -- cycle;
+                          \draw[black,fill=blue!80] (B) -- (C) -- (N) -- (L) -- cycle;
+                          \draw[black,fill=blue!80] (D) -- (G) -- (J) -- (E) -- cycle;
+                          \draw[black,fill=blue!80] (G) -- (L) -- (H) -- (J) -- cycle;
+                          \draw[black,fill=blue!80] (L) -- (N) -- (P) -- (H) -- cycle;
+                          \draw[black,fill=blue!80] (E) -- (J) -- (K) -- (F) -- cycle;
+                          \draw[black,fill=blue!80] (J) -- (H) -- (M) -- (K) -- cycle;
+                          \draw[black,fill=blue!80] (H) -- (P) -- (I) -- (M) -- cycle;
+                          
+                          \draw[black,fill=white!80] (C) -- (Q) -- (T) -- (N) -- cycle;
+                          \draw[black,fill=white!80] (Q) -- (R) -- (U) -- (T) -- cycle;
+                          \draw[black,fill=white!80] (R) -- (S) -- (V) -- (U) -- cycle;
+                          \draw[black,fill=white!80] (N) -- (T) -- (W) -- (P) -- cycle;
+                          \draw[black,fill=white!80] (T) -- (U) -- (X) -- (W) -- cycle;
+                          \draw[black,fill=white!80] (U) -- (V) -- (Y) -- (X) -- cycle;
+                          \draw[black,fill=white!80] (P) -- (W) -- (Z) -- (I) -- cycle;
+                          \draw[black,fill=white!80] (W) -- (X) -- (AA) -- (Z) -- cycle;
+                          \draw[black,fill=white!80] (X) -- (Y) -- (BB) -- (AA) -- cycle;
+                          
+                          \draw[black,fill=red!80] (F) -- (K) -- (DD) -- (CC) -- cycle;
+                          \draw[black,fill=red!80] (K) -- (M) -- (EE) -- (DD) -- cycle;
+                          \draw[black,fill=red!80] (M) -- (I) -- (Z) -- (EE) -- cycle;
+                          \draw[black,fill=red!80] (CC) -- (DD) -- (GG) -- (FF) -- cycle;
+                          \draw[black,fill=red!80] (DD) -- (EE) -- (HH) -- (GG) -- cycle;
+                          \draw[black,fill=red!80] (EE) -- (Z) -- (AA) -- (HH) -- cycle;
+                          \draw[black,fill=red!80] (FF) -- (GG) -- (JJ) -- (II) -- cycle;
+                          \draw[black,fill=red!80] (GG) -- (HH) -- (KK) -- (JJ) -- cycle;
+                          \draw[black,fill=red!80] (HH) -- (AA) -- (BB) -- (KK) -- cycle;
+                          \end{tikzpicture}
+                          \caption{A 3x3x3 Rubik's Cube}
+                        \end{figure}
 
   \end{block}
 
-  \begin{block}{Modelling the Cube}
+  % \begin{block}{Modelling the Cube}
 
 
-  \end{block}
+  % \end{block}
 
   \begin{alertblock}{Useful Definitions}
 
@@ -145,8 +219,8 @@ Then the \textbf{wreath product} of $G$ and $H$ is $G \wr H = G \rtimes H$ where
 For a given configuration of a Rubik's Cube there exists a $4$ tuple $(\rho, \sigma, v, w))$ where $\rho \in S_8, \sigma \in S_{12}$ describe the permutations of the cubies and $v \in \mathbb Z_3^8, w \in \mathbb Z_2^{12}$ describe the orientations of the cubies.
 
 \textbf{Remark:} 
-We will adopt Singmaster notation. 
-We label the face with respect to it lying
+We will adopt Singmaster notation where  
+we label the face with respect to it lying
 flat on a plane and one is facing front face)
 
 \begin{itemize}
@@ -184,10 +258,10 @@ flat on a plane and one is facing front face)
 
   \end{alertblock}
  
-  \begin{exampleblock}{Rubiks Specific Theorems}
+  \begin{exampleblock}{Preliminary Theorems}
 
-    \heading{Theorem on parity:} Permutations can also be described in terms of their parity. Any length n
-cycle of a permutation can be expressed as the product of 2-cycles.
+    \heading{Theorem on parity:} Permutations can also be described in terms of their parity. Any length $n$
+cycle of a permutation can be expressed as the product of $2$-cycles.
 
 The cube always has even parity, or an even number of cubies
 exchanged from the starting position.
@@ -196,7 +270,7 @@ exchanged from the starting position.
       An operation of the cube is possible if and only if the following are satisfied:
             \begin{itemize}
               \item The total number of edge and corner cycles of even length is even.
-              \item The number of corner cycles twisted right is equal to the number of corner cycles twisted left (up to modulo 3).
+              \item The number of corner cycles twisted right is equal to the number of corner cycles twisted left (up to modulo $3$).
               \item There is an even number of reorienting edge cycles.
 
 
@@ -228,27 +302,28 @@ exchanged from the starting position.
 
   \begin{alertblock}{The Fundamental Theorem of Cubology}
     
-    A move sequence is possible if and only if the following three conditions are satisfied, we also state the group theoretic formulation:
+    A move sequence is possible if and only if: 
+    % the following three conditions are satisfied, we also state the group theoretic formulation:
 
-    \begin{enumerate}
+    \begin{itemize}
       \item \textbf{The permutation of the corner cubies has the same parity as the permutation of the edge cubies} 
-      if and only if 
+      % if and only if 
       $$\text{sign}(\rho) = \text{sign}(\sigma)$$
       \item \textbf{The number of corners that are twisted clockwise is equal to the number that are twisted counterclockwise modulo $3$}
-      (meaning remaining corners twisted in the same direction occur in threes).
-      if and only if 
+      % (meaning remaining corners twisted in the same direction occur in threes).
+      % if and only if 
       $$v_{1} + v_{2} +\dots +v_{8} = 0 \mod 3$$
       \item \textbf{The number of flipped edges is even}
-      if and only if 
+      % if and only if 
       $$w_{1} + w_{2} +\dots +w_{12} = 0 \mod 2$$
-    \end{enumerate}
+    \end{itemize}
 
-   \textbf{Remark:}  We are considering the following defintion of a postion of a facet of a cube:
-    A position vector $(\rho,\sigma,v,w) \in S_{8} \times S_{12} \times C_{3}^{8} \times C_{2}^{12}$
+  %  \textbf{Remark:}  We are considering the following defintion of a postion of a facet of a cube:
+  %   A position vector $(\rho,\sigma,v,w) \in S_{8} \times S_{12} \times C_{3}^{8} \times C_{2}^{12}$
 
   \end{alertblock}
 
-  \begin{block}{Unsolvable Cubes}
+  \begin{block}{Solvable and Unsolvable Cubes}
 
     These cubes are unsolvable since they involve odd permutations.
 
@@ -638,11 +713,11 @@ Similar to the corner twist, swapped pieces produces odd permutations.
                                                       \end{figure}
                                                                                 
 
-    \begin{figure}
-      \centering
-      \includegraphics{Screenshot from 2024-03-26 11-14-42.png}
-      \caption{One edge cubie is flipped}
-    \end{figure}
+    % \begin{figure}
+    %   \centering
+    %   \includegraphics{Screenshot from 2024-03-26 11-14-42.png}
+    %   \caption{One edge cubie is flipped}
+    % \end{figure}
 
   \end{block}
 
@@ -687,16 +762,19 @@ Similar to the corner twist, swapped pieces produces odd permutations.
 
 \begin{column}{\colwidth}
 
-  \begin{exampleblock}{Construction of legal Rubik's cube}
-    Recall, that the rubiks cube consists of $54$ facets, and the entire set of arrangements of the rubiks cube can be thought of as permutations of these 54 facets. Hence we can denote $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ as the called rubik's cube group.
+  \begin{block}{Construction of legal Rubik's cube}
+    Recall that the Rubik's cube consists of $54$ facets and the entire set of arrangements of the rubiks cube can be thought of as permutations of these $54$ facets. 
+    We denote all possible permutations on these facets by $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ and call it the Rubik's Cube group.
 
     \heading{Construction of the illegal Rubik's cube:}
 
-    First we construct the illegal Rubik's cube group since the legal Rubik's cube group is a subgroup of the illegal Rubik's cube group.
+    % First we construct the illegal Rubik's cube group since the legal Rubik's cube group is a subgroup of the illegal Rubik's cube group.
     
-    Unlike the legal Rubik's cube group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  However, we also notice that some orientations still will not be physically possible on the cube. We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
+    Unlike the legal Rubik's Cube Group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  
+    We also notice that some orientations are theoretically possible but can not be physically realized on the cube. 
+    % We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
 
-    So from the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (C^{12}_2 \wr S_{12}) \times (C^8_3 \wr S_8)$.
+    From the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (\mathbb Z^{12}_2 \wr S_{12}) \times (\mathbb Z^8_3 \wr S_8)$.
 
     \heading{Construction of the legal Rubik's cube}
 
@@ -724,9 +802,9 @@ By a similar argument we see that the  position of all the edge facets on the Ru
 
     
 
-  \end{exampleblock}
+  \end{block}
 
-  \begin{block}{How is all this related to 4GR3}
+  \begin{block}{How does this relate to \textbf{MATH 4GR3}?}
 
     \heading{Commutator}
 
