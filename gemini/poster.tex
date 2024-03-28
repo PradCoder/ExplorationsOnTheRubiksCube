@@ -355,509 +355,6 @@ Using a similar argument we see that the  position of all the edge facets on the
 
   \end{alertblock}
 
-  \begin{block}{Solvable and Unsolvable Cubes}
-
-    These cubes are unsolvable since they involve odd permutations.
-
-    \begin{enumerate}
-      
-      \item \textbf{Exactly one edge cubie is flipped}
-      A singular edge cubie flipped 90 degrees is not possible since the cube always has even parity.
-      
-      \item \textbf{Corner twist}
-      A singular twisted corner is an impossible case to get on $3 \times 3$.
-      As previously stated, the cube always has even parity. However, a corner twist is an odd permutation.
-      
-
-Similar to the corner twist, swapped pieces produces odd permutations.
-      \item \textbf{Swapped pieces}
-      Two edge pieces cannot be swapped, either adjacently or opposite on a $3 \times 3$ Rubik's cube. The same can be said for two corner pieces.
-    \end{enumerate}
-
-    \tdplotsetmaincoords{55}{135}
-    \begin{figure}
-      \centering
-            \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-                \coordinate (O) at (0,0,0);
-                \coordinate (A) at (1,0,0);
-                \coordinate (B) at (2,0,0);
-                \coordinate (C) at (3,0,0);
-                \coordinate (D) at (0,1,0);
-                \coordinate (G) at (1,1,0);
-                \coordinate (L) at (2,1,0);
-                \coordinate (N) at (3,1,0);
-                \coordinate (E) at (0,2,0);
-                \coordinate (J) at (1,2,0);
-                \coordinate (H) at (2,2,0);
-                \coordinate (P) at (3,2,0);
-                \coordinate (F) at (0,3,0);
-                \coordinate (K) at (1,3,0);
-                \coordinate (M) at (2,3,0);
-                \coordinate (I) at (3,3,0);
-                \coordinate (Q) at (3,0,1);
-                \coordinate (R) at (3,0,2);
-                \coordinate (S) at (3,0,3);
-                \coordinate (T) at (3,1,1);
-                \coordinate (U) at (3,1,2);
-                \coordinate (V) at (3,1,3);
-                \coordinate (W) at (3,2,1);
-                \coordinate (X) at (3,2,2);
-                \coordinate (Y) at (3,2,3);
-                \coordinate (Z) at (3,3,1);
-                \coordinate (AA) at (3,3,2);
-                \coordinate (BB) at (3,3,3);
-                \coordinate (CC) at (0,3,1);
-                \coordinate (DD) at (1,3,1);
-                \coordinate (EE) at (2,3,1);
-                \coordinate (FF) at (0,3,2);
-                \coordinate (GG) at (1,3,2);
-                \coordinate (HH) at (2,3,2);
-                \coordinate (II) at (0,3,3);
-                \coordinate (JJ) at (1,3,3);
-                \coordinate (KK) at (2,3,3);
-                
-                \draw[black,fill=blue!80] (O) -- (A) -- (G) -- (D) -- cycle;
-                \draw[black,fill=blue!80] (A) -- (B) -- (L) -- (G) -- cycle;
-                \draw[black,fill=blue!80] (B) -- (C) -- (N) -- (L) -- cycle;
-                \draw[black,fill=blue!80] (D) -- (G) -- (J) -- (E) -- cycle;
-                \draw[black,fill=blue!80] (G) -- (L) -- (H) -- (J) -- cycle;
-                \draw[black,fill=blue!80] (L) -- (N) -- (P) -- (H) -- cycle;
-                \draw[black,fill=blue!80] (E) -- (J) -- (K) -- (F) -- cycle;
-                \draw[black,fill=blue!80] (J) -- (H) -- (M) -- (K) -- cycle;
-                \draw[black,fill=red!80] (H) -- (P) -- (I) -- (M) -- cycle;
-                
-                \draw[black,fill=white!80] (C) -- (Q) -- (T) -- (N) -- cycle;
-                \draw[black,fill=white!80] (Q) -- (R) -- (U) -- (T) -- cycle;
-                \draw[black,fill=white!80] (R) -- (S) -- (V) -- (U) -- cycle;
-                \draw[black,fill=white!80] (N) -- (T) -- (W) -- (P) -- cycle;
-                \draw[black,fill=white!80] (T) -- (U) -- (X) -- (W) -- cycle;
-                \draw[black,fill=white!80] (U) -- (V) -- (Y) -- (X) -- cycle;
-                \draw[black,fill=blue!80] (P) -- (W) -- (Z) -- (I) -- cycle;
-                \draw[black,fill=white!80] (W) -- (X) -- (AA) -- (Z) -- cycle;
-                \draw[black,fill=white!80] (X) -- (Y) -- (BB) -- (AA) -- cycle;
-                
-                \draw[black,fill=red!80] (F) -- (K) -- (DD) -- (CC) -- cycle;
-                \draw[black,fill=red!80] (K) -- (M) -- (EE) -- (DD) -- cycle;
-                \draw[black,fill=white!80] (M) -- (I) -- (Z) -- (EE) -- cycle;
-                \draw[black,fill=red!80] (CC) -- (DD) -- (GG) -- (FF) -- cycle;
-                \draw[black,fill=red!80] (DD) -- (EE) -- (HH) -- (GG) -- cycle;
-                \draw[black,fill=red!80] (EE) -- (Z) -- (AA) -- (HH) -- cycle;
-                \draw[black,fill=red!80] (FF) -- (GG) -- (JJ) -- (II) -- cycle;
-                \draw[black,fill=red!80] (GG) -- (HH) -- (KK) -- (JJ) -- cycle;
-                \draw[black,fill=red!80] (HH) -- (AA) -- (BB) -- (KK) -- cycle;
-                \end{tikzpicture}
-                \caption{Corner twist}
-              \end{figure}
-
-
-              \begin{figure}
-                \centering
-                \begin{multicols}{4}  
-                
-                      \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-                          \coordinate (O) at (0,0,0);
-                          \coordinate (A) at (1,0,0);
-                          \coordinate (B) at (2,0,0);
-                          \coordinate (C) at (3,0,0);
-                          \coordinate (D) at (0,1,0);
-                          \coordinate (G) at (1,1,0);
-                          \coordinate (L) at (2,1,0);
-                          \coordinate (N) at (3,1,0);
-                          \coordinate (E) at (0,2,0);
-                          \coordinate (J) at (1,2,0);
-                          \coordinate (H) at (2,2,0);
-                          \coordinate (P) at (3,2,0);
-                          \coordinate (F) at (0,3,0);
-                          \coordinate (K) at (1,3,0);
-                          \coordinate (M) at (2,3,0);
-                          \coordinate (I) at (3,3,0);
-                          \coordinate (Q) at (3,0,1);
-                          \coordinate (R) at (3,0,2);
-                          \coordinate (S) at (3,0,3);
-                          \coordinate (T) at (3,1,1);
-                          \coordinate (U) at (3,1,2);
-                          \coordinate (V) at (3,1,3);
-                          \coordinate (W) at (3,2,1);
-                          \coordinate (X) at (3,2,2);
-                          \coordinate (Y) at (3,2,3);
-                          \coordinate (Z) at (3,3,1);
-                          \coordinate (AA) at (3,3,2);
-                          \coordinate (BB) at (3,3,3);
-                          \coordinate (CC) at (0,3,1);
-                          \coordinate (DD) at (1,3,1);
-                          \coordinate (EE) at (2,3,1);
-                          \coordinate (FF) at (0,3,2);
-                          \coordinate (GG) at (1,3,2);
-                          \coordinate (HH) at (2,3,2);
-                          \coordinate (II) at (0,3,3);
-                          \coordinate (JJ) at (1,3,3);
-                          \coordinate (KK) at (2,3,3);
-                          
-                          \draw[black,fill=blue!80] (O) -- (A) -- (G) -- (D) -- cycle;
-                          \draw[black,fill=blue!80] (A) -- (B) -- (L) -- (G) -- cycle;
-                          \draw[black,fill=blue!80] (B) -- (C) -- (N) -- (L) -- cycle;
-                          \draw[black,fill=blue!80] (D) -- (G) -- (J) -- (E) -- cycle;
-                          \draw[black,fill=blue!80] (G) -- (L) -- (H) -- (J) -- cycle;
-                          \draw[black,fill=blue!80] (L) -- (N) -- (P) -- (H) -- cycle;
-                          \draw[black,fill=blue!80] (E) -- (J) -- (K) -- (F) -- cycle;
-                          \draw[black,fill=green!80] (J) -- (H) -- (M) -- (K) -- cycle;
-                          \draw[black,fill=blue!80] (H) -- (P) -- (I) -- (M) -- cycle;
-                          
-                          \draw[black,fill=white!80] (C) -- (Q) -- (T) -- (N) -- cycle;
-                          \draw[black,fill=white!80] (Q) -- (R) -- (U) -- (T) -- cycle;
-                          \draw[black,fill=white!80] (R) -- (S) -- (V) -- (U) -- cycle;
-                          \draw[black,fill=white!80] (N) -- (T) -- (W) -- (P) -- cycle;
-                          \draw[black,fill=white!80] (T) -- (U) -- (X) -- (W) -- cycle;
-                          \draw[black,fill=white!80] (U) -- (V) -- (Y) -- (X) -- cycle;
-                          \draw[black,fill=white!80] (P) -- (W) -- (Z) -- (I) -- cycle;
-                          \draw[black,fill=white!80] (W) -- (X) -- (AA) -- (Z) -- cycle;
-                          \draw[black,fill=white!80] (X) -- (Y) -- (BB) -- (AA) -- cycle;
-                          
-                          \draw[black,fill=red!80] (F) -- (K) -- (DD) -- (CC) -- cycle;
-                          \draw[black,fill=red!80] (K) -- (M) -- (EE) -- (DD) -- cycle;
-                          \coordinate (T) at (3,1,1);
-                          \coordinate (U) at (3,1,2);
-                          \coordinate (V) at (3,1,3);
-                          \coordinate (W) at (3,2,1);
-                          \coordinate (X) at (3,2,2);
-                          \coordinate (Y) at (3,2,3);
-                          \coordinate (Z) at (3,3,1);
-                          \coordinate (AA) at (3,3,2);
-                            \draw[black,fill=red!80] (M) -- (I) -- (Z) -- (EE) -- cycle;
-                          \draw[black,fill=red!80] (CC) -- (DD) -- (GG) -- (FF) -- cycle;
-                          \draw[black,fill=red!80] (DD) -- (EE) -- (HH) -- (GG) -- cycle;
-                          \draw[black,fill=red!80] (EE) -- (Z) -- (AA) -- (HH) -- cycle;
-                          \draw[black,fill=red!80] (FF) -- (GG) -- (JJ) -- (II) -- cycle;
-                          \draw[black,fill=red!80] (GG) -- (HH) -- (KK) -- (JJ) -- cycle;
-                          \draw[black,fill=red!80] (HH) -- (AA) -- (BB) -- (KK) -- cycle;
-                          \end{tikzpicture}
-                          % \end{multicols}
-                          % \caption{Swapped pieces}
-                        % \end{figure}
-          
-                        % \begin{figure}
-                          \centering
-                          % \begin{multicols}{2}
-                        
-                                \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-                                    \coordinate (O) at (0,0,0);
-                                    \coordinate (A) at (1,0,0);
-                                    \coordinate (B) at (2,0,0);
-                                    \coordinate (C) at (3,0,0);
-                                    \coordinate (D) at (0,1,0);
-                                    \coordinate (G) at (1,1,0);
-                                    \coordinate (L) at (2,1,0);
-                                    \coordinate (N) at (3,1,0);
-                                    \coordinate (E) at (0,2,0);
-                                    \coordinate (J) at (1,2,0);
-                                    \coordinate (H) at (2,2,0);
-                                    \coordinate (P) at (3,2,0);
-                                    \coordinate (F) at (0,3,0);
-                                    \coordinate (K) at (1,3,0);
-                                    \coordinate (M) at (2,3,0);
-                                    \coordinate (I) at (3,3,0);
-                                    \coordinate (Q) at (3,0,1);
-                                    \coordinate (R) at (3,0,2);
-                                    \coordinate (S) at (3,0,3);
-                                    \coordinate (T) at (3,1,1);
-                                    \coordinate (U) at (3,1,2);
-                                    \coordinate (V) at (3,1,3);
-                                    \coordinate (W) at (3,2,1);
-                                    \coordinate (X) at (3,2,2);
-                                    \coordinate (Y) at (3,2,3);
-                                    \coordinate (Z) at (3,3,1);
-                                    \coordinate (AA) at (3,3,2);
-                                    \coordinate (BB) at (3,3,3);
-                                    \coordinate (CC) at (0,3,1);
-                                    \coordinate (DD) at (1,3,1);
-                                    \coordinate (EE) at (2,3,1);
-                                    \coordinate (FF) at (0,3,2);
-                                    \coordinate (GG) at (1,3,2);
-                                    \coordinate (HH) at (2,3,2);
-                                    \coordinate (II) at (0,3,3);
-                                    \coordinate (JJ) at (1,3,3);
-                                    \coordinate (KK) at (2,3,3);
-                                    
-                                    \draw[black,fill=blue!80] (O) -- (A) -- (G) -- (D) -- cycle;
-                                    \draw[black,fill=blue!80] (A) -- (B) -- (L) -- (G) -- cycle;
-                                    \draw[black,fill=blue!80] (B) -- (C) -- (N) -- (L) -- cycle;
-                                    \draw[black,fill=blue!80] (D) -- (G) -- (J) -- (E) -- cycle;
-                                    \draw[black,fill=blue!80] (G) -- (L) -- (H) -- (J) -- cycle;
-                                    \draw[black,fill=blue!80] (L) -- (N) -- (P) -- (H) -- cycle;
-                                    \draw[black,fill=blue!80] (E) -- (J) -- (K) -- (F) -- cycle;
-                                    \draw[black,fill=red!80] (J) -- (H) -- (M) -- (K) -- cycle;
-                                    \draw[black,fill=blue!80] (H) -- (P) -- (I) -- (M) -- cycle;
-                                    
-                                    \draw[black,fill=white!80] (C) -- (Q) -- (T) -- (N) -- cycle;
-                                    \draw[black,fill=white!80] (Q) -- (R) -- (U) -- (T) -- cycle;
-                                    \draw[black,fill=white!80] (R) -- (S) -- (V) -- (U) -- cycle;
-                                    \draw[black,fill=white!80] (N) -- (T) -- (W) -- (P) -- cycle;
-                                    \draw[black,fill=white!80] (T) -- (U) -- (X) -- (W) -- cycle;
-                                    \draw[black,fill=white!80] (U) -- (V) -- (Y) -- (X) -- cycle;
-                                    \draw[black,fill=white!80] (P) -- (W) -- (Z) -- (I) -- cycle;
-                                    \draw[black,fill=blue!80] (W) -- (X) -- (AA) -- (Z) -- cycle;
-                                    \draw[black,fill=white!80] (X) -- (Y) -- (BB) -- (AA) -- cycle;
-                                    
-                                    \draw[black,fill=red!80] (F) -- (K) -- (DD) -- (CC) -- cycle;
-                                    \draw[black,fill=red!80] (K) -- (M) -- (EE) -- (DD) -- cycle;
-                                    \draw[black,fill=red!80] (M) -- (I) -- (Z) -- (EE) -- cycle;
-                                    \draw[black,fill=red!80] (CC) -- (DD) -- (GG) -- (FF) -- cycle;
-                                    \draw[black,fill=red!80] (DD) -- (EE) -- (HH) -- (GG) -- cycle;
-                                    \draw[black,fill=red!80] (EE) -- (Z) -- (AA) -- (HH) -- cycle;
-                                    \draw[black,fill=red!80] (FF) -- (GG) -- (JJ) -- (II) -- cycle;
-                                    \draw[black,fill=red!80] (GG) -- (HH) -- (KK) -- (JJ) -- cycle;
-                                    \draw[black,fill=red!80] (HH) -- (AA) -- (BB) -- (KK) -- cycle;
-                                    \end{tikzpicture}
-                                    % \end{multicols}
-                                    % \caption{Swapped pieces}
-                                  % \end{figure}
-                                  
-                                  % \begin{figure}
-                                    \centering
-                                    % \begin{multicols}{4}
-                                          \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-                                              \coordinate (O) at (0,0,0);
-                                              \coordinate (A) at (1,0,0);
-                                              \coordinate (B) at (2,0,0);
-                                              \coordinate (C) at (3,0,0);
-                                              \coordinate (D) at (0,1,0);
-                                              \coordinate (G) at (1,1,0);
-                                              \coordinate (L) at (2,1,0);
-                                              \coordinate (N) at (3,1,0);
-                                              \coordinate (E) at (0,2,0);
-                                              \coordinate (J) at (1,2,0);
-                                              \coordinate (H) at (2,2,0);
-                                              \coordinate (P) at (3,2,0);
-                                              \coordinate (F) at (0,3,0);
-                                              \coordinate (K) at (1,3,0);
-                                              \coordinate (M) at (2,3,0);
-                                              \coordinate (I) at (3,3,0);
-                                              \coordinate (Q) at (3,0,1);
-                                              \coordinate (R) at (3,0,2);
-                                              \coordinate (S) at (3,0,3);
-                                              \coordinate (T) at (3,1,1);
-                                              \coordinate (U) at (3,1,2);
-                                              \coordinate (V) at (3,1,3);
-                                              \coordinate (W) at (3,2,1);
-                                              \coordinate (X) at (3,2,2);
-                                              \coordinate (Y) at (3,2,3);
-                                              \coordinate (Z) at (3,3,1);
-                                              \coordinate (AA) at (3,3,2);
-                                              \coordinate (BB) at (3,3,3);
-                                              \coordinate (CC) at (0,3,1);
-                                              \coordinate (DD) at (1,3,1);
-                                              \coordinate (EE) at (2,3,1);
-                                              \coordinate (FF) at (0,3,2);
-                                              \coordinate (GG) at (1,3,2);
-                                              \coordinate (HH) at (2,3,2);
-                                              \coordinate (II) at (0,3,3);
-                                              \coordinate (JJ) at (1,3,3);
-                                              \coordinate (KK) at (2,3,3);
-                                              
-                                              \draw[black,fill=blue!80] (O) -- (A) -- (G) -- (D) -- cycle;
-                                              \coordinate (T) at (3,1,1);
-                                              \coordinate (U) at (3,1,2);
-                                              \coordinate (V) at (3,1,3);
-                                              \coordinate (W) at (3,2,1);
-                                              \coordinate (X) at (3,2,2);
-                                              \coordinate (Y) at (3,2,3);
-                                              \coordinate (Z) at (3,3,1);
-                                              \coordinate (AA) at (3,3,2);
-                                              \draw[black,fill=blue!80] (A) -- (B) -- (L) -- (G) -- cycle;
-                                              \draw[black,fill=blue!80] (B) -- (C) -- (N) -- (L) -- cycle;
-                                              \draw[black,fill=blue!80] (D) -- (G) -- (J) -- (E) -- cycle;
-                                              \draw[black,fill=blue!80] (G) -- (L) -- (H) -- (J) -- cycle;
-                                              \draw[black,fill=blue!80] (L) -- (N) -- (P) -- (H) -- cycle;
-                                              \draw[black,fill=blue!80] (E) -- (J) -- (K) -- (F) -- cycle;
-                                              \draw[black,fill=blue!80] (J) -- (H) -- (M) -- (K) -- cycle;
-                                              \draw[black,fill=white!80] (H) -- (P) -- (I) -- (M) -- cycle;
-                                              
-                                              \draw[black,fill=white!80] (C) -- (Q) -- (T) -- (N) -- cycle;
-                                              \draw[black,fill=white!80] (Q) -- (R) -- (U) -- (T) -- cycle;
-                                              \draw[black,fill=white!80] (R) -- (S) -- (V) -- (U) -- cycle;
-                                              \draw[black,fill=white!80] (N) -- (T) -- (W) -- (P) -- cycle;
-                                              \draw[black,fill=white!80] (T) -- (U) -- (X) -- (W) -- cycle;
-                                              \draw[black,fill=white!80] (U) -- (V) -- (Y) -- (X) -- cycle;
-                                              \draw[black,fill=green!80] (P) -- (W) -- (Z) -- (I) -- cycle;
-                                              \draw[black,fill=white!80] (W) -- (X) -- (AA) -- (Z) -- cycle;
-                                              \draw[black,fill=blue!80] (X) -- (Y) -- (BB) -- (AA) -- cycle;
-                                              
-                                              \draw[black,fill=red!80] (F) -- (K) -- (DD) -- (CC) -- cycle;
-                                              \draw[black,fill=red!80] (K) -- (M) -- (EE) -- (DD) -- cycle;
-                                              \draw[black,fill=red!80] (M) -- (I) -- (Z) -- (EE) -- cycle;
-                                              \draw[black,fill=red!80] (CC) -- (DD) -- (GG) -- (FF) -- cycle;
-                                              \draw[black,fill=red!80] (DD) -- (EE) -- (HH) -- (GG) -- cycle;
-                                              \draw[black,fill=red!80] (EE) -- (Z) -- (AA) -- (HH) -- cycle;
-                                              \draw[black,fill=red!80] (FF) -- (GG) -- (JJ) -- (II) -- cycle;
-                                              \draw[black,fill=red!80] (GG) -- (HH) -- (KK) -- (JJ) -- cycle;
-                                              \draw[black,fill=red!80] (HH) -- (AA) -- (BB) -- (KK) -- cycle;
-                                              \end{tikzpicture}
-                                            % \end{multicols}
-                                            % \caption{Swapped pieces}
-                                            % \end{figure}
-
-                                            % \begin{figure}
-                                              \centering
-                                            % \begin{multicols}{4}
-                                              
-                                                    \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-                                                        \coordinate (O) at (0,0,0);
-                                                        \coordinate (A) at (1,0,0);
-                                                        \coordinate (B) at (2,0,0);
-                                                        \coordinate (C) at (3,0,0);
-                                                        \coordinate (D) at (0,1,0);
-                                                        \coordinate (G) at (1,1,0);
-                                                        \coordinate (L) at (2,1,0);
-                                                        \coordinate (N) at (3,1,0);
-                                                        \coordinate (E) at (0,2,0);
-                                                        \coordinate (J) at (1,2,0);
-                                                        \coordinate (H) at (2,2,0);
-                                                        \coordinate (P) at (3,2,0);
-                                                        \coordinate (F) at (0,3,0);
-                                                        \coordinate (K) at (1,3,0);
-                                                        \coordinate (M) at (2,3,0);
-                                                        \coordinate (I) at (3,3,0);
-                                                        \coordinate (Q) at (3,0,1);
-                                                        \coordinate (R) at (3,0,2);
-                                                        \coordinate (S) at (3,0,3);
-                                                        \coordinate (T) at (3,1,1);
-                                                        \coordinate (U) at (3,1,2);
-                                                        \coordinate (V) at (3,1,3);
-                                                        \coordinate (W) at (3,2,1);
-                                                        \coordinate (X) at (3,2,2);
-                                                        \coordinate (Y) at (3,2,3);
-                                                        \coordinate (Z) at (3,3,1);
-                                                        \coordinate (AA) at (3,3,2);
-                                                        \coordinate (BB) at (3,3,3);
-                                                        \coordinate (CC) at (0,3,1);
-                                                        \coordinate (DD) at (1,3,1);
-                                                        \coordinate (EE) at (2,3,1);
-                                                        \coordinate (FF) at (0,3,2);
-                                                        \coordinate (GG) at (1,3,2);
-                                                        \coordinate (HH) at (2,3,2);
-                                                        \coordinate (II) at (0,3,3);
-                                                        \coordinate (JJ) at (1,3,3);
-                                                        \coordinate (KK) at (2,3,3);
-                                                        
-                                                        \draw[black,fill=blue!80] (O) -- (A) -- (G) -- (D) -- cycle;
-                                                        \draw[black,fill=blue!80] (A) -- (B) -- (L) -- (G) -- cycle;
-                                                        \draw[black,fill=blue!80] (B) -- (C) -- (N) -- (L) -- cycle;
-                                                        \draw[black,fill=blue!80] (D) -- (G) -- (J) -- (E) -- cycle;
-                                                        \draw[black,fill=blue!80] (G) -- (L) -- (H) -- (J) -- cycle;
-                                                        \draw[black,fill=blue!80] (L) -- (N) -- (P) -- (H) -- cycle;
-                                                        \draw[black,fill=blue!80] (E) -- (J) -- (K) -- (F) -- cycle;
-                                                        \draw[black,fill=blue!80] (J) -- (H) -- (M) -- (K) -- cycle;
-                                                        \draw[black,fill=green!80] (H) -- (P) -- (I) -- (M) -- cycle;
-                                                        
-                                                        \draw[black,fill=white!80] (C) -- (Q) -- (T) -- (N) -- cycle;
-                                                        \draw[black,fill=white!80] (Q) -- (R) -- (U) -- (T) -- cycle;
-                                                        \draw[black,fill=white!80] (R) -- (S) -- (V) -- (U) -- cycle;
-                                                        \draw[black,fill=white!80] (N) -- (T) -- (W) -- (P) -- cycle;
-                                                        \draw[black,fill=white!80] (T) -- (U) -- (X) -- (W) -- cycle;
-                                                        \draw[black,fill=white!80] (U) -- (V) -- (Y) -- (X) -- cycle;
-                                                        \draw[black,fill=orange!80] (P) -- (W) -- (Z) -- (I) -- cycle;
-                                                        \draw[black,fill=white!80] (W) -- (X) -- (AA) -- (Z) -- cycle;
-                                                        \draw[black,fill=white!80] (X) -- (Y) -- (BB) -- (AA) -- cycle;
-                                                        
-                                                        \draw[black,fill=red!80] (F) -- (K) -- (DD) -- (CC) -- cycle;
-                                                        \draw[black,fill=red!80] (K) -- (M) -- (EE) -- (DD) -- cycle;
-                                                        \draw[black,fill=red!80] (M) -- (I) -- (Z) -- (EE) -- cycle;
-                                                        \draw[black,fill=red!80] (CC) -- (DD) -- (GG) -- (FF) -- cycle;
-                                                        \draw[black,fill=red!80] (DD) -- (EE) -- (HH) -- (GG) -- cycle;
-                                                        \draw[black,fill=red!80] (EE) -- (Z) -- (AA) -- (HH) -- cycle;
-                                                        \draw[black,fill=red!80] (FF) -- (GG) -- (JJ) -- (II) -- cycle;
-                                                        \draw[black,fill=red!80] (GG) -- (HH) -- (KK) -- (JJ) -- cycle;
-                                                        \draw[black,fill=red!80] (HH) -- (AA) -- (BB) -- (KK) -- cycle;
-                                                        \end{tikzpicture}
-                                                        
-                                                      \end{multicols}
-                                                      \caption{Swapped pieces}
-                                                    \end{figure}
-                                                      
-                                                      \begin{figure}
-                                                        \centering
-                                                        \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-                                                          \coordinate (O) at (0,0,0);
-                                                          \coordinate (A) at (1,0,0);
-                                                          \coordinate (B) at (2,0,0);
-                                                          \coordinate (C) at (3,0,0);
-                                                          \coordinate (D) at (0,1,0);
-                                                          \coordinate (G) at (1,1,0);
-                                                          \coordinate (L) at (2,1,0);
-                                                          \coordinate (N) at (3,1,0);
-                                                          \coordinate (E) at (0,2,0);
-                                                          \coordinate (J) at (1,2,0);
-                                                          \coordinate (H) at (2,2,0);
-                                                          \coordinate (P) at (3,2,0);
-                                                          \coordinate (F) at (0,3,0);
-                                                          \coordinate (K) at (1,3,0);
-                                                          \coordinate (M) at (2,3,0);
-                                                          \coordinate (I) at (3,3,0);
-                                                          \coordinate (Q) at (3,0,1);
-                                                          \coordinate (R) at (3,0,2);
-                                                          \coordinate (S) at (3,0,3);
-                                                          \coordinate (T) at (3,1,1);
-                                                          \coordinate (U) at (3,1,2);
-                                                          \coordinate (V) at (3,1,3);
-                                                          \coordinate (W) at (3,2,1);
-                                                          \coordinate (X) at (3,2,2);
-                                                          \coordinate (Y) at (3,2,3);
-                                                          \coordinate (Z) at (3,3,1);
-                                                          \coordinate (AA) at (3,3,2);
-                                                          \coordinate (BB) at (3,3,3);
-                                                          \coordinate (CC) at (0,3,1);
-                                                          \coordinate (DD) at (1,3,1);
-                                                          \coordinate (EE) at (2,3,1);
-                                                          \coordinate (FF) at (0,3,2);
-                                                          \coordinate (GG) at (1,3,2);
-                                                          \coordinate (HH) at (2,3,2);
-                                                          \coordinate (II) at (0,3,3);
-                                                          \coordinate (JJ) at (1,3,3);
-                                                          \coordinate (KK) at (2,3,3);
-                                                          
-                                                          \draw[black,fill=blue!80] (O) -- (A) -- (G) -- (D) -- cycle;
-                                                          \draw[black,fill=blue!80] (A) -- (B) -- (L) -- (G) -- cycle;
-                                                          \draw[black,fill=blue!80] (B) -- (C) -- (N) -- (L) -- cycle;
-                                                          \draw[black,fill=blue!80] (D) -- (G) -- (J) -- (E) -- cycle;
-                                                          \draw[black,fill=blue!80] (G) -- (L) -- (H) -- (J) -- cycle;
-                                                          \draw[black,fill=blue!80] (L) -- (N) -- (P) -- (H) -- cycle;
-                                                          \draw[black,fill=blue!80] (E) -- (J) -- (K) -- (F) -- cycle;
-                                                          \draw[black,fill=red!80] (J) -- (H) -- (M) -- (K) -- cycle;
-                                                          \draw[black,fill=blue!80] (H) -- (P) -- (I) -- (M) -- cycle;
-                                                          
-                                                          \draw[black,fill=white!80] (C) -- (Q) -- (T) -- (N) -- cycle;
-                                                          \draw[black,fill=white!80] (Q) -- (R) -- (U) -- (T) -- cycle;
-                                                          \draw[black,fill=white!80] (R) -- (S) -- (V) -- (U) -- cycle;
-                                                          \draw[black,fill=white!80] (N) -- (T) -- (W) -- (P) -- cycle;
-                                                          \draw[black,fill=white!80] (T) -- (U) -- (X) -- (W) -- cycle;
-                                                          \draw[black,fill=white!80] (U) -- (V) -- (Y) -- (X) -- cycle;
-                                                          \draw[black,fill=white!80] (P) -- (W) -- (Z) -- (I) -- cycle;
-                                                          \draw[black,fill=white!80] (W) -- (X) -- (AA) -- (Z) -- cycle;
-                                                          \draw[black,fill=white!80] (X) -- (Y) -- (BB) -- (AA) -- cycle;
-                                                          
-                                                          \draw[black,fill=red!80] (F) -- (K) -- (DD) -- (CC) -- cycle;
-                                                          \draw[black,fill=blue!80] (K) -- (M) -- (EE) -- (DD) -- cycle;
-                                                          \draw[black,fill=red!80] (M) -- (I) -- (Z) -- (EE) -- cycle;
-                                                          \draw[black,fill=red!80] (CC) -- (DD) -- (GG) -- (FF) -- cycle;
-                                                          \draw[black,fill=red!80] (DD) -- (EE) -- (HH) -- (GG) -- cycle;
-                                                          \draw[black,fill=red!80] (EE) -- (Z) -- (AA) -- (HH) -- cycle;
-                                                          \draw[black,fill=red!80] (FF) -- (GG) -- (JJ) -- (II) -- cycle;
-                                                          \draw[black,fill=red!80] (GG) -- (HH) -- (KK) -- (JJ) -- cycle;
-                                                          \draw[black,fill=red!80] (HH) -- (AA) -- (BB) -- (KK) -- cycle;
-                                                          
-                                                          \end{tikzpicture}
-                                                        \caption{One edge cubie is flipped}
-                                                      \end{figure}                       
-                                                                                
-
-    % \begin{figure}
-    %   \centering
-    %   \includegraphics{Screenshot from 2024-03-26 11-14-42.png}
-    %   \caption{One edge cubie is flipped}
-    % \end{figure}
-
-  \end{block}
-
   \begin{block}{Proof of the Fundamental Theorem of Cubology (Summarized)}
 
     % $$
@@ -926,16 +423,6 @@ $(\impliedby)$ This is some text and this is some text.
       \item \textbf{Exactly one edge cubie is flipped}
       A singular edge cubie flipped 90 degrees is not possible since the cube always has even parity.
       
-      \item \textbf{Corner twist}
-      A singular twisted corner is an impossible case to get on $3 \times 3$.
-      As previously stated, the cube always has even parity. However, a corner twist is an odd permutation.
-      
-
-Similar to the corner twist, swapped pieces produces odd permutations.
-      \item \textbf{Swapped pieces}
-      Two edge pieces cannot be swapped, either adjacently or opposite on a $3 \times 3$ Rubik's cube. The same can be said for two corner pieces.
-    \end{enumerate}
-
     \tdplotsetmaincoords{55}{135}
     \begin{figure}
       \centering
@@ -1010,7 +497,12 @@ Similar to the corner twist, swapped pieces produces odd permutations.
                 \end{tikzpicture}
                 \caption{Corner twist}
               \end{figure}
-
+        
+      \item \textbf{Corner twist}
+      A singular twisted corner is an impossible case to get on $3 \times 3$.
+      As previously stated, the cube always has even parity. However, a corner twist is an odd permutation.
+      
+Similar to the corner twist, swapped pieces produces odd permutations.
 
               \begin{figure}
                 \centering
@@ -1336,6 +828,11 @@ Similar to the corner twist, swapped pieces produces odd permutations.
                                                       \caption{Swapped pieces}
                                                     \end{figure}
                                                       
+
+      \item \textbf{Swapped pieces}
+      Two edge pieces cannot be swapped, either adjacently or opposite on a $3 \times 3$ Rubik's cube. The same can be said for two corner pieces.
+    \end{enumerate}
+
                                                       \begin{figure}
                                                         \centering
                                                         \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
@@ -1410,7 +907,6 @@ Similar to the corner twist, swapped pieces produces odd permutations.
                                                           \end{tikzpicture}
                                                         \caption{One edge cubie is flipped}
                                                       \end{figure}                       
-                                                                                
 
     % \begin{figure}
     %   \centering
@@ -1419,6 +915,14 @@ Similar to the corner twist, swapped pieces produces odd permutations.
     % \end{figure}
 
   \end{block}
+
+
+
+    % \begin{figure}
+    %   \centering
+    %   \includegraphics{Screenshot from 2024-03-26 11-14-42.png}
+    %   \caption{One edge cubie is flipped}
+    % \end{figure}
 
   \begin{block}{Proof of the Fundamental Theorem of Cubology (Summarized)}
 
