@@ -370,6 +370,12 @@ Notice that the corner cubies and the edge cubies have even parity so the corner
 Call this configuration $X'$ with position vector $(\rho', \sigma', v', w')$.
 Since $X$ satisfies the three conditions $X'$ also does with $\rho' = \epsilon$, $\sigma' = \epsilon$ because the solved state of the cube has position vector $(\epsilon, \epsilon, 0 , 0)$.
 
+We can solve all edge cubies since we have moves to flip any pair of edges so Condition $3$ holds.
+Now twist any clockwise or counterclockwise pairs to their original position.
+Notice that all leftover corner twists occur in triplets, either all clockwise or all counterclockwise and are solvable with the corner twisting move.
+
+Therefore $X$ is a solvable configuration.
+
   \end{block}
 
   % \begin{block}{An algorithm for solving the Rubik's Cube}
@@ -416,7 +422,7 @@ Since $X$ satisfies the three conditions $X'$ also does with $\rho' = \epsilon$,
 
     % From the description of the corner and edge cubes, we can see that the 
     
-    The Illegal Rubik's Cube group is 
+    The Illegal Rubik's Cube group is:
     $$RC^{*}_{3} = (C^{12}_2 \wr S_{12}) \times (C^8_3 \wr S_8)$$
     $$|RC^{*}_{3}| = 2^{12} \times 12! \times 3^8 \times 8! = 5.19 \times 10^{20}$$
     
