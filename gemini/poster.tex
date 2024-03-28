@@ -16,7 +16,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{tikz}
-\usepackage{multicols}
+% \usepackage{multicols}
 
 \usepackage{tikz-3dplot}
 \usetikzlibrary{3d}
@@ -44,10 +44,11 @@
 
 \title{Understanding The Rubik's Cube: A Group Theoretic Approach}
 
-\author{Tony X \inst{1} \and Pesara A \inst{1} \and Zeyn J \inst{1}}
+% \author{Tony X \inst{1} \and Pesara A \inst{1} \and Zeyn J \inst{1}}
+\author{Tony X \and Pesara A  \and Zeyn J}
 
 %\institute[shortinst]{\inst{1} Some Institute \samelineand \inst{2} Another Institute}
-\institute[shortinst]{\inst{1} McMaster University}
+% \institute[shortinst]{\inst{1} McMaster University}
 % ====================
 % Footer (optional)
 % ====================
@@ -80,7 +81,7 @@
 
 \begin{column}{\colwidth}
 
-  \begin{block}{Abstract}
+  % \begin{block}{Abstract}
 
    % Some block contents, followed by a diagram, followed by a dummy paragraph.
 
@@ -94,12 +95,12 @@
 %%      \caption{A figure caption.}
   %%  \end{figure}
 
-    The rubiks cube is perhaps the world's most famous puzzle. 
-    The first rigorous 
-    mathematical analysis of a Rubik's Cube was done by British-American Mathemetician 
-    David Singmaster, though solutions were known to a number of 
-    mathematicians at the time (such as J.H. Conway and Roger Penrose).  
-    In this project, we attempt to understand the inner workings of the Rubik's cube via group theory and abstract algebra. 
+    % The rubiks cube is perhaps the world's most famous puzzle. 
+    % The first rigorous 
+    % mathematical analysis of a Rubik's Cube was done by British-American Mathemetician 
+    % David Singmaster, though solutions were known to a number of 
+    % mathematicians at the time (such as J.H. Conway and Roger Penrose).  
+    % In this project, we attempt to understand the inner workings of the Rubik's cube via group theory and abstract algebra. 
 
               % \begin{figure}
               %   \centering
@@ -175,7 +176,7 @@
               %             \caption{A 3x3x3 Rubik's Cube}
               %           \end{figure}
 
-  \end{block}
+  % \end{block}
 
   % \begin{block}{Modelling the Cube}
 
@@ -297,6 +298,36 @@ exchanged from the starting position.
     \end{itemize}
 
   \end{exampleblock}
+  
+
+  \begin{block}{Constructing the Legal Rubik's Cube}
+    Recall that the Rubik's cube consists of $54$ facets and the entire set of arrangements of the rubiks cube can be thought of as permutations of these $54$ facets. 
+    We denote all possible permutations on these facets by $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ and call it the Rubik's Cube group.
+
+    % \heading{Construction of the illegal Rubik's cube:}
+
+    % First we construct the illegal Rubik's cube group since the legal Rubik's cube group is a subgroup of the illegal Rubik's cube group.
+    
+    Unlike the legal Rubik's Cube Group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  
+    We also notice that some orientations are theoretically possible but can not be physically realized on the cube. 
+    % We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
+
+    From the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (\mathbb Z^{12}_2 \wr S_{12}) \times (\mathbb Z^8_3 \wr S_8)$.
+
+    % \heading{Construction of the legal Rubik's cube}
+
+    % Now, we will construct the legal Rubik's cube.
+
+    
+
+% Now note that not all arrangments of the permutations would lead to the valid arrangements of a rubik's cube, this group includes all cubes that can be taken apart and put together (the illegal rubiks' cube group), e.g. pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube (the legal rubik's cube group).
+
+The corner facets can be represented as the cyclic group of 3 elements $C_{3}$ or $\mathbb Z_3$ and since there are $8$ of these we denote it as the cross product of $C_{3}$ eight times, namely, $C_3 ^8$ 
+Now, the possible arrangements of the corner cubes can be described using $S_{8}$ (since we are permuting those), which allows the postions of all the corner facets on the Rubik's Cube to be described as the group $C_{3}^{8} \wr S_{8}$.
+Using a similar argument we see that the  position of all the edge facets on the Rubik's Cube can be described by the group $C_{2}^{2} \wr S_{12}$.
+
+  \end{block}
+
 \end{column}
 
 \begin{column}{\colwidth}
@@ -763,11 +794,11 @@ Similar to the corner twist, swapped pieces produces odd permutations.
 
 \begin{column}{\colwidth}
 
-  \begin{block}{Construction of legal Rubik's cube}
+  \begin{block}{Constructing the Legal Rubik's Cube}
     Recall that the Rubik's cube consists of $54$ facets and the entire set of arrangements of the rubiks cube can be thought of as permutations of these $54$ facets. 
     We denote all possible permutations on these facets by $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ and call it the Rubik's Cube group.
 
-    \heading{Construction of the illegal Rubik's cube:}
+    % \heading{Construction of the illegal Rubik's cube:}
 
     % First we construct the illegal Rubik's cube group since the legal Rubik's cube group is a subgroup of the illegal Rubik's cube group.
     
@@ -777,19 +808,17 @@ Similar to the corner twist, swapped pieces produces odd permutations.
 
     From the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (\mathbb Z^{12}_2 \wr S_{12}) \times (\mathbb Z^8_3 \wr S_8)$.
 
-    \heading{Construction of the legal Rubik's cube}
+    % \heading{Construction of the legal Rubik's cube}
 
-    Next, we will construct the legal Rubik's cube.
+    % Now, we will construct the legal Rubik's cube.
 
     
 
-Now note that not all arrangments of the permutations would lead to the valid arrangements of a rubik's cube, this group includes all cubes that can be taken apart and put together (the illegal rubiks' cube group), e.g. pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube (the legal rubik's cube group).
+% Now note that not all arrangments of the permutations would lead to the valid arrangements of a rubik's cube, this group includes all cubes that can be taken apart and put together (the illegal rubiks' cube group), e.g. pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube (the legal rubik's cube group).
 
-Note that it is the case that the corner facets can be modelled as the cyclic group of 3 elements $C_{3}$ and since there are 8 of these we note it is the cross product of $C_{3}$ eight times. 
-
+The corner facets can be represented as the cyclic group of 3 elements $C_{3}$ or $\mathbb Z_3$ and since there are $8$ of these we denote it as the cross product of $C_{3}$ eight times, namely, $C_3 ^8$ 
 Now, the possible arrangements of the corner cubes can be described using $S_{8}$ (since we are permuting those), which allows the postions of all the corner facets on the Rubik's Cube to be described as the group $C_{3}^{8} \wr S_{8}$.
-
-By a similar argument we see that the  position of all the edge facets on the Rubik's Cube can be described by the group $C_{2}^{2} \wr S_{12}$.
+Using a similar argument we see that the  position of all the edge facets on the Rubik's Cube can be described by the group $C_{2}^{2} \wr S_{12}$.
 
     % $$
     % \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
