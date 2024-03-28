@@ -347,7 +347,24 @@ exchanged from the starting position.
     % faucibus. Cras eleifend dolor eu nulla suscipit suscipit. Sed lobortis non
     % felis id vulputate.
 
-$(\implies)$ This is some text and this is some text.    
+$(\implies)$ 
+
+We show that the 3 conditions hold for every legal configuration. i.e. the six position vectors: $(R,L,U,D,F,B)$ are perserved under these conditions.
+
+$$R \rightarrow ((2,6,7,3),(2,6,10,7),(0,1,2,0,0,2,1,0),(0,1,0,0,0,1,1,0,0,1,0,0))$$
+$$L \rightarrow ((1 ,4,8,5),(4,8,12,5),(2, 0, 0, 1, 1, 0, 0, 2), (0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1))$$
+$$U \rightarrow ((1, 2, 3, 4), (1, 2, 3, 4), (0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
+$$D \rightarrow ((5, 8, 7, 6), (9, 12, 11, 10), (0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
+$$F \rightarrow ((3, 7, 8, 4), (3, 7, 11, 8), (0, 0, 1, 2, 0, 0, 2, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
+$$B \rightarrow ((1, 5, 6, 2), (1, 5, 9, 6), (1, 2, 0, 0, 2, 1, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
+
+We can see that each permutation is a 4 - cycle which is odd and has sign $-1$. The sum of the component of each corner orientation vectors is either 0 or 6, so they are divisible by 3. The sum of the components of each edge orientation vector is either 0 or 4.
+
+So every configuration obtained from these legal moves remains legal.
+
+Next, show that these 3 conditions are sufficient.
+
+WLOG, we assume that sign$(\rho)=$ sign$(\sigma)$
 
 $(\impliedby)$ This is some text and this is some text.    
 
