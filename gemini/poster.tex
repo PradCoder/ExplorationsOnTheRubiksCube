@@ -794,31 +794,7 @@ Similar to the corner twist, swapped pieces produces odd permutations.
 
 \begin{column}{\colwidth}
 
-  \begin{block}{Constructing the Legal Rubik's Cube}
-    Recall that the Rubik's cube consists of $54$ facets and the entire set of arrangements of the rubiks cube can be thought of as permutations of these $54$ facets. 
-    We denote all possible permutations on these facets by $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ and call it the Rubik's Cube group.
-
-    % \heading{Construction of the illegal Rubik's cube:}
-
-    % First we construct the illegal Rubik's cube group since the legal Rubik's cube group is a subgroup of the illegal Rubik's cube group.
-    
-    Unlike the legal Rubik's Cube Group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  
-    We also notice that some orientations are theoretically possible but can not be physically realized on the cube. 
-    % We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
-
-    From the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (\mathbb Z^{12}_2 \wr S_{12}) \times (\mathbb Z^8_3 \wr S_8)$.
-
-    % \heading{Construction of the legal Rubik's cube}
-
-    % Now, we will construct the legal Rubik's cube.
-
-    
-
-% Now note that not all arrangments of the permutations would lead to the valid arrangements of a rubik's cube, this group includes all cubes that can be taken apart and put together (the illegal rubiks' cube group), e.g. pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube (the legal rubik's cube group).
-
-The corner facets can be represented as the cyclic group of 3 elements $C_{3}$ or $\mathbb Z_3$ and since there are $8$ of these we denote it as the cross product of $C_{3}$ eight times, namely, $C_3 ^8$ 
-Now, the possible arrangements of the corner cubes can be described using $S_{8}$ (since we are permuting those), which allows the postions of all the corner facets on the Rubik's Cube to be described as the group $C_{3}^{8} \wr S_{8}$.
-Using a similar argument we see that the  position of all the edge facets on the Rubik's Cube can be described by the group $C_{2}^{2} \wr S_{12}$.
+  \begin{block}{Proof of the Fundamental Theorem of Cubology (Summarized)}
 
     % $$
     % \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
@@ -834,7 +810,7 @@ Using a similar argument we see that the  position of all the edge facets on the
 
   \end{block}
 
-  \begin{alertblock}{How does this relate to \textbf{MATH 4GR3}?}
+  \begin{alertblock}{How does this relate to MATH 4GR3?}
 
     \heading{Commutator}
 
