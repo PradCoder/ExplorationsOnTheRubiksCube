@@ -408,19 +408,24 @@ WLOG, we assume that sign$(\rho)=$ sign$(\sigma)$
 
     The Rubik's Cube group can be "partitioned" into two major subgroups: 
     the Illegal Rubik's Cube Group and the Legal Rubik's Cube group where the Legal Rubik's Cube group is a subgroup of the Illegal Rubik's Cube group.
-    Unlike the Legal Rubik's Cube Group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  
+    Unlike the Legal Rubik's Cube Group, the Illegal Rubik's Cube Group allows the solver to take the cube apart and rearrange the facets.  
     There are also some orientations are theoretically possible but can not be physically realized on the cube since 
 this group includes all cubes that can be taken apart and put together (the illegal rubiks' cube group), e.g. pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube (the legal rubik's cube group).
 
     % From the description of the corner and edge cubes, we can see that the 
     
     The Illegal Rubik's Cube group is 
-    $$I = (\mathbb Z^{12}_2 \wr S_{12}) \times (\mathbb Z^8_3 \wr S_8), |I| = 2^{12} \times 12! \times 3^8 \times 8! = 5.19 \times 10^{20}$$
+    $$RC^{*}_{3} = (C^{12}_2 \wr S_{12}) \times (C^8_3 \wr S_8), |RC^{*}_{3}| = 2^{12} \times 12! \times 3^8 \times 8! = 5.19 \times 10^{20}$$
     
     
 The corner facets can be represented as the cyclic group of 3 elements $C_{3}$ and since there are $8$ of these we denote it as the cross product of $C_{3}$ eight times, namely, $C_3 ^8$ .
 Now, the possible arrangements of the corner cubes can be described using $S_{8}$ (since we are permuting those), which allows the postions of all the corner facets on the Rubik's Cube to be described as the group $C_{3}^{8} \wr S_{8}$.
 Using a similar argument we see that the position of all the edge facets on the Rubik's Cube can be described by the group $C_{2}^{2} \wr S_{12}$.
+
+Ultimately, we can now effectively conclude that.
+
+$$RC_{3} \cong (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12})\subset (C_{3}^{7} \wr S_{8}) \times (C_{2}^{11} \wr S_{12}) \subset RC_{3}^{*} \cong C_{2}^{12} \times S_{8} \times C_{3}^{8} \times S_{8} \times S_{8}\subset S_{54}$$
+$$RC_{3} \cong (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12})$$
 
     % \heading{Construction of the illegal Rubik's cube:}
 
