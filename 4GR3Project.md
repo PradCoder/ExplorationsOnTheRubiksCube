@@ -193,7 +193,7 @@ $\Leftrightarrow$
 $$w_{1} + w_{2} +\dots +w_{12} = 0 (\text{mod } 2)$$
 
 ## Summarized proof ?
- The first thing to show is that the three conditions are necessary, that is, they hold for any legal configuration. To do this we just need to show that if the conditions are satisfied for a configuration, then they also hold for the configuration obtained from it by twising one of the six faces. This involves just looking at the six cases individually.
+ The first thing to show is that the three conditions are necessary, that is, they hold for any legal configuration. To do this we just need to show that if the conditions are satisfied for a configuration, then they also hold for the configuration obtained from it by twising one of the six faces. This involves just looking at the six cases individually, i.e the six faces.
 
 Next we would need to show that if we had a configuration that satisfies the three conditions then the puzzle is solvable. Here is where our four basic moves come in handy. Let's recall them here for convenience. 
 
@@ -295,7 +295,6 @@ Similar to the corner twist, swapped pieces produces odd permutations.
 ## Exactly one edge cubie is flipped *
 
 ![Example of cube with one edge flipped](<Screenshot from 2024-03-26 11-14-42-1.png>)
-
 
 
 # Section 5 
