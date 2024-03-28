@@ -53,9 +53,9 @@
 % Footer (optional)
 % ====================
 
-%\footercontent{
-%  \href{https://www.example.com}{https://www.example.com} \hfill
-%  ABC Conference 2025, New York --- XYZ-1234 \hfill
+% \footercontent{
+%  \href{https://www.github.com/PradCoder/4GR3Repository}{https://www.github.com/PradCoder/4GR3Repository} \hfill
+%  ABC Conference 2025, New York --- XYZ-1234 \hfill}
 %  \href{mailto:alyssa.p.hacker@example.com}{alyssa.p.hacker@example.com}}
 % (can be left out to remove footer)
 
@@ -95,7 +95,7 @@
 %      \caption{A figure caption.}
   %  \end{figure}
 
-    The rubiks cube is perhaps the world's most famous puzzle and one that has caught the attention of many a mathematician. 
+    The Rubik's Cube is perhaps the world's most famous puzzle and one that has caught the attention of many a mathematician. 
     % The first rigorous 
     % mathematical analysis of a Rubik's Cube was done by British-American Mathemetician 
     % David Singmaster, though solutions were known to a number of 
@@ -236,12 +236,12 @@ flat on a plane and one is facing front face)
 
 \heading{Conjugates:}
 For a group $G$ with two elements $g,h \in G$, the \textbf{conjugate of $g$ by $h$} is
-$g^h = h^{-1}gh$.
+$$g^h = h^{-1}gh$$
 
 \heading{Commutators:}
-For a group $G$ with two elements $g,h \in G$ we call the element
-$[g,h]=ghg^{-1}h^{-1}$
+For a group $G$ with two elements $g,h \in G$ the 
 the \textbf{commutator} of $g$ and $h$.
+$$[g,h]=ghg^{-1}h^{-1}$$
 
 % The capital letter represent a $90\degree$ turn clockwise facing that face. The inverse of each move would be the $90\degree$ rotation of the face counter-clockwise (denoted by a $M^{-1}$ in our adaptation where $M$ \in \{F,L,U,D,R,B \}$).
 
@@ -391,18 +391,31 @@ $(\impliedby)$ This is some text and this is some text.
   % \end{block}
 
   \begin{block}{Constructing the Legal Rubik's Cube}
-    Recall that the Rubik's cube consists of $54$ facets and the entire set of arrangements of the rubiks cube can be thought of as permutations of these $54$ facets. 
-    We denote all possible permutations on these facets by $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$ and call it the Rubik's Cube group.
+    The Rubik's cube consists of $54$ facets and the entire set of arrangements of the Rubik's Cube are all possible permutations of these $54$ facets 
+    denoted  by $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$, which is the Rubik's Cube group.
+
+    The Rubik's Cube group can be "partitioned" into two major subgroups: 
+    the Illegal Rubik's Cube Group and the Legal Rubik's Cube group where the Legal Rubik's Cube group is a subgroup of the Illegal Rubik's Cube group.
+    Unlike the Legal Rubik's Cube Group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  
+    There are also some orientations are theoretically possible but can not be physically realized on the cube since 
+this group includes all cubes that can be taken apart and put together (the illegal rubiks' cube group), e.g. pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube (the legal rubik's cube group).
+
+    % From the description of the corner and edge cubes, we can see that the 
+    
+    The Illegal Rubik's Cube group is 
+    $$I = (\mathbb Z^{12}_2 \wr S_{12}) \times (\mathbb Z^8_3 \wr S_8), |I| = 2^{12} \times 12! \times 3^8 \times 8! = 5.19 \times 10^{20}$$
+    
+    
+The corner facets can be represented as the cyclic group of 3 elements $C_{3}$ and since there are $8$ of these we denote it as the cross product of $C_{3}$ eight times, namely, $C_3 ^8$ .
+Now, the possible arrangements of the corner cubes can be described using $S_{8}$ (since we are permuting those), which allows the postions of all the corner facets on the Rubik's Cube to be described as the group $C_{3}^{8} \wr S_{8}$.
+Using a similar argument we see that the position of all the edge facets on the Rubik's Cube can be described by the group $C_{2}^{2} \wr S_{12}$.
 
     % \heading{Construction of the illegal Rubik's cube:}
 
     % First we construct the illegal Rubik's cube group since the legal Rubik's cube group is a subgroup of the illegal Rubik's cube group.
     
-    Unlike the legal Rubik's Cube Group, the Illegal Rubik’s Cube Group allows the solver to take the cube apart and rearrange the facets.  
-    We also notice that some orientations are theoretically possible but can not be physically realized on the cube. 
     % We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
 
-    From the description of the corner and edge cubes, we can see that the illegal rubik's cube group is $I = (\mathbb Z^{12}_2 \wr S_{12}) \times (\mathbb Z^8_3 \wr S_8)$.
 
     % \heading{Construction of the legal Rubik's cube}
 
@@ -410,11 +423,9 @@ $(\impliedby)$ This is some text and this is some text.
 
     
 
-% Now note that not all arrangments of the permutations would lead to the valid arrangements of a rubik's cube, this group includes all cubes that can be taken apart and put together (the illegal rubiks' cube group), e.g. pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube (the legal rubik's cube group).
+% Now note that not all arrangments of the permutations would lead to the valid arrangements of a rubik's cube, 
 
-The corner facets can be represented as the cyclic group of 3 elements $C_{3}$ or $\mathbb Z_3$ and since there are $8$ of these we denote it as the cross product of $C_{3}$ eight times, namely, $C_3 ^8$ 
-Now, the possible arrangements of the corner cubes can be described using $S_{8}$ (since we are permuting those), which allows the postions of all the corner facets on the Rubik's Cube to be described as the group $C_{3}^{8} \wr S_{8}$.
-Using a similar argument we see that the  position of all the edge facets on the Rubik's Cube can be described by the group $C_{2}^{2} \wr S_{12}$.
+
 
   \end{block}
 
@@ -424,13 +435,13 @@ Using a similar argument we see that the  position of all the edge facets on the
 
 \begin{column}{\colwidth}
 
-  \begin{block}{Solvable and Unsolvable Cubes}
+  \begin{block}{Unsolvable Cubes}
 
     These cubes are unsolvable since they involve odd permutations.
 
     \begin{enumerate}
       
-      \item \textbf{Exactly one edge cubie is flipped}
+      \item \textbf{Exactly one edge cubie is flipped:}
       A singular edge cubie flipped 90 degrees is not possible since the cube always has even parity.
       
     \tdplotsetmaincoords{55}{135}
@@ -508,11 +519,10 @@ Using a similar argument we see that the  position of all the edge facets on the
                 \caption{Corner twist}
               \end{figure}
         
-      \item \textbf{Corner twist}
-      A singular twisted corner is an impossible case to get on $3 \times 3$.
-      As previously stated, the cube always has even parity. However, a corner twist is an odd permutation.
-      
-Similar to the corner twist, swapped pieces produces odd permutations.
+      \item \textbf{Corner twist:}
+      A singular twisted corner is an impossible case to get on 3 x 3 since
+      the cube always has even parity 
+      and a corner twist is an odd permutation.
 
               \begin{figure}
                 \centering
@@ -839,8 +849,8 @@ Similar to the corner twist, swapped pieces produces odd permutations.
                                                     \end{figure}
                                                       
 
-      \item \textbf{Swapped pieces}
-      Two edge pieces cannot be swapped, either adjacently or opposite on a $3 \times 3$ Rubik's cube. The same can be said for two corner pieces.
+      \item \textbf{Swapped pieces:}
+      Two edge pieces cannot be swapped, either adjacently or opposite on a 3 x 3 Rubik's cube. The same can be said for two corner pieces.
     \end{enumerate}
 
                                                       \begin{figure}
@@ -947,9 +957,6 @@ Similar to the corner twist, swapped pieces produces odd permutations.
     %   \end{tabular}
     %   \caption{A table caption.}
     % \end{table}
-
-    Donec quis posuere ligula. Nunc feugiat elit a mi malesuada consequat. Sed
-    imperdiet augue ac nibh aliquet tristique. Aenean eu tortor vulputate,
 
   \end{alertblock}
 
