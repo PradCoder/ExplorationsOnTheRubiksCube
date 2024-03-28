@@ -110,9 +110,7 @@
   \begin{alertblock}{Useful Definitions}
 
 
-    \begin{itemize}
-      
-  \item  \textbf{Semi-direct products:}
+  \heading{Semi-direct products:}
      Let $G$ be a group with identity element $e$, a subgroup $H$ and a normal subgroup $N \triangleleft G$ such that $N \cap H = \{e\}$.
     Then $G = N H$ if and only if for all $g \in G$ there exists a unique $n \in N$ and h \in H such that $g = nh$.
     %  \begin{enumerate}
@@ -121,7 +119,7 @@
     %   \item $N \triangleleft K$
     %  \end{enumerate}
 
-\item  \textbf{Wreath products:}
+\heading{Wreath products:}
 
 Let $X$ be a finite set, $G$ a group and $H$ a group acting on $X$.
 Fix a labelling of $X$ say $\{x_1,x_2, \dots, x_t\}$ with $| X | = t$.
@@ -143,7 +141,7 @@ Then the \textbf{wreath product} of $G$ and $H$ is $G \wr H = G \rtimes H$ where
 % The wreath product permutes the factors of G according to the action h on X. So if $x \in G$, then the wreath product would take components of G and shuffle them around according to the action h on the set X.
     
 
-\item \textbf{Position Vectors:}
+\heading{Position Vectors:}
 For a given configuration of a Rubik's Cube there exists a $4$ tuple $(\rho, \sigma, v, w))$ where $\rho \in S_8, \sigma \in S_{12}$ describe the permutations of the cubies and $v \in \mathbb Z_3^8, w \in \mathbb Z_2^{12}$ describe the orientations of the cubies.
 
 \textbf{Remark:} 
@@ -161,7 +159,6 @@ flat on a plane and one is facing front face)
 \end{itemize}
 
 % The capital letter represent a $90\degree$ turn clockwise facing that face. The inverse of each move would be the $90\degree$ rotation of the face counter-clockwise (denoted by a $M^{-1}$ in our adaptation where $M$ \in \{F,L,U,D,R,B \}$).
-\end{itemize}
 
 
     % This block catches your eye, so \textbf{important stuff} should probably go
@@ -188,21 +185,19 @@ flat on a plane and one is facing front face)
   \end{alertblock}
  
   \begin{exampleblock}{Rubiks Specific Theorems}
-    \begin{itemize}
 
-    \item\textbf{Theorem on parity:} Permutations can also be described in terms of their parity. Any length n
+    \heading{Theorem on parity:} Permutations can also be described in terms of their parity. Any length n
 cycle of a permutation can be expressed as the product of 2-cycles.
 
 The cube always has even parity, or an even number of cubies
 exchanged from the starting position.
 
-      \item \textbf{Second Fundamental Theorem of Cubology: }
+      \heading{Second Fundamental Theorem of Cubology: }
       An operation of the cube is possible if and only if the following are satisfied:
             \begin{itemize}
               \item The total number of edge and corner cycles of even length is even.
               \item The number of corner cycles twisted right is equal to the number of corner cycles twisted left (up to modulo 3).
               \item There is an even number of reorienting edge cycles.
-            \end{itemize}
 
 
     % $$
