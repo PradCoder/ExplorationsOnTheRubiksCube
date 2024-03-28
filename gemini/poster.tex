@@ -361,10 +361,14 @@ Notice that each permutation is a $4$-cycle which is odd with sign $-1$, the sum
 the sum of the components of each edge orientation vector is either $0$ or $4$, both divisible by $2$.
 So every configuration obtained from these legal moves remains legal.
 
-$(\impliedby)$  
-WLOG, we assume that sign$(\rho)=$ sign$(\sigma)$
+$(\impliedby)$ 
+For a legal configuration $X$ that corresponds to the position vector $(\rho, \sigma, v, w)$: 
+\begin{itemize}
+\item Without loss of generality, assume that sign$(\rho)=$ sign$(\sigma)$ or apply a quarter turn to get the position vector mentioned above.
+Notice that the corner cubies have even parity so the corner cubies can be returned to their originial position by  
     
 
+\end{itemize}
   \end{block}
 
   % \begin{block}{An algorithm for solving the Rubik's Cube}
@@ -407,15 +411,15 @@ WLOG, we assume that sign$(\rho)=$ sign$(\sigma)$
     denoted  by $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$, which is the Rubik's Cube group.
 
     The Rubik's Cube group can be "partitioned" into two major subgroups: 
-    the Illegal Rubik's Cube Group and the Legal Rubik's Cube group where the Legal Rubik's Cube group is a subgroup of the Illegal Rubik's Cube group.
+    the Illegal Rubik's Cube Group and the Legal Rubik's Cube group , a subgroup of the Illegal Rubik's Cube group.
     Unlike the Legal Rubik's Cube Group, the Illegal Rubik's Cube Group allows the solver to take the cube apart and rearrange the facets.  
-    There are also some orientations are theoretically possible but can not be physically realized on the cube since 
-this group includes all cubes that can be taken apart and put together (the illegal rubiks' cube group), e.g. pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube (the legal rubik's cube group).
+    There are also some orientations are theoretically possible but can not be physically realized on the cube for example pieces can alternate between being either corner and edge cubies, and those that can be reached by applying moves on the cube.
 
     % From the description of the corner and edge cubes, we can see that the 
     
     The Illegal Rubik's Cube group is 
-    $$RC^{*}_{3} = (C^{12}_2 \wr S_{12}) \times (C^8_3 \wr S_8), |RC^{*}_{3}| = 2^{12} \times 12! \times 3^8 \times 8! = 5.19 \times 10^{20}$$
+    $$RC^{*}_{3} = (C^{12}_2 \wr S_{12}) \times (C^8_3 \wr S_8)$$
+    $$|RC^{*}_{3}| = 2^{12} \times 12! \times 3^8 \times 8! = 5.19 \times 10^{20}$$
     
     
 The corner facets can be represented as the cyclic group of 3 elements $C_{3}$ and since there are $8$ of these we denote it as the cross product of $C_{3}$ eight times, namely, $C_3 ^8$ .
