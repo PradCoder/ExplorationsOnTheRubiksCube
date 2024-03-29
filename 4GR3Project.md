@@ -297,12 +297,9 @@ Similar to the corner twist, swapped pieces produces odd permutations.
 ![Example of cube with one edge flipped](<Screenshot from 2024-03-26 11-14-42-1.png>)
 
 
-# Section 5 
+# Section 5 *
 
 In this section we discuss how the Fundamental Theorem of Cubology relates to the content covered in MATH 4GR3.
-
-We can define the rubik's cube interms of the following permutation cycles
-R = 
 
 - Commutators as a subgroup of moves that partially commute
 

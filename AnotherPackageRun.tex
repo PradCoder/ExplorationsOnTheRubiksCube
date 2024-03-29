@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usepackage{rubikcube} 
+
+\usetikzlibrary{3d}
+
+\begin{document}
+\begin{figure}[hbt]
+    \centering
+    %\RubikCubeSolved
+    
+    \begin{minipage}{2cm}
+    \begin{tikzpicture}[scale=0.5]
+    \DrawRubikCubeRU
+    \end{tikzpicture}
+    \end{minipage}
+    \hspace{5mm}$\Longrightarrow$\hspace{5mm}%
+    \RubikFaceUp {Y}{B}{Y} {R}{Y}{O} {Y}{G}{Y}%
+    \RubikFaceDown {W}{G}{W} {R}{W}{O} {W}{B}{W}%
+    \RubikFaceLeft {R}{Y}{R} {B}{R}{G} {R}{W}{R}%
+    \RubikFaceRight{O}{Y}{O} {G}{O}{B} {O}{W}{O}%
+    \RubikFaceFront{G}{Y}{G} {R}{G}{O} {G}{W}{G}%
+    \RubikFaceBack {B}{Y}{B}%
+    {O}{B}{R}%
+    {B}{W}{B}%
+    \begin{minipage}{2cm}
+    \begin{tikzpicture}[scale=0.5]
+    \DrawRubikCubeRU
+    \end{tikzpicture}
+    \end{minipage}
+    \hspace{1cm}%
+    \begin{minipage}{5cm}
+    \begin{tikzpicture}[scale=0.5]
+    \DrawRubikCubeFlat
+    \end{tikzpicture}
+    \end{minipage}
+    \caption{Two images of the superflip configuration.}
+    \end{figure}
+\end{document}
