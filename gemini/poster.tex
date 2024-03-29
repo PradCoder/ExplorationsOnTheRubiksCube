@@ -272,11 +272,11 @@ $[g,h]=ghg^{-1}h^{-1}$
  
   \begin{block}{Preliminary Theorems}
 
-    \heading{Theorem on parity:} Permutations can also be described in terms of their parity. Any length $n$-
-cycle of a permutation can be expressed as the product of $2$-cycles.
-
+    \heading{Theorem on parity:} 
 The cube always has even parity, or an even number of cubies
 exchanged from the starting position.
+%     Permutations can also be described in terms of their parity. Any length $n$-
+% cycle of a permutation can be expressed as the product of $2$-cycles.
 
       \heading{Second Fundamental Theorem of Cubology: }
       An operation of the cube is possible if and only if:
@@ -340,7 +340,7 @@ exchanged from the starting position.
 
   \begin{block}{Proof of the Fundamental Theorem of Cubology (Summarized)}
     The Rubik's cube consists of $54$ facets and the entire set of arrangements of the Rubik's Cube are all possible permutations of these $54$ facets 
-    denoted  by $G = \langle F,L,U,D,R,B\rangle \subset S_{54}$, which is the Rubik's Cube group.
+    denoted by the Rubik's Cube group $RC = \langle F,L,U,D,R,B\rangle \subset S_{54}$.
 
     % $$
     % \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
@@ -354,14 +354,12 @@ $(\implies)$
 \textbf{We show that if $X$ is a legal configuration then the three conditions hold.}
 
 Essentially, the six position vectors $(R,L,U,D,F,B)$ are perserved under these conditions.
-
 $$R \rightarrow ((2,6,7,3),(2,6,10,7),(0,1,2,0,0,2,1,0),(0,1,0,0,0,1,1,0,0,1,0,0))$$
 $$L \rightarrow ((1 ,4,8,5),(4,8,12,5),(2, 0, 0, 1, 1, 0, 0, 2), (0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1))$$
 $$U \rightarrow ((1, 2, 3, 4), (1, 2, 3, 4), (0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
 $$D \rightarrow ((5, 8, 7, 6), (9, 12, 11, 10), (0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
 $$F \rightarrow ((3, 7, 8, 4), (3, 7, 11, 8), (0, 0, 1, 2, 0, 0, 2, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
 $$B \rightarrow ((1, 5, 6, 2), (1, 5, 9, 6), (1, 2, 0, 0, 2, 1, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
-
 Notice that each permutation is a $4$-cycle which is odd with sign $-1$, the sum of the component of each corner orientation vectors is either $0$ or $6$, both divisible by $3$ and 
 the sum of the components of each edge orientation vector is either $0$ or $4$, both divisible by $2$.
 % So every configuration obtained from these legal moves remains legal.
