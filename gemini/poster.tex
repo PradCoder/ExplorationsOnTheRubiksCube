@@ -95,13 +95,13 @@
 %      \caption{A figure caption.}
   %  \end{figure}
 
-    The Rubik's Cube is perhaps the world's most famous puzzle and one that has caught the attention of many a mathematician. 
+    \textbf{The Rubik's Cube is perhaps the world's most famous puzzle and one that has caught the attention of many a mathematician.} 
     The first rigorous 
     mathematical analysis of a Rubik's Cube was done by British-American Mathemetician 
     David Singmaster, though solutions were known to a number of 
     mathematicians at the time (like J.H. Conway and Roger Penrose).  
 
-    In this project, we attempt to understand the inner workings of the Rubik's cube via group theory and abstract algebra. 
+    \textbf{In this project, we attempt to understand the inner workings of the Rubik's cube via group theory and abstract algebra.} 
 
               \begin{figure}
                 \centering
@@ -375,7 +375,7 @@ Notice that the corner cubies and the edge cubies have even parity so the corner
 Call this configuration $X'$ with position vector $(\rho', \sigma', v', w')$.
 Since $X$ satisfies the three conditions $X'$ also does with $\rho' = \epsilon$, $\sigma' = \epsilon$ because the solved state of the cube has position vector $(\epsilon, \epsilon, 0 , 0)$.
 
-We can solve all edge cubies since we have moves to flip any pair of edges so Condition $3$ holds.
+We can solve all edge cubies since we have moves to flip any pair of edges.
 Now twist any clockwise or counterclockwise pairs to their original position.
 Notice that all leftover corner twists occur in triplets, either all clockwise or all counterclockwise and are solvable with the corner twisting move.
 
@@ -551,7 +551,7 @@ $$RC_{3} \approx (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12}) \subset  (
               \end{figure}
         
       \item \textbf{Corner twist:}
-      A singular twisted corner is an impossible case to get on 3 x 3 since
+      A singular twisted corner is an impossible case since
       the cube always has even parity 
       and a corner twist is an odd permutation.
 
@@ -881,7 +881,7 @@ $$RC_{3} \approx (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12}) \subset  (
                                                       
 
       \item \textbf{Swapped pieces:}
-      Two edge pieces cannot be swapped, either adjacently or opposite on a 3 x 3 Rubik's cube. The same can be said for two corner pieces.
+      For both  edge and corner pieces, two adjacent or opposite pieces cannot be swapped.
     \end{enumerate}
 
                                                       \begin{figure}
@@ -969,24 +969,26 @@ $$RC_{3} \approx (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12}) \subset  (
 
   \begin{alertblock}{How does this relate to MATH 4GR3?}
 
-    \heading{Commutators and Conjugates}
+    % \heading{Commutators and Conjugates}
 
-    Note that when anlalyzing permutations, certain moves sequences are more effective than others. For instance the moves done by commutators.
-    Consider for instance $y$ and $h$ are moves that fail to commute with each other by "just a little bit",
-    then $[y,h]$ will be close to the identity (i.e. the solved state). For example a permutation $\alpha \in S_{n}$ we define the fixed set of $\alpha$ to be the set of all numbers in
-    $$[n] = \{1,2,3,4,\dots,n\}$$
-    that are not moved as
-    $$fix(\alpha) = \{m \in [n] | \alpha(m) = m\}$$ 
-    the ones that are moved, is the compliment of this set, which we denote by $mov(\alpha)$
-    $$mov(\alpha) = \overline{fix(\alpha)} = \{m \in [n] | \alpha(m) \neq m\}$$
-    (Note: the moved set is sometimes known as the support of $\alpha$ denoted $supp(\alpha)$).
-    In terms of permutation puzzles $mov(\alpha)$ is the list of all the positions of the pieces that are moved when $\alpha$ is applied.
-    We note that in the rubik's cube group we have the following commutator for instance, followed by a commutator that
-    can be used to adjust the move done by the commutator by changing the elements permuted, the type (structure on the move) is essentially
-    the same but different pieces are moved
+    \textbf{When analyzing permutations, certain moves sequences are more effective than others like moves done by commutators.}
+
+    If $y$ and $h$ are moves that fail to commute with each other by "just a little bit",
+    then $[y,h]$ will be close to the identity (i.e. the solved state). 
     
-\textbf{Remark:} 
-\textbf{Commutators} provide us with a method for creating puzzles moves that affect only a small number of pieces and \textbf{Conjugation} is a process for modifying the moves of the Commutators to produce new moves that have similar structure.
+    For a permutation $\alpha \in S_{n}$ define the fixed set of $\alpha$ to be the set of all numbers in $[n]$
+    that are not moved: 
+    $$\text{fix}(\alpha) = \{m \in [n] | \alpha(m) = m\}$$ 
+
+    The ones that are moved are sometimes known as the support of $\alpha$ denoted by $\text{mov}(\alpha)$ or $\text{supp}(\alpha)$ and are  the complement of this set:  
+    $$\text{mov}(\alpha) = \overline{\text{fix}(\alpha)} = \{m \in [n] | \alpha(m) \neq m\}$$
+
+    \textbf{Commutators provide us with a method for creating puzzles moves that affect only a small number of pieces and \textbf{Conjugation} is a process for modifying the moves of the commutators to produce new moves that have similar structure}.
+    % \item 
+    % In the Rubik's Cube group we have the following commutator for instance, followed by a commutator that
+    % can be used to adjust the move done by the commutator by changing the elements permuted, the type (structure on the move) is essentially
+    % the same but different pieces are moved
+    % In permutation puzzles $mov(\alpha)$ is the list of all the positions of the pieces that are moved when $\alpha$ is applied.
 
     % \begin{table}
     %   \centering
