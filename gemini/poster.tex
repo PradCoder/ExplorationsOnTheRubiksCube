@@ -117,7 +117,7 @@
       \centering
       % \begin{figure}
       \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-          \DrawRubikCubeRU
+          \DrawRubikCubeFlat
       \end{tikzpicture}
       % \end{figure}
       % \begin{figure}
@@ -132,6 +132,7 @@
       %   \end{tikzpicture}
       % \end{figure}
       % \end{multicols}
+      \caption{A flat map of the cube}
     \end{figure}
   \end{block}
 
@@ -175,7 +176,7 @@ Then the \textbf{wreath product} of $G$ and $H$ is $G \wr H = G \rtimes H$ where
     
 
 \heading{Position Vectors:}
-For any configuration of a Rubik's Cube there exists a corresponding \textbf{position vector} which is a $4$ tuple $(\rho, \sigma, v, w))$ where $\rho \in S_8, \sigma \in S_{12}$ describe the permutations of the cubies and $v \in \mathbb Z_3^8, w \in \mathbb Z_2^{12}$ describe the orientations of the cubies.
+For any configuration of a Rubik's Cube there exists a corresponding \textbf{position vector} which is a $4$ tuple $(\rho, \sigma, v, w))$ where $\rho \in S_8, \sigma \in S_{12}$ describe the permutations of the cubies and $v \in \mathbb{Z}_3^8, w \in \mathbb{Z}_2^{12}$ describe the orientations of the cubies.
 
 \textbf{Remark:} 
 We will adopt Singmaster notation where  
@@ -382,18 +383,18 @@ Notice that all leftover corner twists occur in triplets, either all clockwise o
     % From the description of the corner and edge cubes, we can see that the 
     
     The Illegal Rubik's Cube group is:
-    $$RC^{*}_{3} = (C^{12}_2 \wr S_{12}) \times (C^8_3 \wr S_8)$$
-    $$|RC^{*}_{3}| = 2^{12} \times 12! \times 3^8 \times 8! = 5.19 \times 10^{20}$$
+    $$RC^{*}_{3} = (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8)$$
+    $$|RC^{*}_{3}| = 2^{12} \times 12! \times 3^8 \times 8! = 519024039293878272000$$
     
 \begin{itemize} 
-\item The corner facets are represented by cyclic group of 3 elements $C_{3}$ and since there are $8$ copies we denote it by $C_3 ^8$.
-\item The possible arrangements of the corner cubes are represented by $S_{8}$ (since we are permuting those), and postions of all the corner facets are represented by $C_{3}^{8} \wr S_{8}$.
-\item Using a similar argument, the position of all the edge facets on the Rubik's Cube are represented by the group $C_{2}^{2} \wr S_{12}$.
+\item The corner facets are represented by cyclic group of 3 elements $\mathbb{Z}_{3}$ and since there are $8$ copies we denote it by $\mathbb{Z}_3 ^8$.
+\item The possible arrangements of the corner cubes are represented by $S_{8}$ (since we are permuting those), and postions of all the corner facets are represented by $\mathbb{Z}_{3}^{8} \wr S_{8}$.
+\item Using a similar argument, the position of all the edge facets on the Rubik's Cube are represented by the group $\mathbb{Z}_{12}^{2} \wr S_{12}$.
 \end{itemize} 
 
-    \textbf{The Legal Rubik's Cube group is a subgroup of the Illegal Rubik's Cube Group because there are some orientations are theoretically possible but can not be physically realized on the cube.}
-$$RC_{3} \approx (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12}) \subset  (C^{12}_2 \wr S_{12}) \times (C^8_3 \wr S_8) \approx RC^{*}_{3}$$
-
+    \textbf{The Legal Rubik's Cube group is a subgroup of the Illegal Rubik's Cube Group because there are configurations of the cube that cannot be realized by only using the rotaions.}
+$$RC_{3} \approx (\mathbb{Z}_{3}^{7} \wr S_{8}) \times (\mathbb{Z}_{2}^{10} \wr S_{12}) \subset  (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8) \approx RC^{*}_{3}$$
+$$ |RC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
 % $$RC_{3} \cong (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12})\subset (C_{3}^{7} \wr S_{8}) \times (C_{2}^{11} \wr S_{12}) \subset RC_{3}^{*} \cong C_{2}^{12} \times S_{8} \times C_{3}^{8} \times S_{8} \times S_{8}\subset S_{54}$$
     % \heading{Construction of the illegal Rubik's cube:}
 
@@ -432,80 +433,6 @@ $$RC_{3} \approx (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12}) \subset  (
     \tdplotsetmaincoords{55}{135}
     \begin{figure}
       \centering
-              \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{W}%
-              \RubikFaceFront {B}{B}{R} {B}{B}{B} {B}{B}{B}%
-              \RubikFaceRight {B}{W}{W} {W}{W}{W} {W}{W}{W}%
-              \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
-              \RubikFaceLeft {Y}{Y}{Y} {Y}{Y}{Y} {Y}{Y}{Y}%
-              \RubikFaceBack  {G}{G}{G} {G}{G}{G} {G}{G}{G}%
-                \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-                \DrawRubikCubeRU
-                \end{tikzpicture}
-                \caption{Corner twist}
-              \end{figure}
-        
-      \item \textbf{Corner twist:}
-      A singular twisted corner is an impossible case since
-      the cube always has even parity 
-      and a corner twist is an odd permutation.
-
-              \begin{figure}
-                \centering
-                \begin{multicols}{4}  
-                  \centering
-                  \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{R}%
-                  \RubikFaceFront {B}{G}{B} {B}{B}{B} {B}{B}{B}%
-                  \RubikFaceRight {W}{W}{W} {W}{W}{W} {W}{W}{W}%
-                  \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
-                  \RubikFaceLeft {Y}{Y}{Y} {Y}{Y}{Y} {Y}{Y}{Y}%
-                  \RubikFaceBack  {G}{B}{G} {G}{G}{G} {G}{G}{G}%
-                  \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-                    \DrawRubikCubeRU
-                  \end{tikzpicture}
-
-                  \centering
-                  \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{R}%
-                  \RubikFaceFront {B}{W}{B} {B}{B}{B} {B}{B}{B}%
-                  \RubikFaceRight {W}{B}{W} {W}{W}{W} {W}{W}{W}%
-                  \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
-                  \RubikFaceLeft {Y}{Y}{Y} {Y}{Y}{Y} {Y}{Y}{Y}%
-                  \RubikFaceBack  {G}{G}{G} {G}{G}{G} {G}{G}{G}%
-                    \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-                    \DrawRubikCubeRU
-                    \end{tikzpicture}
-
-                  \centering
-                  \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{R}%
-                  \RubikFaceFront {B}{B}{W} {B}{B}{B} {B}{B}{B}%
-                  \RubikFaceRight {G}{W}{B} {W}{W}{W} {W}{W}{W}%
-                  \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
-                  \RubikFaceLeft {Y}{Y}{Y} {Y}{Y}{Y} {Y}{Y}{Y}%
-                  \RubikFaceBack  {W}{G}{G} {G}{G}{G} {G}{G}{G}%
-                    \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-                    \DrawRubikCubeRU
-                    \end{tikzpicture}
-                  
-                  \centering
-                  \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{R}%
-                  \RubikFaceFront {B}{B}{G} {B}{B}{B} {B}{B}{B}%
-                  \RubikFaceRight {Y}{W}{W} {W}{W}{W} {W}{W}{W}%
-                  \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
-                  \RubikFaceLeft {W}{Y}{Y} {Y}{Y}{Y} {Y}{Y}{Y}%
-                  \RubikFaceBack  {G}{G}{B} {G}{G}{G} {G}{G}{G}%
-                    \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-                    \DrawRubikCubeRU
-                    \end{tikzpicture}                                              
-            \end{multicols}
-            \caption{Swapped pieces}
-          \end{figure}
-                                                      
-
-      \item \textbf{Swapped pieces:}
-      For both  edge and corner pieces, two adjacent or opposite pieces cannot be swapped.
-    \end{enumerate}
-
-    \begin{figure}
-      \centering
       \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{B}{R}%
       \RubikFaceFront {B}{R}{B} {B}{B}{B} {B}{B}{B}%
       \RubikFaceRight {W}{W}{W} {W}{W}{W} {W}{W}{W}%
@@ -516,7 +443,83 @@ $$RC_{3} \approx (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12}) \subset  (
         \DrawRubikCubeRU
         \end{tikzpicture}
       \caption{One edge cubie is flipped}
-    \end{figure}                       
+    \end{figure}
+    
+        
+      \item \textbf{Corner twist:}
+      A singular twisted corner is an impossible case since
+      the cube always has even parity 
+      and a corner twist is an odd permutation.
+      \begin{figure}
+        \centering
+                \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{W}%
+                \RubikFaceFront {B}{B}{R} {B}{B}{B} {B}{B}{B}%
+                \RubikFaceRight {B}{W}{W} {W}{W}{W} {W}{W}{W}%
+                \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
+                \RubikFaceLeft {Y}{Y}{Y} {Y}{Y}{Y} {Y}{Y}{Y}%
+                \RubikFaceBack  {G}{G}{G} {G}{G}{G} {G}{G}{G}%
+                  \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+                  \DrawRubikCubeRU
+                  \end{tikzpicture}
+                  \caption{Corner twist}
+                \end{figure}
+           
+                                                      
+
+      \item \textbf{Swapped pieces:}
+      For both edge and corner pieces, exactly two adjacent or opposite pieces cannot be swapped.
+      \begin{figure}
+        \centering
+        \begin{multicols}{4}  
+          \centering
+          \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{R}%
+          \RubikFaceFront {B}{G}{B} {B}{B}{B} {B}{B}{B}%
+          \RubikFaceRight {W}{W}{W} {W}{W}{W} {W}{W}{W}%
+          \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
+          \RubikFaceLeft {Y}{Y}{Y} {Y}{Y}{Y} {Y}{Y}{Y}%
+          \RubikFaceBack  {G}{B}{G} {G}{G}{G} {G}{G}{G}%
+          \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+            \DrawRubikCubeRU
+          \end{tikzpicture}
+
+          \centering
+          \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{R}%
+          \RubikFaceFront {B}{W}{B} {B}{B}{B} {B}{B}{B}%
+          \RubikFaceRight {W}{B}{W} {W}{W}{W} {W}{W}{W}%
+          \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
+          \RubikFaceLeft {Y}{Y}{Y} {Y}{Y}{Y} {Y}{Y}{Y}%
+          \RubikFaceBack  {G}{G}{G} {G}{G}{G} {G}{G}{G}%
+            \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+            \DrawRubikCubeRU
+            \end{tikzpicture}
+
+          \centering
+          \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{R}%
+          \RubikFaceFront {B}{B}{W} {B}{B}{B} {B}{B}{B}%
+          \RubikFaceRight {G}{W}{B} {W}{W}{W} {W}{W}{W}%
+          \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
+          \RubikFaceLeft {Y}{Y}{Y} {Y}{Y}{Y} {Y}{Y}{Y}%
+          \RubikFaceBack  {W}{G}{G} {G}{G}{G} {G}{G}{G}%
+            \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+            \DrawRubikCubeRU
+            \end{tikzpicture}
+          
+          \centering
+          \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{R}%
+          \RubikFaceFront {B}{B}{G} {B}{B}{B} {B}{B}{B}%
+          \RubikFaceRight {Y}{W}{W} {W}{W}{W} {W}{W}{W}%
+          \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
+          \RubikFaceLeft {W}{Y}{Y} {Y}{Y}{Y} {Y}{Y}{Y}%
+          \RubikFaceBack  {G}{G}{B} {G}{G}{G} {G}{G}{G}%
+            \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+            \DrawRubikCubeRU
+            \end{tikzpicture}
+    \end{multicols}
+    \caption{Swapped pieces}
+  \end{figure}
+    \end{enumerate}
+
+                       
 
     % \begin{figure}
     %   \centering
@@ -535,14 +538,39 @@ $$RC_{3} \approx (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12}) \subset  (
     If $y$ and $h$ are moves that fail to commute with each other by "just a little bit",
     then $[y,h]$ will be close to the identity (i.e. the solved state). 
     
-    For a permutation $\alpha \in S_{n}$ define the fixed set of $\alpha$ to be the set of all numbers in $[n]$
-    that are not moved: 
-    $$\text{fix}(\alpha) = \{m \in [n] | \alpha(m) = m\}$$ 
+    For a permutation $\alpha \in RC$ define $\text{fix}(\alpha)$ to be the set of all cubies that are not moved and
+    the define the set of cubies moved as the support of $\alpha$ (denoted $\text{supp}(\alpha)$):  
+    $$\text{supp}(\alpha) = \overline{\text{fix}(\alpha)} = \{m \in Cubies | \alpha(m) \neq m\}$$
 
-    The ones that are moved are sometimes known as the support of $\alpha$ denoted by $\text{mov}(\alpha)$ or $\text{supp}(\alpha)$ and are  the complement of this set:  
-    $$\text{mov}(\alpha) = \overline{\text{fix}(\alpha)} = \{m \in [n] | \alpha(m) \neq m\}$$
+    \textbf{Commutators provide us with a method for creating puzzles moves that affect a small number of pieces and Conjugation is a process for modifying the moves of the commutators to produce new moves that have similar structure}.
 
-    \textbf{Commutators provide us with a method for creating puzzles moves that affect only a small number of pieces and \textbf{Conjugation} is a process for modifying the moves of the commutators to produce new moves that have similar structure}.
+    \begin{figure}
+      \centering
+      \begin{multicols}{2}  
+        \centering
+        \RubikFaceUp   {R}{R}{R} {R}{R}{R} {Y}{R}{W}%
+        \RubikFaceFront {R}{B}{R} {B}{B}{B} {B}{B}{B}%
+        \RubikFaceRight {B}{W}{W} {W}{W}{W} {W}{W}{W}%
+        \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
+        \RubikFaceLeft {Y}{Y}{B} {Y}{Y}{Y} {Y}{Y}{Y}%
+        \RubikFaceBack  {G}{G}{G} {G}{G}{G} {G}{G}{G}%
+        \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+          \DrawRubikCubeFlat
+        \end{tikzpicture}
+        
+        \centering
+        \RubikFaceUp   {R}{R}{G} {R}{R}{R} {Y}{R}{R}%
+        \RubikFaceFront {R}{B}{B} {B}{B}{B} {B}{B}{B}%
+        \RubikFaceRight {W}{W}{R} {W}{W}{W} {W}{W}{W}%
+        \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
+        \RubikFaceLeft {Y}{Y}{B} {Y}{Y}{Y} {Y}{Y}{Y}%
+        \RubikFaceBack  {W}{G}{G} {G}{G}{G} {G}{G}{G}%
+          \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+          \DrawRubikCubeFlat
+          \end{tikzpicture}
+  \end{multicols}
+  \caption{$x = [LD^{2}L^{-1}F^{-1}D^{2}F,U]$ twists adjacent corners, it can be conjugated as $R^{x}$, to twist opposite corners}
+\end{figure}
     % \item 
     % In the Rubik's Cube group we have the following commutator for instance, followed by a commutator that
     % can be used to adjust the move done by the commutator by changing the elements permuted, the type (structure on the move) is essentially
