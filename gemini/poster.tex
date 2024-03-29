@@ -96,10 +96,11 @@
   %  \end{figure}
 
     The Rubik's Cube is perhaps the world's most famous puzzle and one that has caught the attention of many a mathematician. 
-    % The first rigorous 
-    % mathematical analysis of a Rubik's Cube was done by British-American Mathemetician 
-    % David Singmaster, though solutions were known to a number of 
-    % mathematicians at the time (such as J.H. Conway and Roger Penrose).  
+    The first rigorous 
+    mathematical analysis of a Rubik's Cube was done by British-American Mathemetician 
+    David Singmaster, though solutions were known to a number of 
+    mathematicians at the time (like J.H. Conway and Roger Penrose).  
+
     In this project, we attempt to understand the inner workings of the Rubik's cube via group theory and abstract algebra. 
 
               \begin{figure}
@@ -271,7 +272,7 @@ $[g,h]=ghg^{-1}h^{-1}$
  
   \begin{block}{Preliminary Theorems}
 
-    \heading{Theorem on parity:} Permutations can also be described in terms of their parity. Any length $n$
+    \heading{Theorem on parity:} Permutations can also be described in terms of their parity. Any length $n$-
 cycle of a permutation can be expressed as the product of $2$-cycles.
 
 The cube always has even parity, or an even number of cubies
@@ -319,18 +320,18 @@ exchanged from the starting position.
     A move sequence is possible if and only if: 
     % the following three conditions are satisfied, we also state the group theoretic formulation:
 
-    \begin{itemize}
-      \item \textbf{The permutation of the corner cubies has the same parity as the permutation of the edge cubies} 
+    \begin{enumerate}
+      \item The permutation of the corner cubies has the same parity as the permutation of the edge cubies 
       % if and only if 
       $$\text{sign}(\rho) = \text{sign}(\sigma)$$
-      \item \textbf{The number of corners that are twisted clockwise is equal to the number that are twisted counterclockwise modulo $3$}
+      \item The number of corners that are twisted clockwise is equal to the number that are twisted counterclockwise modulo $3$
       % (meaning remaining corners twisted in the same direction occur in threes).
       % if and only if 
       $$v_{1} + v_{2} +\dots +v_{8} \equiv 0 \mod 3$$
-      \item \textbf{The number of flipped edges is even}
+      \item The number of flipped edges is even
       % if and only if 
       $$w_{1} + w_{2} +\dots +w_{12} \equiv 0 \mod 2$$
-    \end{itemize}
+    \end{enumerate}
 
   %  \textbf{Remark:}  We are considering the following defintion of a postion of a facet of a cube:
   %   A position vector $(\rho,\sigma,v,w) \in S_{8} \times S_{12} \times C_{3}^{8} \times C_{2}^{12}$
