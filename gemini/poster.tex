@@ -188,7 +188,7 @@
 
   \heading{Semi-direct products:}
      Let $G$ be a group with identity element $e$, a subgroup $H$ and a normal subgroup $N \triangleleft G$ such that $N \cap H = \{e\}$.
-    Then $G = N H$ if and only if for all $g \in G$ there exists a unique $n \in N$ and h \in H such that $g = nh$.
+    Then the \textbf{semi-direct product} of $N$ and $H$ is $G = N \rtimes H$ if and only if for all $g \in G$ there exists a unique $n \in N$ and h \in H such that $g = nh$.
     %  \begin{enumerate}
     %   \item $G = NH$
     %   \item $N \cap H = e$
@@ -197,9 +197,9 @@
 
 \heading{Wreath products:}
 
-Let $X$ be a finite set, $G$ a group and $H$ a group acting on $X$.
-Fix a labelling of $X$ say $\{x_1,x_2, \dots, x_t\}$ with $| X | = t$.
-Let $G^t$ be the direct product of $G$ with itself $t$ times.
+For $X$ be a finite set, $G$ a group and $H$ a group acting on $X$,
+fix $\{x_1,x_2, \dots, x_t\}$, a labelling of $X$ with $| X | = t$ and 
+let $G^t$ be the direct product of $G$ with itself $t$ times.
 Then the \textbf{wreath product} of $G$ and $H$ is $G \wr H = G \rtimes H$ where $H$ acts on $G$ by its action on $X$.
 
 % The wreath products of two groups $G$ and $H$ is constructed by: 
@@ -218,7 +218,7 @@ Then the \textbf{wreath product} of $G$ and $H$ is $G \wr H = G \rtimes H$ where
     
 
 \heading{Position Vectors:}
-For a given configuration of a Rubik's Cube there exists a $4$ tuple $(\rho, \sigma, v, w))$ where $\rho \in S_8, \sigma \in S_{12}$ describe the permutations of the cubies and $v \in \mathbb Z_3^8, w \in \mathbb Z_2^{12}$ describe the orientations of the cubies.
+For any configuration of a Rubik's Cube there exists a corresponding \textbf{position vector} which is a $4$ tuple $(\rho, \sigma, v, w))$ where $\rho \in S_8, \sigma \in S_{12}$ describe the permutations of the cubies and $v \in \mathbb Z_3^8, w \in \mathbb Z_2^{12}$ describe the orientations of the cubies.
 
 \textbf{Remark:} 
 We will adopt Singmaster notation where  
@@ -235,13 +235,13 @@ flat on a plane and one is facing front face)
 \end{itemize}
 
 \heading{Conjugates:}
-For a group $G$ with two elements $g,h \in G$, the \textbf{conjugate of $g$ by $h$} is
-$$g^h = h^{-1}gh$$
+For a group $G$ with $g,h \in G$, the \textbf{conjugate} of $g$ by $h$ is
+$g^h = h^{-1}gh$ 
 
 \heading{Commutators:}
-For a group $G$ with two elements $g,h \in G$ the 
-the \textbf{commutator} of $g$ and $h$.
-$$[g,h]=ghg^{-1}h^{-1}$$
+For a group $G$ with $g,h \in G$ 
+the \textbf{commutator} of $g$ and $h$ is 
+$[g,h]=ghg^{-1}h^{-1}$
 
 % The capital letter represent a $90\degree$ turn clockwise facing that face. The inverse of each move would be the $90\degree$ rotation of the face counter-clockwise (denoted by a $M^{-1}$ in our adaptation where $M$ \in \{F,L,U,D,R,B \}$).
 
@@ -278,7 +278,7 @@ The cube always has even parity, or an even number of cubies
 exchanged from the starting position.
 
       \heading{Second Fundamental Theorem of Cubology: }
-      An operation of the cube is possible if and only if the following are satisfied:
+      An operation of the cube is possible if and only if:
             \begin{itemize}
               \item The total number of edge and corner cycles of even length is even.
               \item The number of corner cycles twisted right is equal to the number of corner cycles twisted left (up to modulo $3$).
