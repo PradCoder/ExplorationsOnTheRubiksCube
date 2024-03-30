@@ -383,8 +383,8 @@ Notice that all leftover corner twists occur in triplets, either all clockwise o
     % From the description of the corner and edge cubes, we can see that the 
     
     The Illegal Rubik's Cube group is:
-    $$RC^{*}_{3} = (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8)$$
-    $$|RC^{*}_{3}| = 2^{12} \times 12! \times 3^8 \times 8! = 519024039293878272000$$
+    $$IRC_{3} = (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8)$$
+    $$|IRC_{3}| = 2^{12} \times 12! \times 3^8 \times 8! = 519024039293878272000$$
     
 \begin{itemize} 
 \item The corner facets are represented by cyclic group of 3 elements $\mathbb{Z}_{3}$ and since there are $8$ copies we denote it by $\mathbb{Z}_3 ^8$.
@@ -393,8 +393,9 @@ Notice that all leftover corner twists occur in triplets, either all clockwise o
 \end{itemize} 
 
     \textbf{The Legal Rubik's Cube group is a subgroup of the Illegal Rubik's Cube Group because there are configurations of the cube that cannot be realized by only using the rotaions.}
-$$RC_{3} \approx (\mathbb{Z}_{3}^{7} \wr S_{8}) \times (\mathbb{Z}_{2}^{10} \wr S_{12}) \subset  (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8) \approx RC^{*}_{3}$$
-$$ |RC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
+$$LRC_{3} \approx (\mathbb{Z}_{3}^{7} \wr S_{8}) \times (\mathbb{Z}_{2}^{10} \wr S_{12}) \subset  (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8) \approx RC^{*}_{3}$$
+$$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
+
 % $$RC_{3} \cong (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12})\subset (C_{3}^{7} \wr S_{8}) \times (C_{2}^{11} \wr S_{12}) \subset RC_{3}^{*} \cong C_{2}^{12} \times S_{8} \times C_{3}^{8} \times S_{8} \times S_{8}\subset S_{54}$$
     % \heading{Construction of the illegal Rubik's cube:}
 
@@ -529,7 +530,7 @@ $$ |RC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
 
   \end{block}
 
-  \begin{alertblock}{Linkage to MATH 4GR3}
+  \begin{alertblock}{How does this relate to MATH 4GR3?}
 
     % \heading{Commutators and Conjugates}
 
@@ -539,8 +540,8 @@ $$ |RC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
     then $[y,h]$ will be close to the identity (i.e. the solved state). 
     
     For a permutation $\alpha \in RC$ define $\text{fix}(\alpha)$ to be the set of all cubies that are not moved and
-    the define the set of cubies moved as the support of $\alpha$ (denoted $\text{supp}(\alpha)$):  
-    $$\text{supp}(\alpha) = \overline{\text{fix}(\alpha)} = \{m \in Cubies | \alpha(m) \neq m\}$$
+    the set of cubies moved as the support of $\alpha$ (denoted $\text{supp}(\alpha)$):  
+    $$\text{supp}(\alpha) = \overline{\text{fix}(\alpha)} = \{m \in \text{cubies} : \alpha(m) \neq m\}$$
 
     \textbf{Commutators provide us with a method for creating puzzles moves that affect a small number of pieces and Conjugation is a process for modifying the moves of the commutators to produce new moves that have similar structure}.
 
@@ -569,7 +570,7 @@ $$ |RC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
           \DrawRubikCubeFlat
           \end{tikzpicture}
   \end{multicols}
-  \caption{$x = [LD^{2}L^{-1}F^{-1}D^{2}F,U]$ twists adjacent corners, it can be conjugated as $R^{x}$, to twist opposite corners}
+  \caption{$x = [LD^{2}L^{-1}F^{-1}D^{2}F,U]$ twists adjacent corners can be conjugated as $R^{x}$ which twists opposite corners}
 \end{figure}
     % \item 
     % In the Rubik's Cube group we have the following commutator for instance, followed by a commutator that
