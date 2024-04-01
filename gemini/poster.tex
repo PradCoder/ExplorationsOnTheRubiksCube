@@ -299,7 +299,7 @@ exchanged from the starting position.
 
   \begin{block}{Proof of the Fundamental Theorem of Cubology (Summarized)}
     The Rubik's cube consists of $54$ facets and the entire set of arrangements of the Rubik's Cube are a subset of all possible permutations of these $54$ facets
-    denoted by the Rubik's Cube group i.e. $RC = \langle F,L,U,D,R,B\rangle \subset S_{54}$.
+    denoted by the Rubik's Cube group i.e. $LRC_{3} = \langle F,L,U,D,R,B\rangle \subset S_{54}$.
 
     % $$
     % \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
@@ -312,7 +312,7 @@ exchanged from the starting position.
 $(\implies)$
 \textbf{We show that if $X$ is a legal configuration then the three conditions hold.}
 
-Essentially, the six position vectors $(R,L,U,D,F,B)$ are perserved under these conditions.
+Essentially, the six position vectors $(F,L,U,D,R,B)$ are perserved under these conditions.
 $$F \rightarrow ((3, 7, 8, 4), (3, 7, 11, 8), (0, 0, 1, 2, 0, 0, 2, 1), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
 $$L \rightarrow ((1 ,4,8,5),(4,8,12,5),(2, 0, 0, 1, 1, 0, 0, 2), (0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1))$$
 $$U \rightarrow ((1, 2, 3, 4), (1, 2, 3, 4), (0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
@@ -391,11 +391,11 @@ Notice that all leftover corner twists occur in triplets, either all clockwise o
 \begin{itemize}
 \item The corner facets are represented by cyclic group of 3 elements $\mathbb{Z}_{3}$ and since there are $8$ copies we denote it by $\mathbb{Z}_3 ^8$.
 \item The possible arrangements of the corner cubes are represented by $S_{8}$ (since we are permuting those), and postions of all the corner facets are represented by $\mathbb{Z}_{3}^{8} \wr S_{8}$.
-\item Using a similar argument, the position of all the edge facets on the Rubik's Cube are represented by the group $\mathbb{Z}_{12}^{2} \wr S_{12}$.
+\item Using a similar argument, the position of all the edge facets on the Rubik's Cube are represented by the group $\mathbb{Z}^{12}_{2} \wr S_{12}$.
 \end{itemize}
 
     \textbf{The Legal Rubik's Cube group is a subgroup of the Illegal Rubik's Cube Group because there are configurations of the cube that cannot be realized by only using the rotaions.}
-$$LRC_{3} \approx (\mathbb{Z}_{3}^{7} \wr S_{8}) \times (\mathbb{Z}_{2}^{10} \wr S_{12}) \subset  (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8) \approx RC^{*}_{3}$$
+$$LRC_{3} \approx (\mathbb{Z}_{3}^{7} \wr S_{8}) \times (\mathbb{Z}_{2}^{10} \wr S_{12}) \subset  (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8) \approx IRC_{3}$$
 $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
 
 % $$RC_{3} \cong (C_{3}^{7} \wr S_{8}) \times (C_{2}^{10} \wr S_{12})\subset (C_{3}^{7} \wr S_{8}) \times (C_{2}^{11} \wr S_{12}) \subset RC_{3}^{*} \cong C_{2}^{12} \times S_{8} \times C_{3}^{8} \times S_{8} \times S_{8}\subset S_{54}$$
