@@ -96,13 +96,13 @@
 %      \caption{A figure caption.}
   %  \end{figure}
 
-    \textbf{The Rubik's Cube is perhaps the world's most famous puzzle and one that has caught the attention of many a mathematician.} 
-    The first rigorous 
-    mathematical analysis of a Rubik's Cube was done by British-American Mathemetician 
-    David Singmaster, though solutions were known to a number of 
-    mathematicians at the time (like J.H. Conway and Roger Penrose).  
+    \textbf{The Rubik's Cube is perhaps the world's most famous puzzle and one that has caught the attention of many a mathematician.}
+    The first rigorous
+    mathematical analysis of a Rubik's Cube was done by British-American Mathemetician
+    David Singmaster, though solutions were known to a number of
+    mathematicians at the time (like J.H. Conway and Roger Penrose).
 
-    \textbf{In this project, we attempt to understand the inner workings of the Rubik's cube via abstract algebra and group theory.} 
+    \textbf{In this project, we attempt to understand the inner workings of the Rubik's cube via abstract algebra and group theory.}
     \begin{figure}[hbt]
     %\centering
     \RubikCubeSolved %Reset the cube configuration for use
@@ -156,11 +156,11 @@
 \heading{Wreath products:}
 
 For $X$ be a finite set, $G$ a group and $H$ a group acting on $X$,
-fix $\{x_1,x_2, \dots, x_t\}$, a labelling of $X$ with $| X | = t$ and 
+fix $\{x_1,x_2, \dots, x_t\}$, a labelling of $X$ with $| X | = t$ and
 let $G^t$ be the direct product of $G$ with itself $t$ times.
 Then the \textbf{wreath product} of $G$ and $H$ is $G \wr H = G \rtimes H$ where $H$ acts on $G$ by its action on $X$.
 
-% The wreath products of two groups $G$ and $H$ is constructed by: 
+% The wreath products of two groups $G$ and $H$ is constructed by:
 % \begin{enumerate}
 % \item  Write $H$ as a permutation on $n$ items
 
@@ -173,13 +173,13 @@ Then the \textbf{wreath product} of $G$ and $H$ is $G \wr H = G \rtimes H$ where
 % of $G$ by $H$.
 
 % The wreath product permutes the factors of G according to the action h on X. So if $x \in G$, then the wreath product would take components of G and shuffle them around according to the action h on the set X.
-    
+
 
 \heading{Position Vectors:}
 For any configuration of a Rubik's Cube there exists a corresponding \textbf{position vector} which is a $4$ tuple $(\rho, \sigma, v, w))$ where $\rho \in S_8, \sigma \in S_{12}$ describe the permutations of the cubies and $v \in \mathbb{Z}_3^8, w \in \mathbb{Z}_2^{12}$ describe the orientations of the cubies.
 
-\textbf{Remark:} 
-We will adopt Singmaster notation where  
+\textbf{Remark:}
+We will adopt Singmaster notation where
 we label the face with respect to it lying
 flat on a plane and one is facing front face)
 
@@ -194,11 +194,11 @@ flat on a plane and one is facing front face)
 
 \heading{Conjugates:}
 For a group $G$ with $g,h \in G$, the \textbf{conjugate} of $g$ by $h$ is
-$g^h = h^{-1}gh$ 
+$g^h = h^{-1}gh$
 
 \heading{Commutators:}
-For a group $G$ with $g,h \in G$ 
-the \textbf{commutator} of $g$ and $h$ is 
+For a group $G$ with $g,h \in G$
+the \textbf{commutator} of $g$ and $h$ is
 $[g,h]=ghg^{-1}h^{-1}$
 
 % The capital letter represent a $90\degree$ turn clockwise facing that face. The inverse of each move would be the $90\degree$ rotation of the face counter-clockwise (denoted by a $M^{-1}$ in our adaptation where $M$ \in \{F,L,U,D,R,B \}$).
@@ -226,10 +226,10 @@ $[g,h]=ghg^{-1}h^{-1}$
     % ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
 
   \end{alertblock}
- 
+
   \begin{block}{Relevant Theorems}
 
-    \heading{Theorem on parity:} 
+    \heading{Theorem on parity:}
 The cube always has even parity, or an even number of cubies
 exchanged from the starting position.
 %     Permutations can also be described in terms of their parity. Any length $n$-
@@ -265,28 +265,30 @@ exchanged from the starting position.
     \end{itemize}
 
   \end{block}
-  
+
 
 
 \end{column}
 
+\separatorcolumn
+
 \begin{column}{\colwidth}
 
   \begin{alertblock}{The Fundamental Theorem of Cubology}
-    
-    \textbf{A move sequence is possible if and only if:} 
+
+    \textbf{A move sequence is possible if and only if:}
     % the following three conditions are satisfied, we also state the group theoretic formulation:
 
     \begin{enumerate}
-      \item The permutation of the corner cubies has the same parity as the permutation of the edge cubies 
-      % if and only if 
+      \item The permutation of the corner cubies has the same parity as the permutation of the edge cubies
+      % if and only if
       $$\text{sign}(\rho) = \text{sign}(\sigma)$$
       \item The number of corners that are twisted clockwise is equal to the number that are twisted counterclockwise modulo $3$
       % (meaning remaining corners twisted in the same direction occur in threes).
-      % if and only if 
+      % if and only if
       $$v_{1} + v_{2} +\dots +v_{8} \equiv 0 \mod 3$$
       \item The number of flipped edges is even
-      % if and only if 
+      % if and only if
       $$w_{1} + w_{2} +\dots +w_{12} \equiv 0 \mod 2$$
     \end{enumerate}
 
@@ -296,7 +298,7 @@ exchanged from the starting position.
   \end{alertblock}
 
   \begin{block}{Proof of the Fundamental Theorem of Cubology (Summarized)}
-    The Rubik's cube consists of $54$ facets and the entire set of arrangements of the Rubik's Cube are a subset of all possible permutations of these $54$ facets 
+    The Rubik's cube consists of $54$ facets and the entire set of arrangements of the Rubik's Cube are a subset of all possible permutations of these $54$ facets
     denoted by the Rubik's Cube group i.e. $RC = \langle F,L,U,D,R,B\rangle \subset S_{54}$.
 
     % $$
@@ -307,7 +309,7 @@ exchanged from the starting position.
     % faucibus. Cras eleifend dolor eu nulla suscipit suscipit. Sed lobortis non
     % felis id vulputate.
 
-$(\implies)$ 
+$(\implies)$
 \textbf{We show that if $X$ is a legal configuration then the three conditions hold.}
 
 Essentially, the six position vectors $(R,L,U,D,F,B)$ are perserved under these conditions.
@@ -317,16 +319,16 @@ $$U \rightarrow ((1, 2, 3, 4), (1, 2, 3, 4), (0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0,
 $$D \rightarrow ((5, 8, 7, 6), (9, 12, 11, 10), (0, 0, 0, 0, 0, 0, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
 $$R \rightarrow ((2,6,7,3),(2,6,10,7),(0,1,2,0,0,2,1,0),(0,1,0,0,0,1,1,0,0,1,0,0))$$
 $$B \rightarrow ((1, 5, 6, 2), (1, 5, 9, 6), (1, 2, 0, 0, 2, 1, 0, 0), (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))$$
-Notice that each permutation is a $4$-cycle which is odd with sign $-1$, the sum of the component of each corner orientation vectors is either $0$ or $6$, both divisible by $3$ and 
+Notice that each permutation is a $4$-cycle which is odd with sign $-1$, the sum of the component of each corner orientation vectors is either $0$ or $6$, both divisible by $3$ and
 the sum of the components of each edge orientation vector is either $0$ or $4$, both divisible by $2$.
 % So every configuration obtained from these legal moves remains legal.
 
-$(\impliedby)$ 
+$(\impliedby)$
 \textbf{We show that if the $3$ conditions hold then $X$ is a solvable configuration.}
 
 For a legal configuration $X$ with position vector $(\rho, \sigma, v, w)$ assume that sign$(\rho)=$ sign$(\sigma)$.
 % or apply a quarter turn to get the position vector mentioned above.
-Notice that the corner cubies and the edge cubies have even parity so the corner cubies can be returned to their originial position by performing $3$-cycles on them. 
+Notice that the corner cubies and the edge cubies have even parity so the corner cubies can be returned to their originial position by performing $3$-cycles on them.
 Call this configuration $X'$ with position vector $(\rho', \sigma', v', w')$.
 Since $X$ satisfies the three conditions $X'$ also does with $\rho' = \epsilon$, $\sigma' = \epsilon$ because the solved state of the cube has position vector $(\epsilon, \epsilon, 0 , 0)$.
 
@@ -374,23 +376,23 @@ Notice that all leftover corner twists occur in triplets, either all clockwise o
   % \end{block}
 
   \begin{block}{Constructing the Legal Rubik's Cube Group}
-    
 
-    % The Rubik's Cube group can be "partitioned" into two major subgroups: 
+
+    % The Rubik's Cube group can be "partitioned" into two major subgroups:
     % the Illegal Rubik's Cube Group and the Legal Rubik's Cube group where the Legal Rubik's Cube group is a subgroup of the Illegal Rubik's Cube group.
-    % Unlike the Legal Rubik's Cube Group, the Illegal Rubik's Cube Group allows the solver to take the cube apart and rearrange the facets.  
+    % Unlike the Legal Rubik's Cube Group, the Illegal Rubik's Cube Group allows the solver to take the cube apart and rearrange the facets.
 
-    % From the description of the corner and edge cubes, we can see that the 
-    
+    % From the description of the corner and edge cubes, we can see that the
+
     The Illegal Rubik's Cube group is:
     $$IRC_{3} = (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8)$$
     $$|IRC_{3}| = 2^{12} \times 12! \times 3^8 \times 8! = 519024039293878272000$$
-    
-\begin{itemize} 
+
+\begin{itemize}
 \item The corner facets are represented by cyclic group of 3 elements $\mathbb{Z}_{3}$ and since there are $8$ copies we denote it by $\mathbb{Z}_3 ^8$.
 \item The possible arrangements of the corner cubes are represented by $S_{8}$ (since we are permuting those), and postions of all the corner facets are represented by $\mathbb{Z}_{3}^{8} \wr S_{8}$.
 \item Using a similar argument, the position of all the edge facets on the Rubik's Cube are represented by the group $\mathbb{Z}_{12}^{2} \wr S_{12}$.
-\end{itemize} 
+\end{itemize}
 
     \textbf{The Legal Rubik's Cube group is a subgroup of the Illegal Rubik's Cube Group because there are configurations of the cube that cannot be realized by only using the rotaions.}
 $$LRC_{3} \approx (\mathbb{Z}_{3}^{7} \wr S_{8}) \times (\mathbb{Z}_{2}^{10} \wr S_{12}) \subset  (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8) \approx RC^{*}_{3}$$
@@ -400,7 +402,7 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
     % \heading{Construction of the illegal Rubik's cube:}
 
     % First we construct the illegal Rubik's cube group since the legal Rubik's cube group is a subgroup of the illegal Rubik's cube group.
-    
+
     % We also notice that the Rubik's cube group is a subgroup of the illegal rubik's cube group.
 
 
@@ -408,9 +410,9 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
 
     % Now, we will construct the legal Rubik's cube.
 
-    
 
-% Now note that not all arrangments of the permutations would lead to the valid arrangements of a rubik's cube, 
+
+% Now note that not all arrangments of the permutations would lead to the valid arrangements of a rubik's cube,
 
 
 
@@ -427,10 +429,10 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
     These cubes are unsolvable since they involve odd permutations.
 
     \begin{enumerate}
-      
+
       \item \textbf{Exactly one edge cubie is flipped:}
       A singular edge cubie flipped 90 degrees is not possible since the cube always has even parity.
-      
+
     \tdplotsetmaincoords{55}{135}
     \begin{figure}
       \centering
@@ -445,11 +447,11 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
         \end{tikzpicture}
       \caption{One edge cubie is flipped}
     \end{figure}
-    
-        
+
+
       \item \textbf{Corner twist:}
       A singular twisted corner is an impossible case since
-      the cube always has even parity 
+      the cube always has even parity
       and a corner twist is an odd permutation.
       \begin{figure}
         \centering
@@ -464,14 +466,14 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
                   \end{tikzpicture}
                   \caption{Corner twist}
                 \end{figure}
-           
-                                                      
+
+
 
       \item \textbf{Swapped pieces:}
       For both edge and corner pieces, exactly two adjacent or opposite pieces cannot be swapped.
       \begin{figure}
         \centering
-        \begin{multicols}{4}  
+        \begin{multicols}{4}
           \centering
           \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{R}%
           \RubikFaceFront {B}{G}{B} {B}{B}{B} {B}{B}{B}%
@@ -504,7 +506,7 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
             \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
             \DrawRubikCubeRU
             \end{tikzpicture}
-          
+
           \centering
           \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{R}%
           \RubikFaceFront {B}{B}{G} {B}{B}{B} {B}{B}{B}%
@@ -520,7 +522,7 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
   \end{figure}
     \end{enumerate}
 
-                       
+
 
     % \begin{figure}
     %   \centering
@@ -537,17 +539,17 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
     \textbf{When analyzing permutations, certain moves sequences are more effective than others like moves done by commutators.}
 
     If $y$ and $h$ are moves that fail to commute with each other by "just a little bit",
-    then $[y,h]$ will be close to the identity (i.e. the solved state). 
-    
+    then $[y,h]$ will be close to the identity (i.e. the solved state).
+
     For a permutation $\alpha \in RC$ define $\text{fix}(\alpha)$ to be the set of all cubies that are not moved and
-    the set of cubies moved as the support of $\alpha$ (denoted $\text{supp}(\alpha)$):  
+    the set of cubies moved as the support of $\alpha$ (denoted $\text{supp}(\alpha)$):
     $$\text{supp}(\alpha) = \overline{\text{fix}(\alpha)} = \{m \in \text{cubies} : \alpha(m) \neq m\}$$
 
     \textbf{Commutators provide us with a method for creating puzzles moves that affect a small number of pieces and Conjugation is a process for modifying the moves of the commutators to produce new moves that have similar structure}.
 
     \begin{figure}
       \centering
-      \begin{multicols}{2}  
+      \begin{multicols}{2}
         \centering
         \RubikFaceUp   {R}{R}{R} {R}{R}{R} {Y}{R}{W}%
         \RubikFaceFront {R}{B}{R} {B}{B}{B} {B}{B}{B}%
@@ -558,7 +560,7 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
         \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
           \DrawRubikCubeFlat
         \end{tikzpicture}
-        
+
         \centering
         \RubikFaceUp   {R}{R}{G} {R}{R}{R} {Y}{R}{R}%
         \RubikFaceFront {R}{B}{B} {B}{B}{B} {B}{B}{B}%
@@ -572,7 +574,7 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
   \end{multicols}
   \caption{$x = [LD^{2}L^{-1}F^{-1}D^{2}F,U]$ twists adjacent corners can be conjugated as $R^{x}$ which twists opposite corners}
 \end{figure}
-    % \item 
+    % \item
     % In the Rubik's Cube group we have the following commutator for instance, followed by a commutator that
     % can be used to adjust the move done by the commutator by changing the elements permuted, the type (structure on the move) is essentially
     % the same but different pieces are moved
