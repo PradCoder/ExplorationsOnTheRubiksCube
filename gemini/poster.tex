@@ -427,12 +427,12 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
 
   \begin{block}{Unsolvable Cubes}
 
-    These cubes are unsolvable since they involve odd permutations.
+    These following cubes unsolvable.
 
     \begin{enumerate}
 
       \item \textbf{Exactly one edge cubie is flipped:}
-      A singular edge cubie flipped 90 degrees is not possible since the cube always has even parity.
+      A singular edge cubie flipped is not possible since flipped edges occur in pairs.
 
     \tdplotsetmaincoords{55}{135}
     \begin{figure}
@@ -451,9 +451,8 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
 
 
       \item \textbf{Corner twist:}
-      A singular twisted corner is an impossible case since
-      the cube always has even parity
-      and a corner twist is an odd permutation.
+      A singular twisted corner is an impossible case since the number of corner twisted clockwise should be the same as
+      those twisted counter clockwise modulo 3.
       \begin{figure}
         \centering
                 \RubikFaceUp   {R}{R}{R} {R}{R}{R} {R}{R}{W}%
