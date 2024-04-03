@@ -515,8 +515,8 @@ Notice that all leftover corner twists occur in triplets, either all clockwise o
     % From the description of the corner and edge cubes, we can see that the
 
     The Illegal Rubik's Cube group is:
-    $$IRC_{3} = (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8)$$
-    $$|IRC_{3}| = 2^{12} \times 12! \times 3^8 \times 8! = 519024039293878272000$$
+    $$IRC_{3} = (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8) \\
+    |IRC_{3}| = 2^{12} \times 12! \times 3^8 \times 8! = 519024039293878272000$$
 \begin{itemize}
 \item The corner facets are represented by cyclic group of 3 elements $\mathbb{Z}_{3}$ and since there are $8$ copies we denote it by $\mathbb{Z}_3 ^8$.
 \item The possible arrangements of the corner cubes are represented by $S_{8}$ (since we are permuting those), and postions of all the corner facets are represented by $\mathbb{Z}_{3}^{8} \wr S_{8}$.
@@ -651,30 +651,16 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
   Exactly two corner cubies cannot be twisted in the same direction.
   \begin{figure}
     \centering
-    \begin{multicols}{2}
-      \centering
-      \RubikFaceUp   {R}{R}{R} {R}{R}{R} {Y}{R}{W}%
-      \RubikFaceFront {R}{B}{R} {B}{B}{B} {B}{B}{B}%
-      \RubikFaceRight {B}{W}{W} {W}{W}{W} {W}{W}{W}%
+      \RubikFaceUp   {R}{R}{R} {R}{R}{R} {Y}{R}{B}%
+      \RubikFaceFront {R}{B}{W} {B}{B}{B} {B}{B}{B}%
+      \RubikFaceRight {R}{W}{W} {W}{W}{W} {W}{W}{W}%
       \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
       \RubikFaceLeft {Y}{Y}{B} {Y}{Y}{Y} {Y}{Y}{Y}%
       \RubikFaceBack  {G}{G}{G} {G}{G}{G} {G}{G}{G}%
       \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
         \DrawRubikCubeRU
       \end{tikzpicture}
-
-      \centering
-      \RubikFaceUp   {R}{R}{G} {R}{R}{R} {Y}{R}{R}%
-      \RubikFaceFront {R}{B}{B} {B}{B}{B} {B}{B}{B}%
-      \RubikFaceRight {W}{W}{R} {W}{W}{W} {W}{W}{W}%
-      \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
-      \RubikFaceLeft {Y}{Y}{B} {Y}{Y}{Y} {Y}{Y}{Y}%
-      \RubikFaceBack  {W}{G}{G} {G}{G}{G} {G}{G}{G}%
-        \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-        \DrawRubikCubeRU
-        \end{tikzpicture}
-\end{multicols}
-\caption{$x = [LD^{2}L^{-1}F^{-1}D^{2}F,U]$ twists adjacent corners, it can be conjugated as $R^{x}$ to twist opposite corners}
+\caption{Two corner cubies twisted clockwise}
 \end{figure}
 
     \end{enumerate}
