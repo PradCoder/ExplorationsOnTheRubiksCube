@@ -178,11 +178,12 @@ Then the \textbf{wreath product} of $G$ and $H$ is $G \wr H = G \rtimes H$ where
 \heading{Position Vectors:}
 For any configuration of a Rubik's Cube there exists a corresponding \textbf{position vector} which is a $4$ tuple $(\rho, \sigma, v, w))$ where $\rho \in S_8, \sigma \in S_{12}$ describe the permutations of the cubies and $v \in \mathbb{Z}_3^8, w \in \mathbb{Z}_2^{12}$ describe the orientations of the cubies.
 
+\textbf{Remark:} The orientation number for any facet is determined by comparing the primary orientation with the numbering of the colored tiles. Note that the center facets are unaffected by the moves so they do not require an orientation.
+
 \textbf{Remark:}
 We will adopt Singmaster notation where
 we label the face with respect to it lying
 flat on a plane and one is facing the front face. The letters also represent a 90 degree clockwise turn of that face, the inverse of which is a 90 degree anticlockwise turn.
-
 
 \begin{itemize}
 \item Let $F$ denote the front face.
@@ -192,6 +193,7 @@ flat on a plane and one is facing the front face. The letters also represent a 9
 \item Let $R$ denote the right face.
 \item Let $B$ denote the back face.
 \end{itemize}
+
 
 \heading{Conjugates:}
 For a group $G$ with $g,h \in G$, the \textbf{conjugate} of $g$ by $h$ is
@@ -229,7 +231,6 @@ $[g,h]=ghg^{-1}h^{-1}$
   \end{alertblock}
 
   \begin{block}{Relevant Theorems and Remarks}
-    \heading{Remark on Orientation:} The orientation number for any facet is determined by comparing the primary orientation with the numbering of the colored tiles. Note that the center facets are unaffected by the moves so they do not require an orientation.
     \heading{Theorem on Parity:}
 The cube always has even parity, or an even number of cubies
 exchanged from the starting position.
@@ -244,7 +245,7 @@ exchanged from the starting position.
               \item There is an even number of reorienting edge cycles.
             \end{itemize}
 
-  Note that these theorems can be proved as part of the \textbf{Fundamental theorem of Cubology}
+  % Note that these theorems can be proved as part of the \textbf{Fundamental theorem of Cubology}
 
     % $$
     % \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
