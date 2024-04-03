@@ -228,9 +228,9 @@ $[g,h]=ghg^{-1}h^{-1}$
 
   \end{alertblock}
 
-  \begin{block}{Relevant Theorems}
-
-    \heading{Theorem on parity:}
+  \begin{block}{Relevant Theorems and Remarks}
+    \heading{Remark on Orientation:} The orientation number for any facet is determined by comparing the primary orientation with the numbering of the colored tiles. Note that the center facets are unaffected by the moves so they do not require an orientation.
+    \heading{Theorem on Parity:}
 The cube always has even parity, or an even number of cubies
 exchanged from the starting position.
 %     Permutations can also be described in terms of their parity. Any length $n$-
@@ -243,6 +243,7 @@ exchanged from the starting position.
               \item The number of corner cycles twisted right is equal to the number of corner cycles twisted left (up to modulo $3$).
               \item There is an even number of reorienting edge cycles.
 
+  Note that these theorems can be proved as part of the \textbf{Fundamental theorem of Cubology}
 
     % $$
     % \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
@@ -521,7 +522,6 @@ Notice that all leftover corner twists occur in triplets, either all clockwise o
 \item The possible arrangements of the corner cubes are represented by $S_{8}$ (since we are permuting those), and postions of all the corner facets are represented by $\mathbb{Z}_{3}^{8} \wr S_{8}$.
 \item Using a similar argument, the position of all the edge facets on the Rubik's Cube are represented by the group $\mathbb{Z}^{12}_{2} \wr S_{12}$.
 \end{itemize}
-
     \textbf{The Legal Rubik's Cube group is a subgroup of the Illegal Rubik's Cube Group because there are configurations of the cube that cannot be realized by only using the rotaions.}
 $$LRC_{3} \approx (\mathbb{Z}_{3}^{7} \wr S_{8}) \times (\mathbb{Z}_{2}^{10} \wr S_{12}) \subset  (\mathbb{Z}^{12}_2 \wr S_{12}) \times (\mathbb{Z}^8_3 \wr S_8) \approx IRC_{3}$$
 $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
@@ -647,6 +647,36 @@ $$ |LRC_{3}| = 2^{10} \times 12! \times 3^7 \times 8! = 43252003274489856000$$
     \end{multicols}
     \caption{Swapped pieces}
   \end{figure}
+  \item \textbf{Two Corners twisted in the same direction}
+  Exactly two corner cubies cannot be twisted in the same direction.
+  \begin{figure}
+    \centering
+    \begin{multicols}{2}
+      \centering
+      \RubikFaceUp   {R}{R}{R} {R}{R}{R} {Y}{R}{W}%
+      \RubikFaceFront {R}{B}{R} {B}{B}{B} {B}{B}{B}%
+      \RubikFaceRight {B}{W}{W} {W}{W}{W} {W}{W}{W}%
+      \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
+      \RubikFaceLeft {Y}{Y}{B} {Y}{Y}{Y} {Y}{Y}{Y}%
+      \RubikFaceBack  {G}{G}{G} {G}{G}{G} {G}{G}{G}%
+      \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+        \DrawRubikCubeRU
+      \end{tikzpicture}
+
+      \centering
+      \RubikFaceUp   {R}{R}{G} {R}{R}{R} {Y}{R}{R}%
+      \RubikFaceFront {R}{B}{B} {B}{B}{B} {B}{B}{B}%
+      \RubikFaceRight {W}{W}{R} {W}{W}{W} {W}{W}{W}%
+      \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
+      \RubikFaceLeft {Y}{Y}{B} {Y}{Y}{Y} {Y}{Y}{Y}%
+      \RubikFaceBack  {W}{G}{G} {G}{G}{G} {G}{G}{G}%
+        \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+        \DrawRubikCubeRU
+        \end{tikzpicture}
+\end{multicols}
+\caption{$x = [LD^{2}L^{-1}F^{-1}D^{2}F,U]$ twists adjacent corners, it can be conjugated as $R^{x}$ to twist opposite corners}
+\end{figure}
+
     \end{enumerate}
 
 
