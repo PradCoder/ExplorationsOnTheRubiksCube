@@ -305,32 +305,127 @@ exchanged from the starting position.
     \begin{figure}
       \centering
       \begin{multicols}{2}
+        
         \begin{figure}
         \centering
-        \RubikFaceUp   {R}{R}{R} {R}{R}{R} {Y}{R}{W}%
-        \RubikFaceFront {R}{B}{R} {B}{B}{B} {B}{B}{B}%
-        \RubikFaceRight {B}{W}{W} {W}{W}{W} {W}{W}{W}%
-        \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
-        \RubikFaceLeft {Y}{Y}{B} {Y}{Y}{Y} {Y}{Y}{Y}%
-        \RubikFaceBack  {G}{G}{G} {G}{G}{G} {G}{G}{G}%
-        \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-          \DrawRubikCubeFlat
+        \RubikFaceUp   {R}{R}{R} {R}{X}{R} {R}{R}{R}%
+        \RubikFaceFront {B}{B}{B} {B}{X}{B} {B}{B}{B}%
+        \RubikFaceRight {W}{W}{W} {W}{X}{W} {W}{W}{W}%
+        \RubikFaceDown {O}{O}{O} {O}{X}{O} {O}{O}{O}%
+        \RubikFaceLeft {Y}{Y}{Y} {Y}{X}{Y} {Y}{Y}{Y}%
+        \RubikFaceBack  {G}{G}{G} {G}{X}{G} {G}{G}{G}%
+        \begin{tikzpicture}[scale=0.75]
+          \DrawRubikFlat
+          \node (U) at (0.5, 5.5) [black]{\small\textsf{+}};
+          \node (U) at (0.5, 4.5) [black]{\small\textsf{+}};
+          \node (U) at (0.5, 3.5) [black]{\small\textsf{+}};
+          \node (U) at (1.5, 5.5) [black]{\small\textsf{+}};
+          \node (U) at (1.5, 4.5) [black]{\small\textsf{U}};
+          \node (U) at (1.5, 3.5) [black]{\small\textsf{+}};
+          \node (U) at (2.5, 5.5) [black]{\small\textsf{+}};
+          \node (U) at (2.5, 4.5) [black]{\small\textsf{+}};
+          \node (U) at (2.5, 3.5) [black]{\small\textsf{+}};
+
+          \node (D) at (0.5, -0.5) [black]{\small\textsf{+}};
+          \node (D) at (0.5, -1.5) [black]{\small\textsf{+}};
+          \node (D) at (0.5, -2.5) [black]{\small\textsf{+}};
+          \node (D) at (1.5, -0.5) [black]{\small\textsf{+}};
+          \node (D) at (1.5, -1.5) [black]{\small\textsf{D}};
+          \node (D) at (1.5, -2.5) [black]{\small\textsf{+}};
+          \node (D) at (2.5, -0.5) [black]{\small\textsf{+}};
+          \node (D) at (2.5, -1.5) [black]{\small\textsf{+}};
+          \node (D) at (2.5, -2.5) [black]{\small\textsf{+}};
+
+          \node (L) at (-0.5, 1.5) [black]{\small\textsf{+}};
+          \node (L) at (-1.5, 1.5) [black]{\small\textsf{L}};
+          \node (L) at (-2.5, 1.5) [black]{\small\textsf{+}};
+
+          \node (R) at (3.5, 1.5) [black]{\small\textsf{+}};
+          \node (R) at (4.5, 1.5) [black]{\small\textsf{R}};
+          \node (R) at (5.5, 1.5) [black]{\small\textsf{+}};
+
+          \node (F) at (1.5, 1.5) [black]{\small\textsf{F}};
+          \node (B) at (7.5, 1.5) [black]{\small\textsf{B}};
         \end{tikzpicture}
       \end{figure}
-      \caption{Caption}
+      \caption{The primary orientation of the Cubies}
+
         \begin{figure}
         \centering
-        \RubikFaceUp   {R}{R}{G} {R}{R}{R} {Y}{R}{R}%
-        \RubikFaceFront {R}{B}{B} {B}{B}{B} {B}{B}{B}%
-        \RubikFaceRight {W}{W}{R} {W}{W}{W} {W}{W}{W}%
-        \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
-        \RubikFaceLeft {Y}{Y}{B} {Y}{Y}{Y} {Y}{Y}{Y}%
-        \RubikFaceBack  {W}{G}{G} {G}{G}{G} {G}{G}{G}%
-          \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
-          \DrawRubikCubeFlat
+        \RubikFaceUp   {R}{R}{R} {R}{X}{R} {R}{R}{R}%
+        \RubikFaceFront {B}{B}{B} {B}{X}{B} {B}{B}{B}%
+        \RubikFaceRight {W}{W}{W} {W}{X}{W} {W}{W}{W}%
+        \RubikFaceDown {O}{O}{O} {O}{X}{O} {O}{O}{O}%
+        \RubikFaceLeft {Y}{Y}{Y} {Y}{X}{Y} {Y}{Y}{Y}%
+        \RubikFaceBack  {G}{G}{G} {G}{X}{G} {G}{G}{G}%
+          \begin{tikzpicture}[scale=0.75]
+          \DrawRubikFlat
+          \node (U) at (0.5, 5.5) [black]{\small\textsf{0}};
+          \node (U) at (0.5, 4.5) [black]{\small\textsf{0}};
+          \node (U) at (0.5, 3.5) [black]{\small\textsf{0}};
+          \node (U) at (1.5, 5.5) [black]{\small\textsf{0}};
+          \node (U) at (1.5, 4.5) [black]{\small\textsf{U}};
+          \node (U) at (1.5, 3.5) [black]{\small\textsf{0}};
+          \node (U) at (2.5, 5.5) [black]{\small\textsf{0}};
+          \node (U) at (2.5, 4.5) [black]{\small\textsf{0}};
+          \node (U) at (2.5, 3.5) [black]{\small\textsf{0}};
+
+          \node (D) at (0.5, -0.5) [black]{\small\textsf{0}};
+          \node (D) at (0.5, -1.5) [black]{\small\textsf{0}};
+          \node (D) at (0.5, -2.5) [black]{\small\textsf{0}};
+          \node (D) at (1.5, -0.5) [black]{\small\textsf{0}};
+          \node (D) at (1.5, -1.5) [black]{\small\textsf{D}};
+          \node (D) at (1.5, -2.5) [black]{\small\textsf{0}};
+          \node (D) at (2.5, -0.5) [black]{\small\textsf{0}};
+          \node (D) at (2.5, -1.5) [black]{\small\textsf{0}};
+          \node (D) at (2.5, -2.5) [black]{\small\textsf{0}};
+
+          \node (L) at (-0.5, 0.5) [black]{\small\textsf{1}};
+          \node (L) at (-0.5, 1.5) [black]{\small\textsf{0}};
+          \node (L) at (-0.5, 2.5) [black]{\small\textsf{2}};
+          \node (L) at (-1.5, 0.5) [black]{\small\textsf{1}};
+          \node (L) at (-1.5, 1.5) [black]{\small\textsf{L}};
+          \node (L) at (-1.5, 2.5) [black]{\small\textsf{1}};
+          \node (L) at (-2.5, 0.5) [black]{\small\textsf{2}};
+          \node (L) at (-2.5, 1.5) [black]{\small\textsf{0}};
+          \node (L) at (-2.5, 2.5) [black]{\small\textsf{1}};
+
+
+          \node (R) at (3.5, 0.5) [black]{\small\textsf{2}};
+          \node (R) at (3.5, 1.5) [black]{\small\textsf{0}};
+          \node (R) at (3.5, 2.5) [black]{\small\textsf{1}};
+          \node (R) at (4.5, 0.5) [black]{\small\textsf{1}};
+          \node (R) at (4.5, 1.5) [black]{\small\textsf{R}};
+          \node (R) at (4.5, 2.5) [black]{\small\textsf{1}};
+          \node (R) at (5.5, 0.5) [black]{\small\textsf{1}};
+          \node (R) at (5.5, 1.5) [black]{\small\textsf{0}};
+          \node (R) at (5.5, 2.5) [black]{\small\textsf{2}};
+
+
+          \node (F) at (0.5, 0.5) [black]{\small\textsf{2}};
+          \node (F) at (0.5, 1.5) [black]{\small\textsf{1}};
+          \node (F) at (0.5, 2.5) [black]{\small\textsf{1}};
+          \node (F) at (1.5, 0.5) [black]{\small\textsf{1}};
+          \node (F) at (1.5, 1.5) [black]{\small\textsf{F}};
+          \node (F) at (1.5, 2.5) [black]{\small\textsf{1}};
+          \node (F) at (2.5, 0.5) [black]{\small\textsf{1}};
+          \node (F) at (2.5, 1.5) [black]{\small\textsf{1}};
+          \node (F) at (2.5, 2.5) [black]{\small\textsf{2}};
+
+          \node (B) at (6.5, 0.5) [black]{\small\textsf{2}};
+          \node (B) at (6.5, 1.5) [black]{\small\textsf{1}};
+          \node (B) at (6.5, 2.5) [black]{\small\textsf{1}};
+          \node (B) at (7.5, 0.5) [black]{\small\textsf{1}};
+          \node (B) at (7.5, 1.5) [black]{\small\textsf{B}};
+          \node (B) at (7.5, 2.5) [black]{\small\textsf{1}};
+          \node (B) at (8.5, 0.5) [black]{\small\textsf{1}};
+          \node (B) at (8.5, 1.5) [black]{\small\textsf{1}};
+          \node (B) at (8.5, 2.5) [black]{\small\textsf{2}};
+
           \end{tikzpicture}
         \end{figure}
-        \caption{Caption}
+        \caption{The numbering of the coloured tiles}
+
   \end{multicols}
 \end{figure}
 
