@@ -9,8 +9,8 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-% \usepackage[size=custom,width=120,height=72,scale=1.0]{beamerposter}
-\usepackage[size=B0]{beamerposter}
+\usepackage[size=custom,width=120,height=72,scale=0.8]{beamerposter}
+%\usepackage[size=B0]{beamerposter}
 \usetheme{gemini}
 \usecolortheme{gemini}
 \usepackage{graphicx}
@@ -301,6 +301,39 @@ exchanged from the starting position.
   \begin{block}{Proof of the Fundamental Theorem of Cubology (Summarized)}
     The Rubik's cube consists of $54$ facets and the entire set of arrangements of the Rubik's Cube are a subset of all possible permutations of these $54$ facets
     denoted by the Rubik's Cube group i.e. $LRC_{3} = \langle F,L,U,D,R,B\rangle \subset S_{54}$.
+
+    \begin{figure}
+      \centering
+      \begin{multicols}{2}
+        \begin{figure}
+        \centering
+        \RubikFaceUp   {R}{R}{R} {R}{R}{R} {Y}{R}{W}%
+        \RubikFaceFront {R}{B}{R} {B}{B}{B} {B}{B}{B}%
+        \RubikFaceRight {B}{W}{W} {W}{W}{W} {W}{W}{W}%
+        \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
+        \RubikFaceLeft {Y}{Y}{B} {Y}{Y}{Y} {Y}{Y}{Y}%
+        \RubikFaceBack  {G}{G}{G} {G}{G}{G} {G}{G}{G}%
+        \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+          \DrawRubikCubeFlat
+        \end{tikzpicture}
+      \end{figure}
+      \caption{Caption}
+        \begin{figure}
+        \centering
+        \RubikFaceUp   {R}{R}{G} {R}{R}{R} {Y}{R}{R}%
+        \RubikFaceFront {R}{B}{B} {B}{B}{B} {B}{B}{B}%
+        \RubikFaceRight {W}{W}{R} {W}{W}{W} {W}{W}{W}%
+        \RubikFaceDown {O}{O}{O} {O}{O}{O} {O}{O}{O}%
+        \RubikFaceLeft {Y}{Y}{B} {Y}{Y}{Y} {Y}{Y}{Y}%
+        \RubikFaceBack  {W}{G}{G} {G}{G}{G} {G}{G}{G}%
+          \begin{tikzpicture}[z={(3.85mm,3.85mm)}]
+          \DrawRubikCubeFlat
+          \end{tikzpicture}
+        \end{figure}
+        \caption{Caption}
+  \end{multicols}
+\end{figure}
+
 
     % $$
     % \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
