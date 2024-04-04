@@ -297,7 +297,7 @@ Similar to the corner twist, swapped pieces produces odd permutations.
 ![Example of cube with one edge flipped](<Screenshot from 2024-03-26 11-14-42-1.png>)
 
 
-# Section 5 *
+# Relation to Math 4GR3*
 
 In this section we discuss how the Fundamental Theorem of Cubology relates to the content covered in MATH 4GR3.
 
@@ -336,6 +336,8 @@ It is noticable from there that by using 4 basic types of moves and there conjug
 
 
 - Centers of the group (the trivial identity and the super flip )
+Given Commutators and Conjugates exist, we can try to define a center of the rubik's cube group, it is known that there are exactly 2 centers for the
+rubik's cube group, one is the identity (or solved state of the cube), the other is the superflip, which is achieved via this permutation
 
 # Section 6 *
 
