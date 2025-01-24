@@ -138,3 +138,18 @@ data Bin : Set where
     ⟨⟩ : Bin
     _O : Bin → Bin
     _I : Bin → Bin
+
+inc : Bin → Bin
+inc ⟨⟩ = ⟨⟩
+inc (⟨⟩ O) = ⟨⟩ I
+inc (⟨⟩ I) = ⟨⟩ I O
+inc ((x O) O) = (x O) I
+inc ((x I) O) = (x I) I
+inc ((x O) I) = (x I) O
+inc ((x I) I) = (inc (x I)) O
+
+to : ℕ → Bin
+to zero = ⟨⟩ O
+to (suc suc a) = ⟨⟩ 
+
+from : Bin → ℕ
