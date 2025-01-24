@@ -134,4 +134,7 @@ _ =
         1
     ∎
 
-_ =
+data Bin : Set where
+    ⟨⟩ : Bin
+    _O : Bin → Bin
+    _I : Bin → Bin
