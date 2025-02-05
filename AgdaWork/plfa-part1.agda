@@ -134,6 +134,8 @@ _ =
         1
     ∎
 
+
+
 data Bin : Set where
     ⟨⟩ : Bin
     _O : Bin → Bin
@@ -141,15 +143,43 @@ data Bin : Set where
 
 inc : Bin → Bin
 inc ⟨⟩ = ⟨⟩
-inc (⟨⟩ O) = ⟨⟩ I
-inc (⟨⟩ I) = ⟨⟩ I O
-inc ((x O) O) = (x O) I
-inc ((x I) O) = (x I) I
-inc ((x O) I) = (x I) O
-inc ((x I) I) = (inc (x I)) O
+inc (x O) = x I
+inc (x I) = (inc x) O
+
+dec : Bin → Bin
+dec ⟨⟩ = ⟨⟩
+dec (⟨⟩ O) = ⟨⟩ O
+dec (⟨⟩ I) = ⟨⟩ O
+dec (⟨⟩ O I) = ⟨⟩ I
+dec (⟨⟩ O O) = ⟨⟩ O
+dec (⟨⟩ I O) = ⟨⟩ I
+dec ((x O) O) = (dec x O) I
+dec (((x O) I) O) = (((x O) O) I)
+dec (((x I) I) O) = (((x I) O) I)
+dec ((x O) I) = ((x O) O)
+dec ((x I) I) = ((x I) O)
+
+
+addB : Bin → Bin → Bin
+addB (⟨⟩) y = y
+addB x (⟨⟩) = x
+addB (x O) (y O) = (addB x y) O
+addB (x I) (y O) = (addB x y) I 
+addB (x O) (y I) = (addB x y) I 
+addB (x I) (y I) = inc (addB x y) O
 
 to : ℕ → Bin
-to zero = ⟨⟩ O
-to (suc suc a) = ⟨⟩ 
+to 0 = ⟨⟩ O
+to (suc a) = addB (to a) (⟨⟩ I)
+
+shiftR : Bin → Bin
+shiftR ⟨⟩ = ⟨⟩
+shiftR (a O) = a
+shiftR (a I) = a
 
 from : Bin → ℕ
+from ⟨⟩ = 0
+from (⟨⟩ O) = 0
+from (⟨⟩ I) = suc 0 
+from (a O) = (2 * (from a)) + 0
+from (a I) = (2 * (from a)) + 1

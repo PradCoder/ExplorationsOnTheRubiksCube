@@ -3,3 +3,4 @@ agda-stdlib-2.2/
 MAlonzo/
 agda-stdlib.tar.gz
 *.agdai
+*.DS_Store
