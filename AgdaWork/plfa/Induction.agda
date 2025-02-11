@@ -1,4 +1,4 @@
-module plfa-part2 where
+module plfa.Induction where
 
 import Relation.Binary.PropositionalEquality as Eq
 open Eq using (_≡_; refl; cong; sym)
@@ -79,4 +79,24 @@ open import Data.Nat using (ℕ; zero; suc; _+_; _*_; _∸_; _^_)
     suc (m + zero)
   ≡⟨ cong suc (+-identityʳ m) ⟩
     suc m
+  ∎
+
++-suc : ∀ (m n : ℕ) → m + suc n ≡ suc (m + n)
++-suc zero n =
+  begin
+    zero + suc n
+  ≡⟨⟩
+    suc n
+  ≡⟨⟩
+    suc (zero + n)
+  ∎
++-suc (suc m) n =
+  begin
+    suc m + suc n
+  ≡⟨⟩
+    suc (m + suc n)
+  ≡⟨ cong suc (+-suc m n) ⟩
+    suc (suc (m + n))
+  ≡⟨⟩
+    suc (suc m + n)
   ∎

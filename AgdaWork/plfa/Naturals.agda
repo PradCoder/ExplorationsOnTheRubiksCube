@@ -2,7 +2,7 @@ import Relation.Binary.PropositionalEquality as Eq
 open Eq using (_≡_; refl)
 open Eq.≡-Reasoning using (begin_; step-≡-∣; _∎)
 
-module plfa-part1 where
+module plfa.Naturals where
 
 data ℕ : Set where
     zero : ℕ
