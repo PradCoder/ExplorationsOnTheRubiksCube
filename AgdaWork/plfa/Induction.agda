@@ -188,7 +188,32 @@ open import Data.Nat using (ℕ; zero; suc; _+_; _*_; _∸_; _^_)
   ∎
 
 *-assoc : ∀ (m n p : ℕ) → (m * n) * p ≡ m * (n * p)
-*-assoc m n p =
+*-assoc zero n p =
   begin
-    m n p
+    (zero * n) * p
+  ≡⟨⟩
+    zero * (n * p)
   ∎
+
+*-assoc (suc m) n p =
+  begin
+    ((suc m) * n) * p
+  ≡⟨⟩
+    (n + (m * n)) * p
+  ≡⟨ *-distrib-+ n (m * n) p ⟩
+    n * p + (m * n) * p
+  ≡⟨ cong ((n * p) +_) (*-assoc m n p)⟩
+    n * p + m * (n * p)
+  ≡⟨⟩
+    suc m * (n * p)
+  ∎
+
+*-assoc′ : ∀ (m n p : ℕ) → (m * n) * p ≡ m * (n * p)
+*-assoc′ zero n p = refl
+*-assoc′ (suc m) n p rewrite *-distrib-+ n (m * n) p | *-assoc′ m n p = refl
+
+*-comm : ∀ (a b : ℕ) → a * b ≡ b * a
+*-comm zero zero = refl 
+*-comm zero (suc b) = {!   !}
+*-comm (suc a) zero = {!   !}
+*-comm (suc a) (suc b) = {!   !}
